@@ -1,15 +1,16 @@
 body {
+  background-color: bisque;
   font-family: Quicksand, sans-serif;
-  font-weight: 200;
-  margin: 0; /* Remove margens para ocupar toda a tela */
-}
-
-.landing {
+  font-size: 200px;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-image: url("images/blob.png"); /* Define a imagem de fundo */
-  background-position: center; /* Centraliza a imagem */
-  background-repeat: no-repeat; /* Evita repetições */
+  height: 100vh; /* Ensures full-page centering */
+}
+
+.landingpage{
+  background-image: url('images/blob.png'); /* Substitua pelo caminho da sua imagem */
+  background-size: cover;
+  background-position: center;
 }
