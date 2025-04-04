@@ -1,7 +1,15 @@
-.landing {
-  color: rgb(40, 108, 85);
-  position:absolute;
-  margin: 60px
+body {
+  font-family: Quicksand, sans-serif;
+  font-weight: 200;
+  margin: 0; /* Remove margens para ocupar toda a tela */
 }
 
-
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("images/blob.png"); /* Define a imagem de fundo */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita repetições */
+}
