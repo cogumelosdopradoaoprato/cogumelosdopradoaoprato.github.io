@@ -1,2 +1,4 @@
-# in devolpment
-Webpage for Mushrooms from 'Farm to Fork'
+IN DEVOLPMENT
+
+Project made for Mushrooms from 'Farm to Fork'
+Master's thesis
