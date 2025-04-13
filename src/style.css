@@ -5,39 +5,82 @@ body {
   background-color: #F0F0F0;
 }
 
-.nav-bar {
-  width: calc(100vw*0.90);
-  height: 5rem;
-  position: absolute;
+/* New navbar */
+/* Hamburger Button */
+.hamburger {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
   display: flex;
-  flex-direction: row;
-  z-index: 500;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 1001;
+  width: 30px;
+  height: 24px;
 }
 
-.nav-bar .logo img{
-  height: 100%;
-  object-fit: contain;
-}
-
-.nav-bar .links-list {
-  display: flex;
-  flex-direction: row;
+.bar {
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content:right;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+  transform-origin: center;
 }
 
-.nav-bar .links-list a {
-  background-color: #C5C5C5;
-  padding: 20px 60px;
-  border-radius: 10px;
-  margin: auto;
-  text-align: center;
-  font-weight: bold;
-  color: black;
-  text-decoration: none;
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  transition: 0.3s;
 }
+
+/* Side Menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: #2e2e2e;
+  opacity: 0.9;
+  color: white;
+  padding-top: 5rem;
+  transform: translateX(100%);
+  z-index: 1000;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: 2rem;
+}
+
+.side-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Logo Styling */
+.logo {
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  z-index: 1001;
+}
+
+.logo img {
+  width: 100px;
+  /* Adjust logo size */
+  height: auto;
+}
+
+
  /* Main page */
 .main {
   width: 100%;
@@ -247,12 +290,12 @@ body {
 .producao {
   display: flex;
   flex-direction: column;
-  padding: 6rem 0rem;
   height: calc(100vh*5);
 }
 
 .producao .container {
   height: 500vh;
+  position: relative;
 }
 
 .producao .container .content {
@@ -262,11 +305,9 @@ body {
   gap: 50px;
   max-width: 70%;
   align-self: center;
-  background-color: #C5C5C5;
   padding: 2rem;
-  border: 3px solid black;
   position: sticky;
-  top: 5rem;
+  top: 7rem;
   margin: auto;
 }
 
@@ -295,7 +336,7 @@ body {
   border-radius: 50%;
 }
 
-.circle-container {
+.producao .container .circle-container {
   position: fixed;
   bottom: -1200px;
   left: 50%;
@@ -310,3 +351,139 @@ body {
   justify-content: center;
   z-index: 10;
 }
+
+.producao .container .circle-image {
+  position: absolute;
+  transform-origin: center center;
+  transform: scale(0);
+}
+
+/* Producao - sections */
+
+.producao .container .section-first {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(62, 151, 235);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Section first - parallax */
+
+.producao .container .section-first .parallax {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.producao .container .section-first .parallax .grass-image {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.producao .container .section-first .parallax .clouds-image {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Section second */
+
+
+.producao .container .section-second {
+  width: 100%;
+  height: 100vh;
+  background-color: navy;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+}
+
+/* Section third */
+
+
+.producao .container .section-third {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(0, 128, 6);
+  position: absolute;
+  top: 200vh;
+  left: 0;
+}
+
+/* Section fourth */
+
+
+.producao .container .section-fourth {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(219, 241, 15);
+  position: absolute;
+  top: 300vh;
+  left: 0;
+}
+
+/* Section fifth */
+
+
+.producao .container .section-fifth {
+  width: 100%;
+  height: 140vh;
+  background-color: rgb(253, 25, 234);
+  position: absolute;
+  top: 400vh;
+  left: 0;
+}
+
+/* Producao - Content blocks */
+
+.producao .container .content.first {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.producao .container .content.second {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.producao .container .content.third {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.producao .container .content.fourth {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.producao .container .content.fifth {
+  transform: scale(0);
+  opacity: 0;
+}
+
+
+/* Section first - parallax */
+
+.producao .container .section-second .parallax {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.producao .container .section-second .parallax .grass-image {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.producao .container .section-second .parallax .clouds-image {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+

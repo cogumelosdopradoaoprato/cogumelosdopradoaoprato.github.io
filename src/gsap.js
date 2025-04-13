@@ -1,58 +1,225 @@
-    const circle = document.getElementById('circle');
-    const totalPoints = 5;
-    const pointTexts = [
-      "Conteúdo para o Ponto 1",
-      "Conteúdo para o Ponto 2",
-      "Conteúdo para o Ponto 3",
-      "Conteúdo para o Ponto 4",
-      "Conteúdo para o Ponto 5"
-    ];
+gsap.registerPlugin(ScrollTrigger);
 
-    let currentPoint = 0;
+gsap.to('.circle-image', {duration: 1.5, scale: 1, ease: "power3.out"})
 
-    // Função para calcular a posição dos pontos no círculo
-    function positionPoints() {
-      const radius = 730; // Raio do círculo
-      const centerX = 700; // Centro do círculo
-      const centerY = 700; // Centro do círculo
-      const angleStep = 360 / totalPoints; // O ângulo entre os pontos
+// Move the GIF from the bottom of the container to the top as you scroll
+gsap.fromTo(
+  ".circle-image",
+  {
+    rotation: "0", 
+  },
+  {
+    rotation: "360", 
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".producao .container",
+      start: "top top",
+      end: "130% bottom",
+      scrub: true,
+      smooth: 1,
+      //markers: true,
+    },
+  }
+);
 
-      const points = document.querySelectorAll('.circle-point');
+/* First content block */
 
-      points.forEach((point, index) => {
-        const angle = angleStep * index + 55;
-        const x = centerX + radius * Math.cos((angle * Math.PI) / 180);
-        const y = centerY + radius * Math.sin((angle * Math.PI) / 180);
-
-        point.style.left = `${x}px`;
-        point.style.top = `${y}px`;
-      });
+gsap.fromTo(
+  ".content.first",
+  {
+    scale: 0,
+    opacity: 0,
+  },
+  {
+    scale: 1,
+    opacity: 1,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".section-first",
+      start: "top 20%",
+      end: "bottom 60%",
+      scrub: false,
+      toggleActions: "play reverse play reverse", // scales in and out on scroll
+      //markers: true
     }
+  }
+);
 
-    // Função para lidar com o scroll e calcular a rotação
-    function handleScroll() {
-      const scrollPosition = window.scrollY;
-      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-
-      // Calcular a qual momento do scroll estamos (dividido em 5 partes)
-      const scrollPercentage = (scrollPosition / scrollHeight) * 100;
-      let targetPoint = Math.floor(scrollPercentage / (100 / totalPoints));
-
-      // Impedir que o ponto volte para o primeiro quando atingir o final
-      if (targetPoint >= totalPoints - 1) {
-        targetPoint = totalPoints - 1; // Manter no último ponto
-      }
-
-      // Animar a rotação usando GSAP
-      gsap.to(circle, {
-        rotation: targetPoint * 72,  // Cada ponto representa 72 graus
-        duration: 0.5,  // Duração da animação
-        ease: "power2.out"  // Suaviza a animação
-      });
+gsap.fromTo(
+  ".section-first .parallax .grass-image",
+  {
+    y: '100%',
+  },
+  {
+    y: '0%',
+    duration: 2,
+    delay: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".section-first",
+      start: "top 20%",
+      end: "bottom 60%",
+      scrub: false,
+      toggleActions: "play reverse play reverse", // scales in and out on scroll
+      //markers: true
     }
+  }
+);
 
-    // Escutar o evento de scroll
-    window.addEventListener('scroll', handleScroll);
+gsap.fromTo(
+  ".section-first .parallax .clouds-image",
+  {
+    y: '100%',
+  },
+  {
+    y: '20%',
+    duration: 3,
+    delay: 1.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".section-first",
+      start: "top 20%",
+      end: "bottom 60%",
+      scrub: false,
+      toggleActions: "play reverse play reverse", // scales in and out on scroll
+      //markers: true
+    }
+  }
+);
 
-    // Inicializar a posição dos pontos
-    positionPoints();
+/* Second content block */
+
+gsap.fromTo(
+  ".content.second",
+  {
+    scale: 0,
+    opacity: 0,
+  },
+  {
+    scale: 1,
+    opacity: 1,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".section-second",
+      start: "top 40%",
+      end: "bottom 60%",
+      scrub: false,
+      toggleActions: "play reverse play reverse", // scales in and out on scroll
+      //markers: true
+    }
+  }
+);
+
+gsap.fromTo(
+  ".section-second .parallax .grass-image",
+  {
+    y: '100%',
+  },
+  {
+    y: '0%',
+    duration: 2,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".section-second",
+      start: "top 20%",
+      end: "bottom 60%",
+      scrub: false,
+      toggleActions: "play reverse play reverse", // scales in and out on scroll
+      //markers: true
+    }
+  }
+);
+
+gsap.fromTo(
+  ".section-second .parallax .clouds-image",
+  {
+    y: '100%',
+  },
+  {
+    y: '20%',
+    duration: 3,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".section-second",
+      start: "top 20%",
+      end: "bottom 60%",
+      scrub: false,
+      toggleActions: "play reverse play reverse", // scales in and out on scroll
+      //markers: true
+    }
+  }
+);
+
+/* Third content block */
+
+gsap.fromTo(
+  ".content.third",
+  {
+    scale: 0,
+    opacity: 0,
+  },
+  {
+    scale: 1,
+    opacity: 1,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".section-third",
+      start: "top 40%",
+      end: "bottom 60%",
+      scrub: false,
+      toggleActions: "play reverse play reverse", // scales in and out on scroll
+      //markers: true
+    }
+  }
+);
+
+/* Fourth content block */
+
+gsap.fromTo(
+  ".content.fourth",
+  {
+    scale: 0,
+    opacity: 0,
+  },
+  {
+    scale: 1,
+    opacity: 1,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".section-fourth",
+      start: "top 40%",
+      end: "bottom 60%",
+      scrub: false,
+      toggleActions: "play reverse play reverse", // scales in and out on scroll
+      //markers: true
+    }
+  }
+);
+
+/* Fifth content block */
+
+gsap.fromTo(
+  ".content.fifth",
+  {
+    scale: 0,
+    opacity: 0,
+  },
+  {
+    scale: 1,
+    opacity: 1,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".section-fifth",
+      start: "top 40%",
+      end: "bottom 60%",
+      scrub: false,
+      toggleActions: "play reverse play reverse", // scales in and out on scroll
+      //markers: true
+    }
+  }
+);
