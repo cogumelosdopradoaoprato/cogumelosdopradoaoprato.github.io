@@ -577,8 +577,6 @@ body {
   width: 1500px;
   height: 1500px;
   border-radius: 50%;
-  background-color: #f8f8f8;
-  border: 2px solid #333;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -698,7 +696,7 @@ body {
 }
 
 
-/* Section first - parallax */
+/* Section second - parallax */
 
 .producao .container .section-second .parallax {
   width: 100%;
@@ -718,5 +716,68 @@ body {
   width: 100%;
 }
 
+/* Mobile view */
 
+@media (max-width: 768px) {
+
+  .producao .container .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
+      max-width: 100%;
+      align-self: center;
+      padding: 1rem;
+      position: sticky;
+      top: 5rem;
+      margin: auto;
+    }
+  .producao .container .content img {
+    max-width: 50%;
+    height: 100%;
+  }
+
+  .producao .container .content .text {
+    width: 50%;
+  }
+
+  .producao .container .content .text h2 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .producao .container .content .text p {
+    font-size: 1rem;
+  }
+
+  .producao .container .circle-container {
+    position: fixed;
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  .producao .container .circle-image {
+    position: absolute;
+    transform-origin: center center;
+    transform: scale(0);
+    height: 35rem;
+  }
+
+
+    /* Section fifth */
+    .producao .container .section-fifth {
+      width: 100%;
+      height: 100vh;
+      background-color: rgb(253, 25, 234);
+      position: absolute;
+      top: 400vh;
+      left: 0;
+    }
+}
 
