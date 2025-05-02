@@ -586,7 +586,8 @@ body {
 .producao .container .circle-image {
   position: absolute;
   transform-origin: center center;
-  transform: scale(0);
+  transform: scale(1);
+  max-height: 2400px;
 }
 
 /* Producao - sections */
@@ -714,6 +715,12 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+@media (max-height: 1000px) {
+  .producao .container .circle-image {
+    height: 250vh;
+  }
 }
 
 /* Mobile view */
