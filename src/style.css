@@ -1,8 +1,8 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f0f0f0;
+  font-family: "Onest", sans-serif;
+  background-color: #fef3e2;
 }
 
 /* New navbar */
@@ -23,7 +23,7 @@ body {
 .bar {
   width: 100%;
   height: 3px;
-  background-color: #333;
+  background-color: #f3c623;
   border-radius: 2px;
   transform-origin: center;
 }
@@ -31,7 +31,7 @@ body {
 .hamburger span {
   width: 30px;
   height: 3px;
-  background-color: #333;
+  color: #f3c623;
   transition: 0.3s;
 }
 
@@ -42,12 +42,12 @@ body {
   right: 0;
   width: 300px;
   height: 100vh;
-  background-color: #2e2e2e;
-  opacity: 0.9;
-  color: white;
+  margin-top: auto;
+  background-color: #ccde54;
+  opacity: 0.7;
   padding-top: 5rem;
   transform: translateX(100%);
-  z-index: 1000;
+  z-index: 900px;
 }
 
 .side-menu ul {
@@ -61,9 +61,10 @@ body {
 }
 
 .side-menu ul li a {
-  color: white;
+  color: #242e0f;
   text-decoration: none;
   font-size: 1.2rem;
+  font-weight: 600;
 }
 
 /* Logo Styling */
@@ -71,16 +72,18 @@ body {
   position: fixed;
   top: 0rem;
   left: 0rem;
-  z-index: 1001;
+  z-index: 1000;
+  padding: 5px;
 }
 
 .logo img {
-  width: 100px;
+  width: 120px;
   /* Adjust logo size */
   height: auto;
 }
 
 /* Main page */
+/*Main Desktop*/
 .main.desktop {
   width: 100%;
   height: 100vh;
@@ -91,29 +94,9 @@ body {
   overflow: hidden;
 }
 
-.main.mobile {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  display: none;
-}
-
 .main.desktop .center {
   width: 90%;
   height: 90%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.main.mobile .center {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -133,31 +116,10 @@ body {
   position: relative;
 }
 
-.main.mobile .center .center-image {
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/blob.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
 .main.desktop .center .cogu-main {
   position: absolute;
   transform: translateY(20px);
   width: 40%;
-  z-index: 2;
-}
-
-.main.mobile .center .cogu-main {
-  position: absolute;
-  transform: translateY(20px);
-  width: 80%;
   z-index: 2;
 }
 
@@ -173,23 +135,6 @@ body {
   top: 0;
   font-weight: bold;
   border-radius: 20px;
-  z-index: 3;
-  color: black;
-  text-decoration: none;
-}
-
-.main.mobile .center .button1 {
-  position: absolute;
-  background-color: #c5c5c5;
-  padding: 0.2em 1em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  right: 5%;
-  top: 30%;
-  font-weight: bold;
-  border-radius: 15px;
   z-index: 3;
   color: black;
   text-decoration: none;
@@ -212,23 +157,6 @@ body {
   text-decoration: none;
 }
 
-.main.mobile .center .button2 {
-  position: absolute;
-  background-color: #c5c5c5;
-  padding: 0.2em 1em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  left: 5%;
-  top: 60%;
-  font-weight: bold;
-  border-radius: 15px;
-  z-index: 3;
-  color: black;
-  text-decoration: none;
-}
-
 .main.desktop .center .button3 {
   position: absolute;
   background-color: #c5c5c5;
@@ -241,6 +169,82 @@ body {
   bottom: 0;
   font-weight: bold;
   border-radius: 20px;
+  z-index: 3;
+  color: black;
+  text-decoration: none;
+}
+
+/*Main Mobile*/
+.main.mobile {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  display: none;
+}
+
+.main.mobile .center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.main.mobile .center .center-image {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/blob.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main.mobile .center .cogu-main {
+  position: absolute;
+  transform: translateY(20px);
+  width: 80%;
+  z-index: 2;
+}
+
+.main.mobile .center .button1 {
+  position: absolute;
+  background-color: #c5c5c5;
+  padding: 0.2em 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  right: 5%;
+  top: 30%;
+  font-weight: bold;
+  border-radius: 15px;
+  z-index: 3;
+  color: black;
+  text-decoration: none;
+}
+
+.main.mobile .center .button2 {
+  position: absolute;
+  background-color: #c5c5c5;
+  padding: 0.2em 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  left: 5%;
+  top: 60%;
+  font-weight: bold;
+  border-radius: 15px;
   z-index: 3;
   color: black;
   text-decoration: none;
@@ -302,34 +306,45 @@ body {
   display: flex;
   flex-direction: row; /* Texto e imagem lado a lado */
   align-items: center; /* Alinha a imagem e o texto verticalmente */
-  gap: 3rem; /* Espaço maior entre a imagem e o texto */
+  gap: 3rem;
   justify-content: center; /* Garante que o conteúdo do cogumelo seja centralizado */
 }
 
 .cogumelos.desktop .container img {
-  height: 24rem; /* Aumenta o tamanho das imagens para dar mais destaque */
-  width: auto; /* Mantém a proporção das imagens */
+  /*Mudar aqui o tamanho com base na gif feita */
+  height: 35rem;
+  width: auto;
 }
 
 .cogumelos.desktop .container .cogumelo .text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 50%; /* Limita a largura do texto para que ele ocupe menos espaço */
-  align-items: center; /* Centraliza o texto dentro da coluna */
 }
 
 .cogumelos.desktop .container .cogumelo .text h2 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.1rem;
+}
+.cogumelos.desktop .container .cogumelo .text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.cogumelos.desktop .container .cogumelo .text h3 i {
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  font-weight: 200;
 }
 
 .cogumelos.desktop .container .cogumelo .text p {
-  font-size: 1rem;
+  font-size: 3rem;
   margin-top: 1rem;
   line-height: 1.6;
   max-height: 12rem; /* Limita a altura do parágrafo para evitar que o texto ocupe muito espaço */
   overflow: hidden; /* Esconde o texto extra */
+  justify-content: center;
+  align-items: center; /* Centraliza o texto dentro da coluna */
 }
 
 /* Especificidade para inverter a ordem do Cogumelo Juba de Leão */
@@ -405,6 +420,7 @@ body {
 }
 
 /* Sobre nós page */
+/*Sobre Desktop*/
 
 .sobre.desktop {
   display: flex;
@@ -412,20 +428,8 @@ body {
   padding: 10rem 0rem;
 }
 
-.sobre.mobile {
-  display: flex;
-  flex-direction: column;
-  padding: 5rem 0rem;
-  display: none;
-}
-
 .sobre.desktop .sob-title {
   font-size: 4rem;
-  text-align: center;
-}
-
-.sobre.mobile .sob-title {
-  font-size: 2rem;
   text-align: center;
 }
 
@@ -435,16 +439,130 @@ body {
   margin: 0px 180px;
 }
 
-.sobre.mobile .container {
-  display: flex;
-  flex-direction: column;
-  margin: 0px 10px;
-}
-
 .sobre.desktop .container .header {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.sobre.desktop .container .header .text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 40px;
+}
+
+.sobre.desktop .container .header .text p {
+  font-size: 1.5rem;
+}
+
+.sobre.desktop .container .bodytext {
+  margin: 40px 0px;
+  padding: 40px 0px;
+  font-size: 1.5rem;
+}
+
+.sobre.desktop .container .wide-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.sobre.desktop .container .sponsors h2 {
+  margin: 4rem 0rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.sobre.desktop .container .sponsors h3 {
+  margin-top: 3.5rem;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #9aaf10;
+}
+
+.sobre.desktop .container .sponsors .grid-sponsor {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, auto);
+  align-items: center;
+  justify-content: center;
+}
+
+.sobre.desktop .container .grid-sponsor img {
+  width: 7rem;
+  height: auto;
+  padding: 0;
+  margin: 1rem;
+  justify-content: center;
+}
+
+.sobre.desktop .container .sponsors .grid-finance {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, auto);
+  align-items: center;
+  justify-content: center;
+}
+
+.sobre.desktop .container .grid-finance img {
+  width: 15rem;
+  height: auto;
+  padding: 0;
+  justify-content: center;
+}
+
+.sobre.desktop .container .sponsors .grid-coord {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, auto);
+  align-items: center;
+  justify-content: center;
+}
+
+.sobre.desktop .container .grid-coord img {
+  width: 10rem;
+  height: auto;
+  padding: 0;
+  margin: 1rem;
+  justify-content: center;
+}
+
+.sobre.desktop .container .sponsors .grid-pos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, auto);
+  align-items: center;
+  justify-content: center;
+}
+
+.sobre.desktop .container .grid-pos img {
+  width: 10rem;
+  height: auto;
+  padding: 0;
+  margin: 1rem;
+  justify-content: center;
+}
+
+/*Sobre Mobile*/
+
+.sobre.mobile {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 0rem;
+  display: none;
+}
+
+.sobre.mobile .sob-title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.sobre.mobile .container {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 10px;
 }
 
 .sobre.mobile .container .header {
@@ -459,34 +577,6 @@ body {
   margin: auto 0;
 }
 
-.sobre.desktop .container .header .text {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 40px;
-}
-
-.sobre.desktop .container .header .text p {
-  font-size: 1.1rem;
-}
-
-.sobre.desktop .container .sub-header {
-  margin: 40px 0px;
-  padding: 40px 0px;
-}
-
-.sobre.desktop .container .sub-content {
-  margin: 20px 0px;
-  padding: 20px 0px;
-}
-
-.sobre.desktop .container .wide-image {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
 .sobre.mobile .container .wide-image {
   display: flex;
   flex-direction: row;
@@ -497,27 +587,10 @@ body {
   width: 100%;
   margin: 1rem 0px;
 }
-
-.sobre.desktop .container .sponsors h2 {
-  margin: 4rem 0rem;
-  font-size: 3rem;
-  text-align: center;
-}
-
 .sobre.mobile .container .sponsors h2 {
   margin: 1rem 0rem;
   font-size: 2rem;
   text-align: center;
-}
-
-.sobre.desktop .container .sponsors .grid {
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  /* 9 equal columns */
-  grid-template-rows: repeat(3, auto);
-  /* 3 rows, auto height */
-  gap: 10px;
-  /* optional: space between cells */
 }
 
 .sobre.mobile .container .sponsors .grid {
@@ -528,11 +601,6 @@ body {
   /* 3 rows, auto height */
   gap: 10px;
   /* optional: space between cells */
-}
-
-.sobre.desktop .container .sponsors .grid img {
-  padding: 0;
-  margin: auto;
 }
 
 .sobre.mobile .container .sponsors .grid img {
