@@ -317,13 +317,17 @@ body {
 
 .cogumelos.mobile .container .cogumelo {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: 1rem 0rem;
+  align-items: center;
+  text-align: center;
 }
 
-.cogumelos.mobile .container img {
-  height: 10rem;
-  margin: auto 0;
+.cogumelos.mobile .container .cogumelo img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  margin-bottom: 1rem;
 }
 
 .cogumelos.desktop .container .cogumelo .text {
@@ -337,7 +341,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0px 10px;
+  padding: 0 1rem;
 }
 
 .cogumelos.desktop .container .cogumelo .text h2 {
