@@ -280,7 +280,7 @@ body {
 
 .cogumelos.desktop {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding-top: 10rem;
 }
 
@@ -302,7 +302,7 @@ body {
 
 .cogumelos.desktop .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .cogumelos.mobile .container {
@@ -313,6 +313,7 @@ body {
 .cogumelos.desktop .container .cogumelo {
   display: flex;
   flex-direction: row;
+  margin-bottom: 2rem;
 }
 
 .cogumelos.mobile .container .cogumelo {
@@ -323,16 +324,22 @@ body {
   text-align: center;
 }
 
+.cogumelos.desktop .container img {
+  height: 18rem;
+  margin: auto 0;
+}
+
 .cogumelos.mobile .container img {
-  height: 10rem;
+  height: 12rem;
   margin: auto 0;
 }
 
 .cogumelos.desktop .container .cogumelo .text {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  margin: 0px 40px;
+  margin-left:2rem;
+margin-right: 2rem;
 }
 
 .cogumelos.mobile .container .cogumelo .text {
@@ -352,7 +359,8 @@ body {
 }
 
 .cogumelos.desktop .container .cogumelo .text p {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  margin: 0;
 }
 
 .cogumelos.mobile .container .cogumelo .text p {
@@ -366,7 +374,6 @@ body {
   .cogumelos.desktop {
     display: none;
   }
-
   .cogumelos.mobile {
     display: flex;
   }
