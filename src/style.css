@@ -330,14 +330,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0px 40px;
+  margin: 0px 150px;
 }
 
 .cogumelos.mobile .container .cogumelo .text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0px 10px;
+  padding: 0px 100px;
 }
 
 .cogumelos.desktop .container .cogumelo .text h2 {
