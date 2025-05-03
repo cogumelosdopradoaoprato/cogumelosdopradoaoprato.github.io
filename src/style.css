@@ -266,7 +266,7 @@ body {
 
 /* Mobile view */
 
-@media (max-width: 768px) {
+@media (min-width: 300px) {
   .main.desktop {
     display: none;
   }
@@ -360,7 +360,7 @@ body {
 
 /* Mobile view */
 
-@media (max-width: 768px) {
+@media (min-width: 300px) {
   .cogumelos.desktop {
     display: none;
   }
@@ -508,7 +508,7 @@ body {
 
 /* Mobile view */
 
-@media (max-width: 768px) {
+@media (min-width: 300px) {
   .sobre.desktop {
     display: none;
   }
@@ -725,7 +725,7 @@ body {
 
 /* Mobile view */
 
-@media (max-width: 768px) {
+@media (min-width: 300px) {
 
   .producao .container .content {
       display: flex;
