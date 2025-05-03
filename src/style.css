@@ -323,11 +323,9 @@ body {
   text-align: center;
 }
 
-.cogumelos.mobile .container .cogumelo img {
-  width: 100%;
-  height: auto;
-  max-width: 300px;
-  margin-bottom: 1rem;
+.cogumelos.mobile .container img {
+  height: 10rem;
+  margin: auto 0;
 }
 
 .cogumelos.desktop .container .cogumelo .text {
@@ -341,7 +339,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 1rem;
+  padding: 0px 10px;
 }
 
 .cogumelos.desktop .container .cogumelo .text h2 {
@@ -512,7 +510,7 @@ body {
 
 /* Mobile view */
 
-@media (min-width: 300px) {
+@media (max-width: 768px) {
   .sobre.desktop {
     display: none;
   }
@@ -591,7 +589,7 @@ body {
   position: absolute;
   transform-origin: center center;
   transform: scale(1);
-  max-height: 2400px;
+  max-height: 2000px;
 }
 
 /* Producao - sections */
@@ -729,7 +727,7 @@ body {
 
 /* Mobile view */
 
-@media (min-width: 300px) {
+@media (max-width: 768px) {
 
   .producao .container .content {
       display: flex;
@@ -791,4 +789,3 @@ body {
       left: 0;
     }
 }
-
