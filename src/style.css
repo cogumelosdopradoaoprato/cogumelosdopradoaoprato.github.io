@@ -317,9 +317,10 @@ body {
 
 .cogumelos.mobile .container .cogumelo {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   margin: 1rem 0rem;
-}
+  text-align: center;
 
 .cogumelos.mobile .container img {
   height: 10rem;
