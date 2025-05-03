@@ -317,30 +317,27 @@ body {
 
 .cogumelos.mobile .container .cogumelo {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1rem 0;
-  text-align: center;
+  flex-direction: row;
+  margin: 1rem 0rem;
+}
 
-.cogumelos.mobile .container .cogumelo img {
-  height: auto;
-  width: 100%;
-  margin-bottom: 1rem;
+.cogumelos.mobile .container img {
+  height: 10rem;
+  margin: auto 0;
 }
 
 .cogumelos.desktop .container .cogumelo .text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0px 150px;
+  margin: 0px 40px;
 }
 
 .cogumelos.mobile .container .cogumelo .text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-  padding: 0 1rem;
+  padding: 0px 10px;
 }
 
 .cogumelos.desktop .container .cogumelo .text h2 {
@@ -370,8 +367,6 @@ body {
 
   .cogumelos.mobile {
     display: flex;
-    flex-direction: column;
-    padding-top: 5rem;  
   }
 }
 
