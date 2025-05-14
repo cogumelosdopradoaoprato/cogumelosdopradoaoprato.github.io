@@ -47,7 +47,7 @@ body {
   opacity: 0.7;
   padding-top: 5rem;
   transform: translateX(100%);
-  z-index: 900px;
+  z-index: 999;
 }
 
 .side-menu ul {
@@ -673,7 +673,7 @@ body {
 
 .producao .container .circle-container {
   position: fixed;
-  bottom: -1200px;
+  bottom: -200px;
   left: 50%;
   transform: translateX(-50%);
   width: 1500px;
@@ -688,7 +688,7 @@ body {
 .producao .container .circle-image {
   position: absolute;
   transform-origin: center center;
-  transform: scale(1);
+  transform: scale(0);
   max-height: 2000px;
 }
 
@@ -855,7 +855,7 @@ body {
 
   .producao .container .circle-container {
     position: fixed;
-    bottom: -50%;
+    bottom: -0%;
     left: 50%;
     transform: translateX(-50%);
     height: 100%;

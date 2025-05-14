@@ -6,7 +6,17 @@ function isMobile() {
 
 if (isMobile()) {
   // Show mobile view
-  gsap.to('.circle-image', {duration: 1.5, scale: 1, ease: "power3.out"})
+  //gsap.to('.circle-image', {duration: 1.5, scale: 1, ease: "power3.out"})
+
+  gsap.to(".circle-image", {
+      duration: 1.5,
+      scale: 0.6,
+      ease: "power3.out",
+      onComplete: () => {
+        gsap.to(".circle-image", { duration: 1, scale: 1 })
+        gsap.to(".circle-container", { duration: 1, bottom: "-50%" })
+      }
+  });
 
   // Move the GIF from the bottom of the container to the top as you scroll
   gsap.fromTo(
@@ -40,6 +50,7 @@ if (isMobile()) {
       scale: 1,
       opacity: 1,
       duration: 1,
+      delay: 3,
       ease: "power2.out",
       scrollTrigger: {
         trigger: ".section-first",
@@ -60,7 +71,7 @@ if (isMobile()) {
     {
       y: '0%',
       duration: 2,
-      delay: 0.5,
+      delay: 2,
       ease: "power2.out",
       scrollTrigger: {
         trigger: ".section-first",
@@ -81,7 +92,7 @@ if (isMobile()) {
     {
       y: '20%',
       duration: 3,
-      delay: 1.5,
+      delay: 3,
       ease: "power2.out",
       scrollTrigger: {
         trigger: ".section-first",
@@ -231,7 +242,17 @@ if (isMobile()) {
   );
 } else {
   // Show desktop view
-  gsap.to('.circle-image', {duration: 1.5, scale: 1, ease: "power3.out"})
+  //gsap.to('.circle-image', {duration: 1.5, scale: 1, ease: "power3.out"})
+
+  gsap.to(".circle-image", {
+    duration: 1.5,
+    scale: 0.6,
+    ease: "power3.out",
+    onComplete: () => {
+      gsap.to(".circle-image", { duration: 1, scale: 1 })
+      gsap.to(".circle-container", { duration: 1, bottom: "-1200px" })
+    }
+  });
 
   // Move the GIF from the bottom of the container to the top as you scroll
   gsap.fromTo(
@@ -265,6 +286,7 @@ if (isMobile()) {
       scale: 1,
       opacity: 1,
       duration: 1,
+      delay: 3,
       ease: "power2.out",
       scrollTrigger: {
         trigger: ".section-first",
@@ -285,7 +307,7 @@ if (isMobile()) {
     {
       y: '0%',
       duration: 2,
-      delay: 0.5,
+      delay: 2,
       ease: "power2.out",
       scrollTrigger: {
         trigger: ".section-first",
@@ -306,7 +328,7 @@ if (isMobile()) {
     {
       y: '20%',
       duration: 3,
-      delay: 1.5,
+      delay: 3,
       ease: "power2.out",
       scrollTrigger: {
         trigger: ".section-first",
