@@ -1,9 +1,58 @@
+/* Import fonts */
+.londrina {
+  font-family: "Londrina Solid", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Global style variables to use along the code */
+:root {
+  /* Titles */
+  --ft-londrina: "Londrina", sans-serif;
+  --ft-inter: "Inter", sans-serif;
+  /* Sub-titles */
+  /* Satoshi font has to be downloaded and imported. This video will help: https://youtu.be/lDip-1VnaOA?t=94 */
+  --ft-inter: "Inter", sans-serif;
+  /* Contrast */
+  --ct-laranja: #fe6731;
+  --ct-amarelo: #ffd816;
+  --ct-azul: #0074ff;
+  --ct-verde: #00b552;
+  --ct-rosa: #ff9bc0;
+  /* Backgrounds */
+  --bg-creme: #fff6e7;
+  --bg-branco: #ffffff;
+}
+
+/*Cursor*/
+* {
+  cursor: url("../images/Normal.cur"), default;
+}
+* a {
+  cursor: url("../images/Select.cur"), pointer;
+}
+
+/* Basic settings for the whole website */
+
 body {
   padding: 0;
   margin: 0;
-  font-family: "Onest", sans-serif;
-  background-color:#f3c681;
+  font-family: var(--ft-inter);
+  font-weight: 100;
+  background-color: var(--bg-creme);
 }
+
+/* ----------------------------------------------------------------------- 
+   Hamburger menu styles 
+   This section defines the styles for the hamburger menu, and the navbar
+   present in different pages of the website
+   ----------------------------------------------------------------------- */
 
 /* New navbar */
 /* Hamburger Button */
@@ -43,7 +92,7 @@ body {
   width: 300px;
   height: 100vh;
   margin-top: auto;
-  background-color:#46a35a;
+  background-color: #46a35a;
   opacity: 0.7;
   padding-top: 5rem;
   transform: translateX(100%);
@@ -67,6 +116,17 @@ body {
   font-weight: 600;
 }
 
+@media (max-width: 768px) {
+  .hamburger {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .side-menu {
+    width: 80%;
+  }
+}
+
 /* Logo Styling */
 .logo {
   position: fixed;
@@ -82,9 +142,13 @@ body {
   height: auto;
 }
 
-/* Main page */
-/*Main Desktop*/
-.main.desktop {
+/* ----------------------------------------------------------------------- 
+   Main page styles 
+   This section defines the styles for the "Main" page of the website
+ ----------------------------------------------------------------------- */
+
+/* Main wrapper of all the content of the website */
+.main {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -94,17 +158,20 @@ body {
   overflow: hidden;
 }
 
-.main.desktop .center {
-  width: 90%;
-  height: 90%;
+/* Contains the center image with the buttons and the little guys */
+.main .center {
+  width: 80%;
+  height: 80%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.main.desktop .center .center-image {
-  width: 80%;
+/* Contains the grey background and the 3 buttons */
+.main .center .center-image {
+  width: 100%;
+  height: 100%;
   background-image: url("../images/blob.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -116,172 +183,124 @@ body {
   position: relative;
 }
 
-.main.desktop .center .cogu-main {
+/* Little guys */
+.main .center .cogu-main {
   position: absolute;
   transform: translateY(20px);
   width: 40%;
   z-index: 2;
 }
 
-.main.desktop .center .button1 {
+/* Styles for the buttons */
+.main .center a {
   position: absolute;
-  background-color: #9ae06b;
-  padding: 1em 3em;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  right: 10%;
+  padding: 1em 3em;
+  z-index: 3;
+  border-radius: 20px;
+  background-color: var(--ct-laranja);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Positioning for the button 1 */
+.main .center .button1 {
+  right: 15%;
   top: 0;
-  font-weight: bold;
-  border-radius: 20px;
-  z-index: 3;
-  color: black;
-  text-decoration: none;
 }
 
-.main.desktop .center .button2 {
-  position: absolute;
-  background-color: #9ae06b;
-  padding: 1em 3em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  left: 5%;
-  top: 50%;
-  font-weight: bold;
-  border-radius: 20px;
-  z-index: 3;
-  color: black;
-  text-decoration: none;
+/* Positioning for the button 2 */
+.main .center .button2 {
+  right: 60%;
+  top: 60%;
 }
 
-.main.desktop .center .button3 {
-  position: absolute;
-  background-color: #9ae06b;
-  padding: 1em 3em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+/* Positioning for the button 3 */
+.main .center .button3 {
   right: 20%;
   bottom: 0;
-  font-weight: bold;
-  border-radius: 20px;
-  z-index: 3;
-  color: black;
-  text-decoration: none;
 }
 
-/*Main Mobile*/
-.main.mobile {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  display: none;
-}
+/* Mobile view of Main page */
+/* Ajuste para telas médias */
+@media (min-width:769px) and (max-width: 1024px) {
+  .main .center {
+    width: 90%;
+    height: 90%;
+  }
 
-.main.mobile .center {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
+  .main .center a {
+    padding: 0.8em 2em;
+    font-size: 0.9rem;
+  }
 
-.main.mobile .center .center-image {
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/blob.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
+  /* Positioning for the button 1 */
+  .main .center .button1 {
+    right: 5%;
+    top: 15%;
+  }
 
-.main.mobile .center .cogu-main {
-  position: absolute;
-  transform: translateY(20px);
-  width: 80%;
-  z-index: 2;
-}
+  /* Positioning for the button 2 */
+  .main .center .button2 {
+    left: 0;
+    top: 60%;
+  }
 
-.main.mobile .center .button1 {
-  position: absolute;
-  background-color: #9ae06b;
-  padding: 0.2em 1em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  right: 5%;
-  top: 30%;
-  font-weight: bold;
-  border-radius: 15px;
-  z-index: 3;
-  color: black;
-  text-decoration: none;
+  /* Positioning for the button 3 */
+  .main .center .button3 {
+    right: 10%;
+    bottom: 20%;
+  }
 }
-
-.main.mobile .center .button2 {
-  position: absolute;
-  background-color: #9ae06b;
-  padding: 0.2em 1em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  left: 5%;
-  top: 60%;
-  font-weight: bold;
-  border-radius: 15px;
-  z-index: 3;
-  color: black;
-  text-decoration: none;
-}
-
-.main.mobile .center .button3 {
-  position: absolute;
-  background-color: #9ae06b;
-  padding: 0.2em 1em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  right: 5%;
-  bottom: 30%;
-  font-weight: bold;
-  border-radius: 15px;
-  z-index: 3;
-  color: black;
-  text-decoration: none;
-}
-
-/* Mobile view */
 
 @media (max-width: 768px) {
-  .main.desktop {
-    display: none;
+  .main .center {
+    width: 100%;
+    height: 100%;
   }
-  .main.mobile {
-    display: block;
+
+  .main .center .cogu-main {
+    width: 60%;
+    right: 25%;
+  }
+
+  .main .center a {
+    padding: 0.2em 1em;
+    border-radius: 15px;
+    transform: translateY(200px);
+  }
+
+  .main .center .button1 {
+    position: relative;
+    right: initial;
+    top: initial;
+    margin: 0px 30px;
+  }
+
+  .main .center .button2 {
+    position: relative;
+    left: initial;
+    top: initial;
+  }
+
+  .main .center .button3 {
+    position: relative;
+    right: initial;
+    top: initial;
   }
 }
 
-/* Cogumelos page */
+/* ----------------------------------------------------------------------- 
+   Os Cogumelos page styles 
+   This section defines the styles for the "Os Cogumelos" page of the website
+ ----------------------------------------------------------------------- */
 
-/* Cogumelos Desktop */
-.cogumelos.desktop {
+/* Wrapper for all the content of the page */
+.cogumelos {
   display: flex;
   flex-direction: column;
   padding-top: 10rem;
@@ -289,20 +308,23 @@ body {
   justify-content: center; /* Centraliza os itens dentro da container verticalmente */
 }
 
-.cogumelos.desktop .cog-title {
+/* Main title of the page */
+.cogumelos .cog-title {
   font-size: 4rem;
   text-align: center;
   margin-bottom: 2rem;
 }
 
-.cogumelos.desktop .container {
+/* Container of all 3 sections with the different mushrooms */
+.cogumelos .container {
   display: flex;
   flex-direction: column;
   gap: 4rem; /* Aumenta o espaçamento entre as seções */
   align-items: center; /* Centraliza os itens horizontalmente */
 }
 
-.cogumelos.desktop .container .cogumelo {
+/* Individual containers for each mushrooms */
+.cogumelos .container .cogumelo {
   display: flex;
   flex-direction: row; /* Texto e imagem lado a lado */
   align-items: center; /* Alinha a imagem e o texto verticalmente */
@@ -310,34 +332,41 @@ body {
   justify-content: center; /* Garante que o conteúdo do cogumelo seja centralizado */
 }
 
-.cogumelos.desktop .container img {
-  /*Mudar aqui o tamanho com base na gif feita */
+/* Dimensions of the mushroom images */
+.cogumelos .container img {
+  /* Mudar aqui o tamanho com base na gif feita */
   height: 35rem;
   width: auto;
 }
 
-.cogumelos.desktop .container .cogumelo .text {
+/* Text section of every mushroom container */
+.cogumelos .container .cogumelo .text {
   display: flex;
   flex-direction: column;
   width: 50%; /* Limita a largura do texto para que ele ocupe menos espaço */
 }
 
-.cogumelos.desktop .container .cogumelo .text h2 {
+/* Title of the mushroom text */
+.cogumelos .container .cogumelo .text h2 {
   font-size: 2.5rem;
   margin-bottom: 0.1rem;
 }
-.cogumelos.desktop .container .cogumelo .text h3 {
+
+/* Description title */
+.cogumelos .container .cogumelo .text h3 {
   font-size: 1.5rem;
   margin-bottom: 0;
 }
 
-.cogumelos.desktop .container .cogumelo .text h3 i {
+/* Sub-title of the mushroom text */
+.cogumelos .container .cogumelo .text h3 i {
   font-size: 1.5rem;
   margin-top: 3rem;
   font-weight: 200;
 }
 
-.cogumelos.desktop .container .cogumelo .text p {
+/* Individual paragraphs */
+.cogumelos .container .cogumelo .text p {
   font-size: 3rem;
   margin-top: 1rem;
   line-height: 1.6;
@@ -348,104 +377,87 @@ body {
 }
 
 /* Especificidade para inverter a ordem do Cogumelo Juba de Leão */
-.cogumelos.desktop .container .cogumelo:nth-child(2) {
+.cogumelos .container .cogumelo:nth-child(2) {
   flex-direction: row-reverse; /* Inverte a ordem apenas para o segundo cogumelo (Juba de Leão) */
 }
 
-/* Mobile Version */
-.cogumelos.mobile {
-  flex-direction: column;
-  padding-top: 2rem;
-  display: none;
-}
-
-.cogumelos.mobile .cog-title {
-  font-size: 2.2rem;
-  text-align: center;
-}
-
-.cogumelos.mobile .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.cogumelos.mobile .container .cogumelo {
-  display: flex;
-  flex-direction: column;
-  margin: 0.5rem 0;
-  align-items: center;
-  text-align: center;
-}
-
-.cogumelos.mobile .container img {
-  height: 25rem;
-  margin: auto 0;
-}
-
-.cogumelos.mobile .container .cogumelo .text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0px 25px;
-}
-
-.cogumelos.mobile .container .cogumelo .text h2 {
-  font-size: 1.5rem;
-  margin: 0;
-}
-
-.cogumelos.mobile .container .cogumelo .text p {
-  font-size: 0.9rem;
-  margin: 0.5rem;
-}
-
 /* Mobile view */
-@media (min-width: 320px) {
-  .cogumelos.desktop {
-    display: none;
+
+@media (max-width: 1240px) {
+  .cogumelos {
+    padding-top: 2rem;
   }
-  .cogumelos.mobile {
-    display: flex;
+
+  .cogumelos .cog-title {
+    font-size: 2.2rem;
+  }
+
+  .cogumelos .container .cogumelo {
+    flex-direction: column;
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+
+  .cogumelos .container img {
+    height: 25rem;
+    margin: auto 0;
+  }
+
+  .cogumelos .container .cogumelo .text {
+    justify-content: center;
+    padding: 0px 25px;
+  }
+
+  .cogumelos .container .cogumelo .text h2 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .cogumelos .container .cogumelo .text p {
+    font-size: 0.9rem;
+    margin: 0.5rem;
+  }
+
+  /* In mobile view, all the mushrooms are ordered vertically */
+  .cogumelos .container .cogumelo:nth-child(2) {
+    flex-direction: column; /* Ordered vertically */
   }
 }
 
-@media (min-width: 1024px) {
-  .cogumelos.mobile {
-    display: none;
-  }
-  .cogumelos.desktop {
-    display: flex;
-  }
-}
+/* ----------------------------------------------------------------------- 
+   Sobre nós page styles 
+   This section defines the styles for the "Sobre nós" page of the website
+ ----------------------------------------------------------------------- */
 
-/* Sobre nós page */
-/*Sobre Desktop*/
-
-.sobre.desktop {
+/* Main wrapper for the content of the page */
+.sobre {
   display: flex;
   flex-direction: column;
   padding: 10rem 0rem;
 }
 
-.sobre.desktop .sob-title {
+/* Main title of the page */
+.sobre .sob-title {
   font-size: 4rem;
   text-align: center;
 }
 
-.sobre.desktop .container {
+/* Wrapper for the content and images */
+.sobre .container {
   display: flex;
   flex-direction: column;
   margin: 0px 180px;
 }
 
-.sobre.desktop .container .header {
+/* First section the page */
+.sobre .container .header {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.sobre.desktop .container .header .text {
+/* Text of the first section */
+.sobre .container .header .text {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -453,36 +465,35 @@ body {
   margin: 40px;
 }
 
-.sobre.desktop .container .header .text p {
+/* Paragraphs of the first section*/
+.sobre .container .header .text p {
   font-size: 1.5rem;
 }
 
-.sobre.desktop .container .bodytext {
+/* Text container of individual sections */
+.sobre .container .bodytext {
   margin: 40px 0px;
   padding: 40px 0px;
   font-size: 1.5rem;
 }
 
-.sobre.desktop .container .wide-image {
+/* Wide banner */
+.sobre .container .wide-image {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.sobre.desktop .container .sponsors h2 {
-  margin: 4rem 0rem;
-  font-size: 3rem;
-  text-align: center;
-}
-
-.sobre.desktop .container .sponsors h3 {
+/* Title of sponsors */
+.sobre .container .sponsors h3 {
   margin-top: 3.5rem;
   font-size: 2.5rem;
   text-align: center;
   color: #9aaf10;
 }
 
-.sobre.desktop .container .sponsors .grid-sponsor {
+/* Sponsors grid */
+.sobre .container .sponsors .grid-sponsor {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(2, auto);
@@ -490,7 +501,8 @@ body {
   justify-content: center;
 }
 
-.sobre.desktop .container .grid-sponsor img {
+/* Sponsors images */
+.sobre .container .grid-sponsor img {
   width: 7rem;
   height: auto;
   padding: 0;
@@ -498,7 +510,8 @@ body {
   justify-content: center;
 }
 
-.sobre.desktop .container .sponsors .grid-finance {
+/* Finance grid*/
+.sobre .container .sponsors .grid-finance {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(1, auto);
@@ -506,14 +519,16 @@ body {
   justify-content: center;
 }
 
-.sobre.desktop .container .grid-finance img {
+/* Finance images */
+.sobre .container .grid-finance img {
   width: 15rem;
   height: auto;
   padding: 0;
   justify-content: center;
 }
 
-.sobre.desktop .container .sponsors .grid-coord {
+/* Coordination grid */
+.sobre .container .sponsors .grid-coord {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(1, auto);
@@ -521,7 +536,8 @@ body {
   justify-content: center;
 }
 
-.sobre.desktop .container .grid-coord img {
+/* Coordination images */
+.sobre .container .grid-coord img {
   width: 10rem;
   height: auto;
   padding: 0;
@@ -529,7 +545,8 @@ body {
   justify-content: center;
 }
 
-.sobre.desktop .container .sponsors .grid-pos {
+/* Post-project grid */
+.sobre .container .sponsors .grid-pos {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(1, auto);
@@ -537,7 +554,8 @@ body {
   justify-content: center;
 }
 
-.sobre.desktop .container .grid-pos img {
+/* Post-project images */
+.sobre .container .grid-pos img {
   width: 10rem;
   height: auto;
   padding: 0;
@@ -545,94 +563,113 @@ body {
   justify-content: center;
 }
 
-/*Sobre Mobile*/
-
-.sobre.mobile {
-  display: flex;
-  flex-direction: column;
-  padding: 5rem 0rem;
-  display: none;
-}
-
-.sobre.mobile .sob-title {
-  font-size: 2rem;
-  text-align: center;
-}
-
-.sobre.mobile .container {
-  display: flex;
-  flex-direction: column;
-  margin: 0px 10px;
-}
-
-.sobre.mobile .container .header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 10px;
-}
-
-.sobre.mobile .container .header img {
-  height: 15rem;
-  margin: auto 0;
-}
-
-.sobre.mobile .container .wide-image {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.sobre.mobile .container .wide-image img {
-  width: 100%;
-  margin: 1rem 0px;
-}
-.sobre.mobile .container .sponsors h2 {
-  margin: 1rem 0rem;
-  font-size: 2rem;
-  text-align: center;
-}
-
-.sobre.mobile .container .sponsors .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
-  /* 9 equal columns */
-  grid-template-rows: repeat(3, auto);
-  /* 3 rows, auto height */
-  gap: 10px;
-  /* optional: space between cells */
-}
-
-.sobre.mobile .container .sponsors .grid img {
-  padding: 0;
-  margin: auto;
-}
-
 /* Mobile view */
 
 @media (max-width: 768px) {
-  .sobre.desktop {
-    display: none;
+  .sobre {
+    padding: 5rem 0rem;
   }
 
-  .sobre.mobile {
+  .sobre .sob-title {
+    font-size: 2rem;
+  }
+
+  .sobre .container {
+    margin: 0px 10px;
+  }
+
+  .sobre .container .header {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .sobre .container .header .text {
+    margin: 10px;
+  }
+
+  .sobre .container .header .text p {
+    font-size: 1rem;
+  }
+
+  .sobre .container .bodytext {
+    margin: 20px 10px;
+    padding: 0px 0px;
+    font-size: 1.2rem;
+  }
+
+  .sobre .container .bodytext p {
+    font-size: 1rem;
+  }
+
+  .sobre .container .header img {
+    height: 15rem;
+    margin: auto 0;
+  }
+
+  .sobre .container .wide-image img {
+    width: 100%;
+    margin: 1rem 0px;
+  }
+
+  .sobre .container .sponsors h2 {
+    margin: 1rem 0rem;
+    font-size: 2rem;
+  }
+
+  .sobre .container .sponsors .grid-sponsor {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sobre .container .grid-sponsor img {
+    margin: auto;
+  }
+
+  .sobre .container .sponsors .grid-finance {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .sobre .container .grid-finance img {
+    margin: 0 auto;
+  }
+
+  .sobre .container .sponsors .grid-coord {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sobre .container .grid-coord img {
+    margin: 1rem auto;
+  }
+
+  .sobre .container .sponsors .grid-pos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sobre .container .grid-pos img {
+    margin: 1rem auto;
   }
 }
 
-/* Produção page */
+/* ----------------------------------------------------------------------- 
+   Produção page styles 
+   This section defines the styles for the "Produção" page of the website
+ ----------------------------------------------------------------------- */
 
+/* Wrapper for all the content of the page */
 .producao {
   display: flex;
   flex-direction: column;
   height: calc(100vh * 5);
 }
 
+/* Container for all the sections, and the circle */
 .producao .container {
   height: 500vh;
   position: relative;
 }
 
+/* Information of every section */
 .producao .container .content {
   display: flex;
   flex-direction: row;
@@ -646,31 +683,28 @@ body {
   margin: auto;
 }
 
+/* Images of every section */
 .producao .container .content img {
   max-width: 20%;
 }
 
+/* Text of every section */
 .producao .container .content .text {
   width: 50%;
 }
 
+/* Title of every section */
 .producao .container .content .text h2 {
   font-size: 1.5rem;
   margin: 0;
 }
 
+/* Text body of every section */
 .producao .container .content .text p {
   font-size: 1.1rem;
 }
 
-.producao .container .circle-point {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background-color: rgb(116, 116, 116);
-  border-radius: 50%;
-}
-
+/* Container for the element os the rotating circle */
 .producao .container .circle-container {
   position: fixed;
   bottom: -200px;
@@ -685,6 +719,7 @@ body {
   z-index: 10;
 }
 
+/* Rotating circle image */
 .producao .container .circle-image {
   position: absolute;
   transform-origin: center center;
@@ -692,8 +727,10 @@ body {
   max-height: 2000px;
 }
 
-/* Producao - sections */
+/* Following styles are for every individual section, with their
+   own parallax effect and backgrounds */
 
+/* Section first */
 .producao .container .section-first {
   width: 100%;
   height: 100vh;
@@ -703,20 +740,21 @@ body {
   left: 0;
 }
 
-/* Section first - parallax */
-
+/* Section first parallax container*/
 .producao .container .section-first .parallax {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
+/* Grass image parallax */
 .producao .container .section-first .parallax .grass-image {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
+/* Clouds image parallax*/
 .producao .container .section-first .parallax .clouds-image {
   position: absolute;
   bottom: 0;
@@ -724,7 +762,6 @@ body {
 }
 
 /* Section second */
-
 .producao .container .section-second {
   width: 100%;
   height: 100vh;
@@ -734,8 +771,28 @@ body {
   left: 0;
 }
 
-/* Section third */
+/* Section second parallax container */
+.producao .container .section-second .parallax {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 
+/* Section second grass parallax */
+.producao .container .section-second .parallax .grass-image {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Section second clouds parallax */
+.producao .container .section-second .parallax .clouds-image {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Section third */
 .producao .container .section-third {
   width: 100%;
   height: 100vh;
@@ -746,7 +803,6 @@ body {
 }
 
 /* Section fourth */
-
 .producao .container .section-fourth {
   width: 100%;
   height: 100vh;
@@ -757,7 +813,6 @@ body {
 }
 
 /* Section fifth */
-
 .producao .container .section-fifth {
   width: 100%;
   height: 140vh;
@@ -767,7 +822,10 @@ body {
   left: 0;
 }
 
-/* Producao - Content blocks */
+/* The following styles are the initial states from which
+   the elements will be animated. For example, the content
+   of a section will be invisible (opacity: 0) and fade-in
+   when the scroll reaches that point. */
 
 .producao .container .content.first {
   transform: scale(0);
@@ -794,34 +852,14 @@ body {
   opacity: 0;
 }
 
-/* Section second - parallax */
-
-.producao .container .section-second .parallax {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.producao .container .section-second .parallax .grass-image {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-.producao .container .section-second .parallax .clouds-image {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
+/* Small adjustment for heights lower than 1000px */
 @media (max-height: 1000px) {
   .producao .container .circle-image {
     height: 250vh;
   }
 }
 
-/* Mobile view */
-
+/* Mobile view - when width of the screen is lower than 768px */
 @media (max-width: 768px) {
   .producao .container .content {
     display: flex;

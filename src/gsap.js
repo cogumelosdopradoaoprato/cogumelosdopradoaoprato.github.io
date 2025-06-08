@@ -1,13 +1,14 @@
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);       // Plugin for scroll animations
 
+// Detext if the width is less or equal to 768px, to know if the viewport is Desktop or Mobile
 function isMobile() {
   return window.innerWidth <= 768;
 }
 
+// Depending on the viewport size, load one animation or another
 if (isMobile()) {
-  // Show mobile view
-  //gsap.to('.circle-image', {duration: 1.5, scale: 1, ease: "power3.out"})
 
+  // When page is loaded, show circle in the middle and then move it to the bottom
   gsap.to(".circle-image", {
       duration: 1.5,
       scale: 0.6,
@@ -18,14 +19,14 @@ if (isMobile()) {
       }
   });
 
-  // Move the GIF from the bottom of the container to the top as you scroll
+  // Rotate the circle as the user scrolls
   gsap.fromTo(
     ".circle-image",
     {
-      rotation: "0", 
+      rotation: "0", // Start at 0% rotation
     },
     {
-      rotation: "360", 
+      rotation: "360", // Rotate a full circle
       ease: "none",
       scrollTrigger: {
         trigger: ".producao .container",
@@ -38,8 +39,14 @@ if (isMobile()) {
     }
   );
 
-  /* First content block */
+  /*-----------------------------------------------
+    The following animations are for each individual
+    section of the scroll.
+    -----------------------------------------------*/
 
+
+  /* First content block:
+     When reached, fade-in and scale-up the content */
   gsap.fromTo(
     ".content.first",
     {
@@ -63,6 +70,7 @@ if (isMobile()) {
     }
   );
 
+  /* When in viewport, move the grass from bottom to top */
   gsap.fromTo(
     ".section-first .parallax .grass-image",
     {
@@ -84,6 +92,7 @@ if (isMobile()) {
     }
   );
 
+  /* When in viewport, move the clouds from bottom to top */
   gsap.fromTo(
     ".section-first .parallax .clouds-image",
     {
@@ -105,8 +114,8 @@ if (isMobile()) {
     }
   );
 
-  /* Second content block */
-
+  /* Second content block:
+     When reached, fade-in and scale-up the content */
   gsap.fromTo(
     ".content.second",
     {
@@ -129,6 +138,7 @@ if (isMobile()) {
     }
   );
 
+  /* When in viewport, move the grass from bottom to top */
   gsap.fromTo(
     ".section-second .parallax .grass-image",
     {
@@ -149,6 +159,7 @@ if (isMobile()) {
     }
   );
 
+  /* When in viewport, move the clouds from bottom to top */
   gsap.fromTo(
     ".section-second .parallax .clouds-image",
     {
@@ -169,8 +180,8 @@ if (isMobile()) {
     }
   );
 
-  /* Third content block */
-
+  /* Third content block:
+     When reached, fade-in and scale-up the content */
   gsap.fromTo(
     ".content.third",
     {
@@ -193,8 +204,8 @@ if (isMobile()) {
     }
   );
 
-  /* Fourth content block */
-
+  /* Fourth content block:
+     When reached, fade-in and scale-up the content */
   gsap.fromTo(
     ".content.fourth",
     {
@@ -217,8 +228,8 @@ if (isMobile()) {
     }
   );
 
-  /* Fifth content block */
-
+  /* Fifth content block:
+     When reached, fade-in and scale-up the content */
   gsap.fromTo(
     ".content.fifth",
     {
@@ -240,10 +251,10 @@ if (isMobile()) {
       }
     }
   );
+  
 } else {
-  // Show desktop view
-  //gsap.to('.circle-image', {duration: 1.5, scale: 1, ease: "power3.out"})
 
+  // When page is loaded, show circle in the middle and then move it to the bottom
   gsap.to(".circle-image", {
     duration: 1.5,
     scale: 0.6,
@@ -254,7 +265,7 @@ if (isMobile()) {
     }
   });
 
-  // Move the GIF from the bottom of the container to the top as you scroll
+  // Rotate the circle as the user scrolls
   gsap.fromTo(
     ".circle-image",
     {
@@ -267,15 +278,21 @@ if (isMobile()) {
         trigger: ".producao .container",
         start: "top top",
         end: "130% bottom",
-        scrub: true,
+        scrub: 0.2,
         smooth: 1,
         //markers: true,
       },
     }
   );
 
-  /* First content block */
+  /*-----------------------------------------------
+    The following animations are for each individual
+    section of the scroll.
+    -----------------------------------------------*/
 
+
+  /* First content block:
+     When reached, fade-in and scale-up the content */
   gsap.fromTo(
     ".content.first",
     {
@@ -299,6 +316,7 @@ if (isMobile()) {
     }
   );
 
+  /* When in viewport, move the grass from bottom to top */
   gsap.fromTo(
     ".section-first .parallax .grass-image",
     {
@@ -320,6 +338,7 @@ if (isMobile()) {
     }
   );
 
+  /* When in viewport, move the clouds from bottom to top */
   gsap.fromTo(
     ".section-first .parallax .clouds-image",
     {
@@ -341,8 +360,8 @@ if (isMobile()) {
     }
   );
 
-  /* Second content block */
-
+  /* Second content block:
+     When reached, fade-in and scale-up the content */
   gsap.fromTo(
     ".content.second",
     {
@@ -365,6 +384,7 @@ if (isMobile()) {
     }
   );
 
+  /* When in viewport, move the grass from bottom to top */
   gsap.fromTo(
     ".section-second .parallax .grass-image",
     {
@@ -385,6 +405,7 @@ if (isMobile()) {
     }
   );
 
+  /* When in viewport, move the clouds from bottom to top */
   gsap.fromTo(
     ".section-second .parallax .clouds-image",
     {
@@ -405,8 +426,8 @@ if (isMobile()) {
     }
   );
 
-  /* Third content block */
-
+  /* Third content block:
+     When reached, fade-in and scale-up the content */
   gsap.fromTo(
     ".content.third",
     {
@@ -429,8 +450,8 @@ if (isMobile()) {
     }
   );
 
-  /* Fourth content block */
-
+  /* Fourth content block:
+     When reached, fade-in and scale-up the content */
   gsap.fromTo(
     ".content.fourth",
     {
@@ -453,8 +474,8 @@ if (isMobile()) {
     }
   );
 
-  /* Fifth content block */
-
+  /* Fifth content block:
+     When reached, fade-in and scale-up the content */
   gsap.fromTo(
     ".content.fifth",
     {
@@ -477,3 +498,8 @@ if (isMobile()) {
     }
   );
 }
+
+// Listen for page resize to load the respective animation for Desktop or Mobile
+window.addEventListener("resize", () => {
+  location.reload(); // simplest approach if you don't want to reset all animations manually
+});
