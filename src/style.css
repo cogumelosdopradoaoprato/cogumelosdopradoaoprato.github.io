@@ -1,3 +1,5 @@
+/* Basic settings for the whole website */
+
 body {
   padding: 0;
   margin: 0;
@@ -573,17 +575,20 @@ body {
    This section defines the styles for the "Produção" page of the website
  ----------------------------------------------------------------------- */
 
+ /* Wrapper for all the content of the page */
 .producao {
   display: flex;
   flex-direction: column;
   height: calc(100vh * 5);
 }
 
+/* Container for all the sections, and the circle */
 .producao .container {
   height: 500vh;
   position: relative;
 }
 
+/* Information of every section */
 .producao .container .content {
   display: flex;
   flex-direction: row;
@@ -597,31 +602,28 @@ body {
   margin: auto;
 }
 
+/* Images of every section */
 .producao .container .content img {
   max-width: 20%;
 }
 
+/* Text of every section */
 .producao .container .content .text {
   width: 50%;
 }
 
+/* Title of every section */
 .producao .container .content .text h2 {
   font-size: 1.5rem;
   margin: 0;
 }
 
+/* Text body of every section */
 .producao .container .content .text p {
   font-size: 1.1rem;
 }
 
-.producao .container .circle-point {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background-color: rgb(116, 116, 116);
-  border-radius: 50%;
-}
-
+/* Container for the element os the rotating circle */
 .producao .container .circle-container {
   position: fixed;
   bottom: -200px;
@@ -636,6 +638,7 @@ body {
   z-index: 10;
 }
 
+/* Rotating circle image */
 .producao .container .circle-image {
   position: absolute;
   transform-origin: center center;
@@ -643,8 +646,10 @@ body {
   max-height: 2000px;
 }
 
-/* Producao - sections */
+/* Following styles are for every individual section, with their
+   own parallax effect and backgrounds */
 
+/* Section first */
 .producao .container .section-first {
   width: 100%;
   height: 100vh;
@@ -654,20 +659,21 @@ body {
   left: 0;
 }
 
-/* Section first - parallax */
-
+/* Section first parallax container*/
 .producao .container .section-first .parallax {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
+/* Grass image parallax */
 .producao .container .section-first .parallax .grass-image {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
+/* Clouds image parallax*/
 .producao .container .section-first .parallax .clouds-image {
   position: absolute;
   bottom: 0;
@@ -675,7 +681,6 @@ body {
 }
 
 /* Section second */
-
 .producao .container .section-second {
   width: 100%;
   height: 100vh;
@@ -685,8 +690,28 @@ body {
   left: 0;
 }
 
-/* Section third */
+/* Section second parallax container */
+.producao .container .section-second .parallax {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 
+/* Section second grass parallax */
+.producao .container .section-second .parallax .grass-image {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Section second clouds parallax */
+.producao .container .section-second .parallax .clouds-image {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Section third */
 .producao .container .section-third {
   width: 100%;
   height: 100vh;
@@ -697,7 +722,6 @@ body {
 }
 
 /* Section fourth */
-
 .producao .container .section-fourth {
   width: 100%;
   height: 100vh;
@@ -708,7 +732,6 @@ body {
 }
 
 /* Section fifth */
-
 .producao .container .section-fifth {
   width: 100%;
   height: 140vh;
@@ -718,7 +741,10 @@ body {
   left: 0;
 }
 
-/* Producao - Content blocks */
+/* The following styles are the initial states from which
+   the elements will be animated. For example, the content
+   of a section will be invisible (opacity: 0) and fade-in
+   when the scroll reaches that point. */
 
 .producao .container .content.first {
   transform: scale(0);
@@ -745,34 +771,14 @@ body {
   opacity: 0;
 }
 
-/* Section second - parallax */
-
-.producao .container .section-second .parallax {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.producao .container .section-second .parallax .grass-image {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-.producao .container .section-second .parallax .clouds-image {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
+/* Small adjustment for heights lower than 1000px */
 @media (max-height: 1000px) {
   .producao .container .circle-image {
     height: 250vh;
   }
 }
 
-/* Mobile view */
-
+/* Mobile view - when width of the screen is lower than 768px */
 @media (max-width: 768px) {
   .producao .container .content {
     display: flex;
