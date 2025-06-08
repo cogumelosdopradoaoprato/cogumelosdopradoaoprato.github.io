@@ -5,6 +5,13 @@ body {
   background-color:#f3c681;
 }
 
+
+/* ----------------------------------------------------------------------- 
+   Hamburger menu styles 
+   This section defines the styles for the hamburger menu, and the navbar
+   present in different pages of the website
+   ----------------------------------------------------------------------- */
+
 /* New navbar */
 /* Hamburger Button */
 .hamburger {
@@ -82,9 +89,13 @@ body {
   height: auto;
 }
 
-/* Main page */
-/*Main Desktop*/
-.main.desktop {
+/* ----------------------------------------------------------------------- 
+   Main page styles 
+   This section defines the styles for the "Main" page of the website
+ ----------------------------------------------------------------------- */
+
+/* Main wrapper of all the content of the website */
+.main {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -94,7 +105,8 @@ body {
   overflow: hidden;
 }
 
-.main.desktop .center {
+/* Contains the center image with the buttons and the little guys */
+.main .center {
   width: 90%;
   height: 90%;
   display: flex;
@@ -103,8 +115,10 @@ body {
   align-items: center;
 }
 
-.main.desktop .center .center-image {
-  width: 80%;
+/* Contains the grey background and the 3 buttons */
+.main .center .center-image {
+  width: 100%;
+  height: 100%;
   background-image: url("../images/blob.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -116,166 +130,81 @@ body {
   position: relative;
 }
 
-.main.desktop .center .cogu-main {
+/* Little guys */
+.main .center .cogu-main {
   position: absolute;
   transform: translateY(20px);
   width: 40%;
   z-index: 2;
 }
 
-.main.desktop .center .button1 {
+/* Styles for the buttons */
+.main .center a {
   position: absolute;
-  background-color: #9ae06b;
-  padding: 1em 3em;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 1em 3em;
+  z-index: 3;
+  border-radius: 20px;
+  background-color: #9ae06b;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Positioning for the button "Produção" */
+.main .center .button1 {
   right: 10%;
   top: 0;
-  font-weight: bold;
-  border-radius: 20px;
-  z-index: 3;
-  color: black;
-  text-decoration: none;
 }
 
-.main.desktop .center .button2 {
-  position: absolute;
-  background-color: #9ae06b;
-  padding: 1em 3em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+/* Positioning for the button "Sobre" */
+.main .center .button2 {
   left: 5%;
   top: 50%;
-  font-weight: bold;
-  border-radius: 20px;
-  z-index: 3;
-  color: black;
-  text-decoration: none;
 }
 
-.main.desktop .center .button3 {
-  position: absolute;
-  background-color: #9ae06b;
-  padding: 1em 3em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+/* Positioning for the button "Os cogumelos" */
+.main .center .button3 {
   right: 20%;
   bottom: 0;
-  font-weight: bold;
-  border-radius: 20px;
-  z-index: 3;
-  color: black;
-  text-decoration: none;
 }
 
-/*Main Mobile*/
-.main.mobile {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  display: none;
-}
 
-.main.mobile .center {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.main.mobile .center .center-image {
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/blob.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.main.mobile .center .cogu-main {
-  position: absolute;
-  transform: translateY(20px);
-  width: 80%;
-  z-index: 2;
-}
-
-.main.mobile .center .button1 {
-  position: absolute;
-  background-color: #9ae06b;
-  padding: 0.2em 1em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  right: 5%;
-  top: 30%;
-  font-weight: bold;
-  border-radius: 15px;
-  z-index: 3;
-  color: black;
-  text-decoration: none;
-}
-
-.main.mobile .center .button2 {
-  position: absolute;
-  background-color: #9ae06b;
-  padding: 0.2em 1em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  left: 5%;
-  top: 60%;
-  font-weight: bold;
-  border-radius: 15px;
-  z-index: 3;
-  color: black;
-  text-decoration: none;
-}
-
-.main.mobile .center .button3 {
-  position: absolute;
-  background-color: #9ae06b;
-  padding: 0.2em 1em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  right: 5%;
-  bottom: 30%;
-  font-weight: bold;
-  border-radius: 15px;
-  z-index: 3;
-  color: black;
-  text-decoration: none;
-}
-
-/* Mobile view */
+/* Mobile view of Main page */
 
 @media (max-width: 768px) {
-  .main.desktop {
-    display: none;
-  }
-  .main.mobile {
-    display: block;
-  }
+  
+    .main .center {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .main .center .cogu-main {
+      width: 80%;
+    }
+
+    .main .center a {
+      padding: 0.2em 1em;
+      border-radius: 15px;
+    }
+  
+    .main .center .button1 {
+      right: 5%;
+      top: 30%;
+    }
+  
+    .main .center .button2 {
+      left: 5%;
+      top: 60%;
+    }
+  
+    .main .center .button3 {
+      right: 5%;
+      bottom: 30%;
+    }
 }
 
 /* Cogumelos page */
