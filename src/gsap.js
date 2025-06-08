@@ -278,7 +278,7 @@ if (isMobile()) {
         trigger: ".producao .container",
         start: "top top",
         end: "130% bottom",
-        scrub: true,
+        scrub: 0.2,
         smooth: 1,
         //markers: true,
       },

@@ -1,3 +1,33 @@
+/* Import fonts */
+@font-face {
+  font-family: "Londrina";
+  src: url(fonts/LondrinaSolid-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(fonts/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+/* Global style variables to use along the code */
+:root {
+  /* Titles */
+  --ft-londrina: "Londrina", sans-serif;
+  --ft-inter: "Inter", sans-serif;
+  /* Sub-titles */
+  /* Satoshi font has to be downloaded and imported. This video will help: https://youtu.be/lDip-1VnaOA?t=94 */
+  --ft-inter: "Inter", sans-serif;
+  /* Contrast */
+  --ct-laranja: #fe6731;
+  --ct-amarelo: #ffd816;
+  --ct-azul: #0074ff;
+  --ct-verde: #00b552;
+  /* Backgrounds */
+  --bg-creme: #fff6e7;
+  --bg-branco: #ffffff;
+}
+
+
 /* Basic settings for the whole website */
 
 body {
