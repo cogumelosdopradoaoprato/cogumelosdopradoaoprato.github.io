@@ -339,33 +339,40 @@ body {
 }
 
 
-/* Sobre nós page */
-/*Sobre Desktop*/
+/* ----------------------------------------------------------------------- 
+   Sobre nós page styles 
+   This section defines the styles for the "Sobre nós" page of the website
+ ----------------------------------------------------------------------- */
 
-.sobre.desktop {
+/* Main wrapper for the content of the page */
+.sobre {
   display: flex;
   flex-direction: column;
   padding: 10rem 0rem;
 }
 
-.sobre.desktop .sob-title {
+/* Main title of the page */
+.sobre .sob-title {
   font-size: 4rem;
   text-align: center;
 }
 
-.sobre.desktop .container {
+/* Wrapper for the content and images */
+.sobre .container {
   display: flex;
   flex-direction: column;
   margin: 0px 180px;
 }
 
-.sobre.desktop .container .header {
+/* First section the page */
+.sobre .container .header {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.sobre.desktop .container .header .text {
+/* Text of the first section */
+.sobre .container .header .text {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -373,36 +380,35 @@ body {
   margin: 40px;
 }
 
-.sobre.desktop .container .header .text p {
+/* Paragraphs of the first section*/
+.sobre .container .header .text p {
   font-size: 1.5rem;
 }
 
-.sobre.desktop .container .bodytext {
+/* Text container of individual sections */
+.sobre .container .bodytext {
   margin: 40px 0px;
   padding: 40px 0px;
   font-size: 1.5rem;
 }
 
-.sobre.desktop .container .wide-image {
+/* Wide banner */
+.sobre .container .wide-image {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.sobre.desktop .container .sponsors h2 {
-  margin: 4rem 0rem;
-  font-size: 3rem;
-  text-align: center;
-}
-
-.sobre.desktop .container .sponsors h3 {
+/* Title of sponsors */
+.sobre .container .sponsors h3 {
   margin-top: 3.5rem;
   font-size: 2.5rem;
   text-align: center;
   color: #9aaf10;
 }
 
-.sobre.desktop .container .sponsors .grid-sponsor {
+/* Sponsors grid */
+.sobre .container .sponsors .grid-sponsor {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(2, auto);
@@ -410,7 +416,8 @@ body {
   justify-content: center;
 }
 
-.sobre.desktop .container .grid-sponsor img {
+/* Sponsors images */
+.sobre .container .grid-sponsor img {
   width: 7rem;
   height: auto;
   padding: 0;
@@ -418,7 +425,8 @@ body {
   justify-content: center;
 }
 
-.sobre.desktop .container .sponsors .grid-finance {
+/* Finance grid*/
+.sobre .container .sponsors .grid-finance {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(1, auto);
@@ -426,14 +434,16 @@ body {
   justify-content: center;
 }
 
-.sobre.desktop .container .grid-finance img {
+/* Finance images */
+.sobre .container .grid-finance img {
   width: 15rem;
   height: auto;
   padding: 0;
   justify-content: center;
 }
 
-.sobre.desktop .container .sponsors .grid-coord {
+/* Coordination grid */
+.sobre .container .sponsors .grid-coord {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(1, auto);
@@ -441,7 +451,8 @@ body {
   justify-content: center;
 }
 
-.sobre.desktop .container .grid-coord img {
+/* Coordination images */
+.sobre .container .grid-coord img {
   width: 10rem;
   height: auto;
   padding: 0;
@@ -449,7 +460,8 @@ body {
   justify-content: center;
 }
 
-.sobre.desktop .container .sponsors .grid-pos {
+/* Post-project grid */
+.sobre .container .sponsors .grid-pos {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(1, auto);
@@ -457,7 +469,8 @@ body {
   justify-content: center;
 }
 
-.sobre.desktop .container .grid-pos img {
+/* Post-project images */
+.sobre .container .grid-pos img {
   width: 10rem;
   height: auto;
   padding: 0;
@@ -465,82 +478,100 @@ body {
   justify-content: center;
 }
 
-/*Sobre Mobile*/
 
-.sobre.mobile {
-  display: flex;
-  flex-direction: column;
-  padding: 5rem 0rem;
-  display: none;
-}
-
-.sobre.mobile .sob-title {
-  font-size: 2rem;
-  text-align: center;
-}
-
-.sobre.mobile .container {
-  display: flex;
-  flex-direction: column;
-  margin: 0px 10px;
-}
-
-.sobre.mobile .container .header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 10px;
-}
-
-.sobre.mobile .container .header img {
-  height: 15rem;
-  margin: auto 0;
-}
-
-.sobre.mobile .container .wide-image {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.sobre.mobile .container .wide-image img {
-  width: 100%;
-  margin: 1rem 0px;
-}
-.sobre.mobile .container .sponsors h2 {
-  margin: 1rem 0rem;
-  font-size: 2rem;
-  text-align: center;
-}
-
-.sobre.mobile .container .sponsors .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
-  /* 9 equal columns */
-  grid-template-rows: repeat(3, auto);
-  /* 3 rows, auto height */
-  gap: 10px;
-  /* optional: space between cells */
-}
-
-.sobre.mobile .container .sponsors .grid img {
-  padding: 0;
-  margin: auto;
-}
 
 /* Mobile view */
 
-@media (max-width: 768px) {
-  .sobre.desktop {
-    display: none;
-  }
+@media (max-width: 768px) { 
+    .sobre {
+      padding: 5rem 0rem;
+    }
+  
+    .sobre .sob-title {
+      font-size: 2rem;
+    }
+  
+    .sobre .container {
+      margin: 0px 10px;
+    }
 
-  .sobre.mobile {
-    display: flex;
-  }
+    .sobre .container .header {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .sobre .container .header .text {
+      margin: 10px;
+    }
+    
+    .sobre .container .header .text p {
+      font-size: 1rem;
+    }
+
+    .sobre .container .bodytext {
+      margin: 20px 10px;
+      padding: 0px 0px;
+      font-size: 1.2rem;
+    }
+
+    .sobre .container .bodytext p {
+      font-size: 1rem;
+    }
+    
+    .sobre .container .header img {
+      height: 15rem;
+      margin: auto 0;
+    }
+  
+    .sobre .container .wide-image img {
+      width: 100%;
+      margin: 1rem 0px;
+    }
+  
+    .sobre .container .sponsors h2 {
+      margin: 1rem 0rem;
+      font-size: 2rem;
+    }
+  
+    .sobre .container .sponsors .grid-sponsor {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sobre .container .grid-sponsor img {
+      margin: auto;
+    }
+    
+    .sobre .container .sponsors .grid-finance {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .sobre .container .grid-finance img {
+      margin: 0 auto;
+    }
+    
+    .sobre .container .sponsors .grid-coord {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sobre .container .grid-coord img {
+      margin: 1rem auto;
+    }
+    
+    .sobre .container .sponsors .grid-pos {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sobre .container .grid-pos img {
+      margin: 1rem auto;
+    }
 }
 
-/* Produção page */
+/* ----------------------------------------------------------------------- 
+   Produção page styles 
+   This section defines the styles for the "Produção" page of the website
+ ----------------------------------------------------------------------- */
 
 .producao {
   display: flex;
