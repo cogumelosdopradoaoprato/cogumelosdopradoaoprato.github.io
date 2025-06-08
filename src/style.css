@@ -177,7 +177,6 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -198,31 +197,35 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 1em 3em;
   z-index: 3;
   border-radius: 20px;
   background-color: var(--ct-laranja);
   color: white;
   text-decoration: none;
   font-weight: bold;
+  width: 180px;
+  margin: 20px;
 }
 
-/* Positioning for the button 1 */
+/* Positioning for the button 1 - Cogumelos */
 .main .center .button1 {
-  right: 15%;
-  top: 0;
+  top: 42px;
+  left: 720px;
+  padding: 16px 48px;
 }
 
-/* Positioning for the button 2 */
+/* Positioning for the button 2 - Produção */
 .main .center .button2 {
-  right: 60%;
-  top: 60%;
+  top: 500px;
+  left: -20px;
+  padding: 16px;
 }
 
-/* Positioning for the button 3 */
+/* Positioning for the button 3 - Sobre */
 .main .center .button3 {
-  right: 20%;
-  bottom: 0;
+  top: 651px;
+  left: 600px;
+  padding: 16px;
 }
 
 /* Mobile view of Main page */
