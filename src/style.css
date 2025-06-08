@@ -261,36 +261,48 @@ body {
   .main .center {
     width: 100%;
     height: 100%;
+    flex-direction: column;
+  }
+
+  .main .center .center-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 170px;
   }
 
   .main .center .cogu-main {
     width: 60%;
+    position: absolute;
     right: 25%;
+    transform: translateY(20px);
   }
 
   .main .center a {
     padding: 16px;
     border-radius: 15px;
-    transform: translateY(200px);
-    margin: 170px 20px 20px;
-  }
-
-  .main .center .button1 {
     position: relative;
     right: initial;
-    top: initial;
-  }
-
-  .main .center .button2 {
-    position: relative;
     left: initial;
     top: initial;
+    bottom: initial;
+    transform: none;
+    margin: 10px;
+    display: block;
+    text-align: center;
+    min-width: 120px;
   }
 
+  .main .center .button1,
+  .main .center .button2,
   .main .center .button3 {
     position: relative;
     right: initial;
+    left: initial;
     top: initial;
+    bottom: initial;
   }
 }
 
