@@ -48,8 +48,8 @@ body {
   background-color: var(--bg-creme);
 }
 
-/* ----------------------------------------------------------------------- 
-   Hamburger menu styles 
+/* -----------------------------------------------------------------------
+   Hamburger menu styles
    This section defines the styles for the hamburger menu, and the navbar
    present in different pages of the website
    ----------------------------------------------------------------------- */
@@ -142,8 +142,8 @@ body {
   height: auto;
 }
 
-/* ----------------------------------------------------------------------- 
-   Main page styles 
+/* -----------------------------------------------------------------------
+   Main page styles
    This section defines the styles for the "Main" page of the website
  ----------------------------------------------------------------------- */
 
@@ -227,7 +227,7 @@ body {
 
 /* Mobile view of Main page */
 /* Ajuste para telas médias */
-@media (min-width:769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .main .center {
     width: 90%;
     height: 90%;
@@ -254,6 +254,43 @@ body {
   .main .center .button3 {
     right: 10%;
     bottom: 20%;
+  }
+}
+
+@media (max-width: 991px) {
+  .main .center {
+    width: 100%;
+    height: 100%;
+  }
+
+  .main .center .cogu-main {
+    width: 60%;
+    right: 25%;
+  }
+
+  .main .center a {
+    padding: 16px;
+    border-radius: 15px;
+    transform: translateY(200px);
+    margin: 170px 20px 20px;
+  }
+
+  .main .center .button1 {
+    position: relative;
+    right: initial;
+    top: initial;
+  }
+
+  .main .center .button2 {
+    position: relative;
+    left: initial;
+    top: initial;
+  }
+
+  .main .center .button3 {
+    position: relative;
+    right: initial;
+    top: initial;
   }
 }
 
@@ -294,8 +331,8 @@ body {
   }
 }
 
-/* ----------------------------------------------------------------------- 
-   Os Cogumelos page styles 
+/* -----------------------------------------------------------------------
+   Os Cogumelos page styles
    This section defines the styles for the "Os Cogumelos" page of the website
  ----------------------------------------------------------------------- */
 
@@ -424,8 +461,8 @@ body {
   }
 }
 
-/* ----------------------------------------------------------------------- 
-   Sobre nós page styles 
+/* -----------------------------------------------------------------------
+   Sobre nós page styles
    This section defines the styles for the "Sobre nós" page of the website
  ----------------------------------------------------------------------- */
 
@@ -651,8 +688,8 @@ body {
   }
 }
 
-/* ----------------------------------------------------------------------- 
-   Produção page styles 
+/* -----------------------------------------------------------------------
+   Produção page styles
    This section defines the styles for the "Produção" page of the website
  ----------------------------------------------------------------------- */
 
