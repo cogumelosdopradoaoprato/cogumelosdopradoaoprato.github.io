@@ -316,34 +316,48 @@ body {
     height: 100%;
   }
 
+  .main .center .center-image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 170px;
+    flex-wrap: wrap;
+  }
+
   .main .center .cogu-main {
     width: 60%;
+    position: absolute;
     right: 25%;
+    transform: translateY(20px);
   }
 
   .main .center a {
-    padding: 0.2em 1em;
+    padding: 12px;
     border-radius: 15px;
+    position: relative;
+    right: initial !important;
+    left: initial !important;
+    top: initial !important;
+    bottom: initial !important;
     transform: translateY(200px);
+    margin: 8px;
+    display: block;
+    text-align: center;
+    min-width: 100px;
+    width: auto !important;
+    font-size: 14px;
   }
 
-  .main .center .button1 {
-    position: relative;
-    right: initial;
-    top: initial;
-    margin: 0px 30px;
-  }
-
-  .main .center .button2 {
-    position: relative;
-    left: initial;
-    top: initial;
-  }
-
+  .main .center .button1,
+  .main .center .button2,
   .main .center .button3 {
-    position: relative;
-    right: initial;
-    top: initial;
+    position: relative !important;
+    right: initial !important;
+    left: initial !important;
+    top: initial !important;
+    bottom: initial !important;
   }
 }
 
