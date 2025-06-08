@@ -261,16 +261,16 @@ body {
   .main .center {
     width: 100%;
     height: 100%;
-    flex-direction: column;
   }
 
   .main .center .center-image {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 20px;
     padding-top: 170px;
+    flex-wrap: wrap;
   }
 
   .main .center .cogu-main {
@@ -288,7 +288,7 @@ body {
     left: initial;
     top: initial;
     bottom: initial;
-    transform: none;
+    transform: translateY(200px);
     margin: 10px;
     display: block;
     text-align: center;
