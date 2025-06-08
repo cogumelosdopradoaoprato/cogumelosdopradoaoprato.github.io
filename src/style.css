@@ -271,7 +271,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     padding-top: 170px;
     flex-wrap: wrap;
   }
@@ -287,25 +287,26 @@ body {
     padding: 16px;
     border-radius: 15px;
     position: relative;
-    right: initial;
-    left: initial;
-    top: initial;
-    bottom: initial;
+    right: initial !important;
+    left: initial !important;
+    top: initial !important;
+    bottom: initial !important;
     transform: translateY(200px);
     margin: 10px;
     display: block;
     text-align: center;
     min-width: 120px;
+    width: auto !important;
   }
 
   .main .center .button1,
   .main .center .button2,
   .main .center .button3 {
-    position: relative;
-    right: initial;
-    left: initial;
-    top: initial;
-    bottom: initial;
+    position: relative !important;
+    right: initial !important;
+    left: initial !important;
+    top: initial !important;
+    bottom: initial !important;
   }
 }
 
