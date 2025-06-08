@@ -207,10 +207,13 @@ body {
     }
 }
 
-/* Cogumelos page */
+/* ----------------------------------------------------------------------- 
+   Os Cogumelos page styles 
+   This section defines the styles for the "Os Cogumelos" page of the website
+ ----------------------------------------------------------------------- */
 
-/* Cogumelos Desktop */
-.cogumelos.desktop {
+/* Wrapper for all the content of the page */
+.cogumelos {
   display: flex;
   flex-direction: column;
   padding-top: 10rem;
@@ -218,20 +221,23 @@ body {
   justify-content: center; /* Centraliza os itens dentro da container verticalmente */
 }
 
-.cogumelos.desktop .cog-title {
+/* Main title of the page */
+.cogumelos .cog-title {
   font-size: 4rem;
   text-align: center;
   margin-bottom: 2rem;
 }
 
-.cogumelos.desktop .container {
+/* Container of all 3 sections with the different mushrooms */
+.cogumelos .container {
   display: flex;
   flex-direction: column;
   gap: 4rem; /* Aumenta o espaçamento entre as seções */
   align-items: center; /* Centraliza os itens horizontalmente */
 }
 
-.cogumelos.desktop .container .cogumelo {
+/* Individual containers for each mushrooms */
+.cogumelos .container .cogumelo {
   display: flex;
   flex-direction: row; /* Texto e imagem lado a lado */
   align-items: center; /* Alinha a imagem e o texto verticalmente */
@@ -239,34 +245,41 @@ body {
   justify-content: center; /* Garante que o conteúdo do cogumelo seja centralizado */
 }
 
-.cogumelos.desktop .container img {
-  /*Mudar aqui o tamanho com base na gif feita */
+/* Dimensions of the mushroom images */
+.cogumelos .container img {
+  /* Mudar aqui o tamanho com base na gif feita */
   height: 35rem;
   width: auto;
 }
 
-.cogumelos.desktop .container .cogumelo .text {
+/* Text section of every mushroom container */
+.cogumelos .container .cogumelo .text {
   display: flex;
   flex-direction: column;
   width: 50%; /* Limita a largura do texto para que ele ocupe menos espaço */
 }
 
-.cogumelos.desktop .container .cogumelo .text h2 {
+/* Title of the mushroom text */
+.cogumelos .container .cogumelo .text h2 {
   font-size: 2.5rem;
   margin-bottom: 0.1rem;
 }
-.cogumelos.desktop .container .cogumelo .text h3 {
+
+/* Description title */
+.cogumelos .container .cogumelo .text h3 {
   font-size: 1.5rem;
   margin-bottom: 0;
 }
 
-.cogumelos.desktop .container .cogumelo .text h3 i {
+/* Sub-title of the mushroom text */
+.cogumelos .container .cogumelo .text h3 i {
   font-size: 1.5rem;
   margin-top: 3rem;
   font-weight: 200;
 }
 
-.cogumelos.desktop .container .cogumelo .text p {
+/* Individual paragraphs */
+.cogumelos .container .cogumelo .text p {
   font-size: 3rem;
   margin-top: 1rem;
   line-height: 1.6;
@@ -277,76 +290,54 @@ body {
 }
 
 /* Especificidade para inverter a ordem do Cogumelo Juba de Leão */
-.cogumelos.desktop .container .cogumelo:nth-child(2) {
+.cogumelos .container .cogumelo:nth-child(2) {
   flex-direction: row-reverse; /* Inverte a ordem apenas para o segundo cogumelo (Juba de Leão) */
 }
 
-/* Mobile Version */
-.cogumelos.mobile {
-  flex-direction: column;
-  padding-top: 2rem;
-  display: none;
-}
-
-.cogumelos.mobile .cog-title {
-  font-size: 2.2rem;
-  text-align: center;
-}
-
-.cogumelos.mobile .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.cogumelos.mobile .container .cogumelo {
-  display: flex;
-  flex-direction: column;
-  margin: 0.5rem 0;
-  align-items: center;
-  text-align: center;
-}
-
-.cogumelos.mobile .container img {
-  height: 25rem;
-  margin: auto 0;
-}
-
-.cogumelos.mobile .container .cogumelo .text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0px 25px;
-}
-
-.cogumelos.mobile .container .cogumelo .text h2 {
-  font-size: 1.5rem;
-  margin: 0;
-}
-
-.cogumelos.mobile .container .cogumelo .text p {
-  font-size: 0.9rem;
-  margin: 0.5rem;
-}
-
 /* Mobile view */
-@media (min-width: 320px) {
-  .cogumelos.desktop {
-    display: none;
+
+@media (max-width: 1240px) {
+
+  .cogumelos {
+    padding-top: 2rem;
   }
-  .cogumelos.mobile {
-    display: flex;
+
+  .cogumelos .cog-title {
+    font-size: 2.2rem;
+  }
+
+  .cogumelos .container .cogumelo {
+    flex-direction: column;
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+
+  .cogumelos .container img {
+    height: 25rem;
+    margin: auto 0;
+  }
+
+  .cogumelos .container .cogumelo .text {
+    justify-content: center;
+    padding: 0px 25px;
+  }
+
+  .cogumelos .container .cogumelo .text h2 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .cogumelos .container .cogumelo .text p {
+    font-size: 0.9rem;
+    margin: 0.5rem;
+  }
+
+  /* In mobile view, all the mushrooms are ordered vertically */
+  .cogumelos .container .cogumelo:nth-child(2) {
+    flex-direction: column; /* Ordered vertically */
   }
 }
 
-@media (min-width: 1024px) {
-  .cogumelos.mobile {
-    display: none;
-  }
-  .cogumelos.desktop {
-    display: flex;
-  }
-}
 
 /* Sobre nós page */
 /*Sobre Desktop*/
