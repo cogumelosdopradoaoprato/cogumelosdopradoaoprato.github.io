@@ -92,7 +92,7 @@ body {
   width: 300px;
   height: 100vh;
   margin-top: auto;
-  background-color: #46a35a;
+  background-color:#46a35a;
   opacity: 0.7;
   padding-top: 5rem;
   transform: translateX(100%);
@@ -114,17 +114,6 @@ body {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 600;
-}
-
-@media (max-width: 768px) {
-  .hamburger {
-    top: 0.5rem;
-    right: 0.5rem;
-  }
-
-  .side-menu {
-    width: 80%;
-  }
 }
 
 /* Logo Styling */
@@ -160,8 +149,8 @@ body {
 
 /* Contains the center image with the buttons and the little guys */
 .main .center {
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -201,97 +190,63 @@ body {
   padding: 1em 3em;
   z-index: 3;
   border-radius: 20px;
-  background-color: var(--ct-laranja);
-  color: white;
+  background-color: #9ae06b;
+  color: black;
   text-decoration: none;
   font-weight: bold;
 }
 
-/* Positioning for the button 1 */
+/* Positioning for the button "Produção" */
 .main .center .button1 {
-  right: 15%;
+  right: 10%;
   top: 0;
 }
 
-/* Positioning for the button 2 */
+/* Positioning for the button "Sobre" */
 .main .center .button2 {
-  right: 60%;
-  top: 60%;
+  left: 5%;
+  top: 50%;
 }
 
-/* Positioning for the button 3 */
+/* Positioning for the button "Os cogumelos" */
 .main .center .button3 {
   right: 20%;
   bottom: 0;
 }
 
+
 /* Mobile view of Main page */
-/* Ajuste para telas médias */
-@media (min-width:769px) and (max-width: 1024px) {
-  .main .center {
-    width: 90%;
-    height: 90%;
-  }
-
-  .main .center a {
-    padding: 0.8em 2em;
-    font-size: 0.9rem;
-  }
-
-  /* Positioning for the button 1 */
-  .main .center .button1 {
-    right: 5%;
-    top: 15%;
-  }
-
-  /* Positioning for the button 2 */
-  .main .center .button2 {
-    left: 0;
-    top: 60%;
-  }
-
-  /* Positioning for the button 3 */
-  .main .center .button3 {
-    right: 10%;
-    bottom: 20%;
-  }
-}
 
 @media (max-width: 768px) {
-  .main .center {
-    width: 100%;
-    height: 100%;
-  }
+  
+    .main .center {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .main .center .cogu-main {
+      width: 80%;
+    }
 
-  .main .center .cogu-main {
-    width: 60%;
-    right: 25%;
-  }
-
-  .main .center a {
-    padding: 0.2em 1em;
-    border-radius: 15px;
-    transform: translateY(200px);
-  }
-
-  .main .center .button1 {
-    position: relative;
-    right: initial;
-    top: initial;
-    margin: 0px 30px;
-  }
-
-  .main .center .button2 {
-    position: relative;
-    left: initial;
-    top: initial;
-  }
-
-  .main .center .button3 {
-    position: relative;
-    right: initial;
-    top: initial;
-  }
+    .main .center a {
+      padding: 0.2em 1em;
+      border-radius: 15px;
+    }
+  
+    .main .center .button1 {
+      right: 5%;
+      top: 30%;
+    }
+  
+    .main .center .button2 {
+      left: 5%;
+      top: 60%;
+    }
+  
+    .main .center .button3 {
+      right: 5%;
+      bottom: 30%;
+    }
 }
 
 /* ----------------------------------------------------------------------- 
@@ -384,6 +339,7 @@ body {
 /* Mobile view */
 
 @media (max-width: 1240px) {
+
   .cogumelos {
     padding-top: 2rem;
   }
@@ -423,6 +379,7 @@ body {
     flex-direction: column; /* Ordered vertically */
   }
 }
+
 
 /* ----------------------------------------------------------------------- 
    Sobre nós page styles 
@@ -563,92 +520,94 @@ body {
   justify-content: center;
 }
 
+
+
 /* Mobile view */
 
-@media (max-width: 768px) {
-  .sobre {
-    padding: 5rem 0rem;
-  }
+@media (max-width: 768px) { 
+    .sobre {
+      padding: 5rem 0rem;
+    }
+  
+    .sobre .sob-title {
+      font-size: 2rem;
+    }
+  
+    .sobre .container {
+      margin: 0px 10px;
+    }
 
-  .sobre .sob-title {
-    font-size: 2rem;
-  }
+    .sobre .container .header {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
+    }
 
-  .sobre .container {
-    margin: 0px 10px;
-  }
+    .sobre .container .header .text {
+      margin: 10px;
+    }
+    
+    .sobre .container .header .text p {
+      font-size: 1rem;
+    }
 
-  .sobre .container .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-  }
+    .sobre .container .bodytext {
+      margin: 20px 10px;
+      padding: 0px 0px;
+      font-size: 1.2rem;
+    }
 
-  .sobre .container .header .text {
-    margin: 10px;
-  }
-
-  .sobre .container .header .text p {
-    font-size: 1rem;
-  }
-
-  .sobre .container .bodytext {
-    margin: 20px 10px;
-    padding: 0px 0px;
-    font-size: 1.2rem;
-  }
-
-  .sobre .container .bodytext p {
-    font-size: 1rem;
-  }
-
-  .sobre .container .header img {
-    height: 15rem;
-    margin: auto 0;
-  }
-
-  .sobre .container .wide-image img {
-    width: 100%;
-    margin: 1rem 0px;
-  }
-
-  .sobre .container .sponsors h2 {
-    margin: 1rem 0rem;
-    font-size: 2rem;
-  }
-
-  .sobre .container .sponsors .grid-sponsor {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .sobre .container .grid-sponsor img {
-    margin: auto;
-  }
-
-  .sobre .container .sponsors .grid-finance {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .sobre .container .grid-finance img {
-    margin: 0 auto;
-  }
-
-  .sobre .container .sponsors .grid-coord {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .sobre .container .grid-coord img {
-    margin: 1rem auto;
-  }
-
-  .sobre .container .sponsors .grid-pos {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .sobre .container .grid-pos img {
-    margin: 1rem auto;
-  }
+    .sobre .container .bodytext p {
+      font-size: 1rem;
+    }
+    
+    .sobre .container .header img {
+      height: 15rem;
+      margin: auto 0;
+    }
+  
+    .sobre .container .wide-image img {
+      width: 100%;
+      margin: 1rem 0px;
+    }
+  
+    .sobre .container .sponsors h2 {
+      margin: 1rem 0rem;
+      font-size: 2rem;
+    }
+  
+    .sobre .container .sponsors .grid-sponsor {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sobre .container .grid-sponsor img {
+      margin: auto;
+    }
+    
+    .sobre .container .sponsors .grid-finance {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .sobre .container .grid-finance img {
+      margin: 0 auto;
+    }
+    
+    .sobre .container .sponsors .grid-coord {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sobre .container .grid-coord img {
+      margin: 1rem auto;
+    }
+    
+    .sobre .container .sponsors .grid-pos {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sobre .container .grid-pos img {
+      margin: 1rem auto;
+    }
 }
 
 /* ----------------------------------------------------------------------- 
@@ -656,7 +615,7 @@ body {
    This section defines the styles for the "Produção" page of the website
  ----------------------------------------------------------------------- */
 
-/* Wrapper for all the content of the page */
+ /* Wrapper for all the content of the page */
 .producao {
   display: flex;
   flex-direction: column;
