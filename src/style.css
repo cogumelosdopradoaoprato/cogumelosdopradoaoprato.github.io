@@ -269,17 +269,22 @@ body {
   .main .center .center-image {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    background-size: auto 400px;
     justify-content: center;
+    align-items: center;
+    margin: 84px 0 70px;
+    padding: 70px 20px 20px;
     gap: 10px;
-    padding-top: 170px;
     flex-wrap: wrap;
   }
 
   .main .center .cogu-main {
     width: 60%;
     position: absolute;
-    right: 25%;
+    top: 160px;
+    left: 301px;
+    margin: 20px;
+    padding: 20px;
     transform: translateY(20px);
   }
 
