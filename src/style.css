@@ -456,511 +456,512 @@ body {
     margin: 0.5rem;
   }
 
-/* Mobile view */
-@media (min-width: 320px) {
-  .cogumelos.desktop {
-    display: none;
+  /* Mobile view */
+  @media (min-width: 320px) {
+    .cogumelos.desktop {
+      display: none;
+    }
+    .cogumelos.mobile {
+      display: flex;
+    }
   }
-  .cogumelos.mobile {
+
+  @media (min-width: 1024px) {
+    .cogumelos.mobile {
+      display: none;
+    }
+    .cogumelos.desktop {
+      display: flex;
+    }
+  }
+
+  /* Sobre nós page */
+  /*Sobre Desktop*/
+
+  .sobre.desktop {
     display: flex;
-  }
-}
-
-@media (min-width: 1024px) {
-  .cogumelos.mobile {
-    display: none;
-  }
-  .cogumelos.desktop {
-    display: flex;
-  }
-}
-
-/* Sobre nós page */
-/*Sobre Desktop*/
-
-.sobre.desktop {
-  display: flex;
-  flex-direction: column;
-  padding: 10rem 0rem;
-}
-
-/* Main title of the page */
-.sobre .sob-title {
-  font-size: 4rem;
-  text-align: center;
-}
-
-/* Wrapper for the content and images */
-.sobre .container {
-  display: flex;
-  flex-direction: column;
-  margin: 0px 180px;
-}
-
-/* First section the page */
-.sobre .container .header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-/* Text of the first section */
-.sobre .container .header .text {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 40px;
-}
-
-/* Paragraphs of the first section*/
-.sobre .container .header .text p {
-  font-size: 1.5rem;
-}
-
-/* Text container of individual sections */
-.sobre .container .bodytext {
-  margin: 40px 0px;
-  padding: 40px 0px;
-  font-size: 1.5rem;
-}
-
-/* Wide banner */
-.sobre .container .wide-image {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-/* Title of sponsors */
-.sobre .container .sponsors h3 {
-  margin-top: 3.5rem;
-  font-size: 2.5rem;
-  text-align: center;
-  color: #9aaf10;
-}
-
-/* Sponsors grid */
-.sobre .container .sponsors .grid-sponsor {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(2, auto);
-  align-items: center;
-  justify-content: center;
-}
-
-/* Sponsors images */
-.sobre .container .grid-sponsor img {
-  width: 7rem;
-  height: auto;
-  padding: 0;
-  margin: 1rem;
-  justify-content: center;
-}
-
-/* Finance grid*/
-.sobre .container .sponsors .grid-finance {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(1, auto);
-  align-items: center;
-  justify-content: center;
-}
-
-/* Finance images */
-.sobre .container .grid-finance img {
-  width: 15rem;
-  height: auto;
-  padding: 0;
-  justify-content: center;
-}
-
-/* Coordination grid */
-.sobre .container .sponsors .grid-coord {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(1, auto);
-  align-items: center;
-  justify-content: center;
-}
-
-/* Coordination images */
-.sobre .container .grid-coord img {
-  width: 10rem;
-  height: auto;
-  padding: 0;
-  margin: 1rem;
-  justify-content: center;
-}
-
-/* Post-project grid */
-.sobre .container .sponsors .grid-pos {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(1, auto);
-  align-items: center;
-  justify-content: center;
-}
-
-/* Post-project images */
-.sobre .container .grid-pos img {
-  width: 10rem;
-  height: auto;
-  padding: 0;
-  margin: 1rem;
-  justify-content: center;
-}
-
-/* Mobile view */
-
-@media (max-width: 768px) {
-  .sobre {
-    padding: 5rem 0rem;
+    flex-direction: column;
+    padding: 10rem 0rem;
   }
 
+  /* Main title of the page */
   .sobre .sob-title {
-    font-size: 2rem;
+    font-size: 4rem;
+    text-align: center;
   }
 
+  /* Wrapper for the content and images */
   .sobre .container {
-    margin: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 180px;
   }
 
+  /* First section the page */
   .sobre .container .header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 10px;
   }
 
+  /* Text of the first section */
   .sobre .container .header .text {
-    margin: 10px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px;
   }
 
+  /* Paragraphs of the first section*/
   .sobre .container .header .text p {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
+  /* Text container of individual sections */
   .sobre .container .bodytext {
-    margin: 20px 10px;
-    padding: 0px 0px;
-    font-size: 1.2rem;
+    margin: 40px 0px;
+    padding: 40px 0px;
+    font-size: 1.5rem;
   }
 
-  .sobre .container .bodytext p {
-    font-size: 1rem;
+  /* Wide banner */
+  .sobre .container .wide-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 
-  .sobre .container .header img {
-    height: 15rem;
-    margin: auto 0;
+  /* Title of sponsors */
+  .sobre .container .sponsors h3 {
+    margin-top: 3.5rem;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #9aaf10;
   }
 
-  .sobre .container .wide-image img {
-    width: 100%;
-    margin: 1rem 0px;
-  }
-
-  .sobre .container .sponsors h2 {
-    margin: 1rem 0rem;
-    font-size: 2rem;
-  }
-
+  /* Sponsors grid */
   .sobre .container .sponsors .grid-sponsor {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, auto);
+    align-items: center;
+    justify-content: center;
   }
 
+  /* Sponsors images */
   .sobre .container .grid-sponsor img {
-    margin: auto;
+    width: 7rem;
+    height: auto;
+    padding: 0;
+    margin: 1rem;
+    justify-content: center;
   }
 
+  /* Finance grid*/
   .sobre .container .sponsors .grid-finance {
-    grid-template-columns: repeat(1, 1fr);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1, auto);
+    align-items: center;
+    justify-content: center;
   }
 
+  /* Finance images */
   .sobre .container .grid-finance img {
-    margin: 0 auto;
+    width: 15rem;
+    height: auto;
+    padding: 0;
+    justify-content: center;
   }
 
+  /* Coordination grid */
   .sobre .container .sponsors .grid-coord {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, auto);
+    align-items: center;
+    justify-content: center;
   }
 
+  /* Coordination images */
   .sobre .container .grid-coord img {
-    margin: 1rem auto;
+    width: 10rem;
+    height: auto;
+    padding: 0;
+    margin: 1rem;
+    justify-content: center;
   }
 
+  /* Post-project grid */
   .sobre .container .sponsors .grid-pos {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1, auto);
+    align-items: center;
+    justify-content: center;
   }
 
+  /* Post-project images */
   .sobre .container .grid-pos img {
-    margin: 1rem auto;
+    width: 10rem;
+    height: auto;
+    padding: 0;
+    margin: 1rem;
+    justify-content: center;
   }
-}
 
-/* Produção page */
+  /* Mobile view */
 
-.producao {
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh * 5);
-}
+  @media (max-width: 768px) {
+    .sobre {
+      padding: 5rem 0rem;
+    }
 
-/* Container for all the sections, and the circle */
-.producao .container {
-  height: 500vh;
-  position: relative;
-}
+    .sobre .sob-title {
+      font-size: 2rem;
+    }
 
-/* Information of every section */
-.producao .container .content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 50px;
-  max-width: 70%;
-  align-self: center;
-  padding: 2rem;
-  position: sticky;
-  top: 7rem;
-  margin: auto;
-}
+    .sobre .container {
+      margin: 0px 10px;
+    }
 
-/* Images of every section */
-.producao .container .content img {
-  max-width: 20%;
-}
+    .sobre .container .header {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
+    }
 
-/* Text of every section */
-.producao .container .content .text {
-  width: 50%;
-}
+    .sobre .container .header .text {
+      margin: 10px;
+    }
 
-/* Title of every section */
-.producao .container .content .text h2 {
-  font-size: 1.5rem;
-  margin: 0;
-}
+    .sobre .container .header .text p {
+      font-size: 1rem;
+    }
 
-/* Text body of every section */
-.producao .container .content .text p {
-  font-size: 1.1rem;
-}
+    .sobre .container .bodytext {
+      margin: 20px 10px;
+      padding: 0px 0px;
+      font-size: 1.2rem;
+    }
 
-/* Container for the element os the rotating circle */
-.producao .container .circle-container {
-  position: fixed;
-  bottom: -200px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1500px;
-  height: 1500px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-}
+    .sobre .container .bodytext p {
+      font-size: 1rem;
+    }
 
-/* Rotating circle image */
-.producao .container .circle-image {
-  position: absolute;
-  transform-origin: center center;
-  transform: scale(0);
-  max-height: 2000px;
-}
+    .sobre .container .header img {
+      height: 15rem;
+      margin: auto 0;
+    }
 
-/* Following styles are for every individual section, with their
-   own parallax effect and backgrounds */
+    .sobre .container .wide-image img {
+      width: 100%;
+      margin: 1rem 0px;
+    }
 
-/* Section first */
-.producao .container .section-first {
-  width: 100%;
-  height: 100vh;
-  background-color: rgb(62, 151, 235);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+    .sobre .container .sponsors h2 {
+      margin: 1rem 0rem;
+      font-size: 2rem;
+    }
 
-/* Section first parallax container*/
-.producao .container .section-first .parallax {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
+    .sobre .container .sponsors .grid-sponsor {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
-/* Grass image parallax */
-.producao .container .section-first .parallax .grass-image {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
+    .sobre .container .grid-sponsor img {
+      margin: auto;
+    }
 
-/* Clouds image parallax*/
-.producao .container .section-first .parallax .clouds-image {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
+    .sobre .container .sponsors .grid-finance {
+      grid-template-columns: repeat(1, 1fr);
+    }
 
-/* Section second */
-.producao .container .section-second {
-  width: 100%;
-  height: 100vh;
-  background-color: navy;
-  position: absolute;
-  top: 100vh;
-  left: 0;
-}
+    .sobre .container .grid-finance img {
+      margin: 0 auto;
+    }
 
-/* Section second parallax container */
-.producao .container .section-second .parallax {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
+    .sobre .container .sponsors .grid-coord {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
-/* Section second grass parallax */
-.producao .container .section-second .parallax .grass-image {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
+    .sobre .container .grid-coord img {
+      margin: 1rem auto;
+    }
 
-/* Section second clouds parallax */
-.producao .container .section-second .parallax .clouds-image {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
+    .sobre .container .sponsors .grid-pos {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
-/* Section third */
-.producao .container .section-third {
-  width: 100%;
-  height: 100vh;
-  background-color: rgb(0, 128, 6);
-  position: absolute;
-  top: 200vh;
-  left: 0;
-}
-
-/* Section fourth */
-.producao .container .section-fourth {
-  width: 100%;
-  height: 100vh;
-  background-color: rgb(219, 241, 15);
-  position: absolute;
-  top: 300vh;
-  left: 0;
-}
-
-/* Section fifth */
-.producao .container .section-fifth {
-  width: 100%;
-  height: 140vh;
-  background-color: rgb(253, 25, 234);
-  position: absolute;
-  top: 400vh;
-  left: 0;
-}
-
-/* The following styles are the initial states from which
-   the elements will be animated. For example, the content
-   of a section will be invisible (opacity: 0) and fade-in
-   when the scroll reaches that point. */
-
-.producao .container .content.first {
-  transform: scale(0);
-  opacity: 0;
-}
-
-.producao .container .content.second {
-  transform: scale(0);
-  opacity: 0;
-}
-
-.producao .container .content.third {
-  transform: scale(0);
-  opacity: 0;
-}
-
-.producao .container .content.fourth {
-  transform: scale(0);
-  opacity: 0;
-}
-
-.producao .container .content.fifth {
-  transform: scale(0);
-  opacity: 0;
-}
-
-/* Small adjustment for heights lower than 1000px */
-@media (max-height: 1000px) {
-  .producao .container .circle-image {
-    height: 250vh;
+    .sobre .container .grid-pos img {
+      margin: 1rem auto;
+    }
   }
-}
 
-/* Mobile view - when width of the screen is lower than 768px */
-@media (max-width: 768px) {
+  /* Produção page */
+
+  .producao {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh * 5);
+  }
+
+  /* Container for all the sections, and the circle */
+  .producao .container {
+    height: 500vh;
+    position: relative;
+  }
+
+  /* Information of every section */
   .producao .container .content {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 10px;
-    max-width: 100%;
+    gap: 50px;
+    max-width: 70%;
     align-self: center;
-    padding: 1rem;
+    padding: 2rem;
     position: sticky;
-    top: 5rem;
+    top: 7rem;
     margin: auto;
   }
+
+  /* Images of every section */
   .producao .container .content img {
-    max-width: 50%;
-    height: 100%;
+    max-width: 20%;
   }
 
+  /* Text of every section */
   .producao .container .content .text {
     width: 50%;
   }
 
+  /* Title of every section */
   .producao .container .content .text h2 {
     font-size: 1.5rem;
     margin: 0;
   }
 
+  /* Text body of every section */
   .producao .container .content .text p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
+  /* Container for the element os the rotating circle */
   .producao .container .circle-container {
     position: fixed;
-    bottom: -0%;
+    bottom: -200px;
     left: 50%;
     transform: translateX(-50%);
-    height: 100%;
+    width: 1500px;
+    height: 1500px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 10;
   }
 
+  /* Rotating circle image */
   .producao .container .circle-image {
     position: absolute;
     transform-origin: center center;
     transform: scale(0);
-    height: 35rem;
+    max-height: 2000px;
+  }
+
+  /* Following styles are for every individual section, with their
+   own parallax effect and backgrounds */
+
+  /* Section first */
+  .producao .container .section-first {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(62, 151, 235);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  /* Section first parallax container*/
+  .producao .container .section-first .parallax {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  /* Grass image parallax */
+  .producao .container .section-first .parallax .grass-image {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  /* Clouds image parallax*/
+  .producao .container .section-first .parallax .clouds-image {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  /* Section second */
+  .producao .container .section-second {
+    width: 100%;
+    height: 100vh;
+    background-color: navy;
+    position: absolute;
+    top: 100vh;
+    left: 0;
+  }
+
+  /* Section second parallax container */
+  .producao .container .section-second .parallax {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  /* Section second grass parallax */
+  .producao .container .section-second .parallax .grass-image {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  /* Section second clouds parallax */
+  .producao .container .section-second .parallax .clouds-image {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  /* Section third */
+  .producao .container .section-third {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 128, 6);
+    position: absolute;
+    top: 200vh;
+    left: 0;
+  }
+
+  /* Section fourth */
+  .producao .container .section-fourth {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(219, 241, 15);
+    position: absolute;
+    top: 300vh;
+    left: 0;
   }
 
   /* Section fifth */
   .producao .container .section-fifth {
     width: 100%;
-    height: 100vh;
+    height: 140vh;
     background-color: rgb(253, 25, 234);
     position: absolute;
     top: 400vh;
     left: 0;
+  }
+
+  /* The following styles are the initial states from which
+   the elements will be animated. For example, the content
+   of a section will be invisible (opacity: 0) and fade-in
+   when the scroll reaches that point. */
+
+  .producao .container .content.first {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  .producao .container .content.second {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  .producao .container .content.third {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  .producao .container .content.fourth {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  .producao .container .content.fifth {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  /* Small adjustment for heights lower than 1000px */
+  @media (max-height: 1000px) {
+    .producao .container .circle-image {
+      height: 250vh;
+    }
+  }
+
+  /* Mobile view - when width of the screen is lower than 768px */
+  @media (max-width: 768px) {
+    .producao .container .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
+      max-width: 100%;
+      align-self: center;
+      padding: 1rem;
+      position: sticky;
+      top: 5rem;
+      margin: auto;
+    }
+    .producao .container .content img {
+      max-width: 50%;
+      height: 100%;
+    }
+
+    .producao .container .content .text {
+      width: 50%;
+    }
+
+    .producao .container .content .text h2 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    .producao .container .content .text p {
+      font-size: 1rem;
+    }
+
+    .producao .container .circle-container {
+      position: fixed;
+      bottom: -0%;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .producao .container .circle-image {
+      position: absolute;
+      transform-origin: center center;
+      transform: scale(0);
+      height: 35rem;
+    }
+
+    /* Section fifth */
+    .producao .container .section-fifth {
+      width: 100%;
+      height: 100vh;
+      background-color: rgb(253, 25, 234);
+      position: absolute;
+      top: 400vh;
+      left: 0;
+    }
   }
 }
