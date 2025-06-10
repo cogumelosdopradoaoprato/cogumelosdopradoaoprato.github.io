@@ -1,0 +1,412 @@
+/* Global style variables to use along the code */
+:root {
+  /* Variante para Londrina-- Títulos*/
+  --font-londrina: "Londrina Solid", cursive;
+
+  /* Variante para Inter-- Corpo de Texto */
+  --font-inter: "Inter", sans-serif;
+  /* Satoshi font has to be downloaded and imported. This video will help: https://youtu.be/lDip-1VnaOA?t=94 */
+
+  /* Contrast */
+  --ct-laranja: #fe6731;
+  --ct-amarelo: #ffd816;
+  --ct-azul: #0074ff;
+  --ct-verde: #00b552;
+  /* Backgrounds */
+  --bg-creme: #fff6e7;
+  --bg-branco: #ffffff;
+  /* Text */
+  --txt-branco: #ffffff;
+  --txt-preto: #000000;
+}
+
+/* Basic settings for the whole website */
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-inter);
+  background-color: #f3c681;
+}
+
+/* ----------------------------------------------------------------------- 
+   Hamburger menu styles 
+   This section defines the styles for the hamburger menu, and the navbar
+   present in different pages of the website
+   ----------------------------------------------------------------------- */
+
+/* New navbar */
+/* Hamburger Button */
+.header {
+  max-width: 100%;
+}
+
+.hamburger {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 1001;
+  width: 30px;
+  height: 24px;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--bg-creme);
+  border-radius: 2px;
+  transform-origin: center;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  color: #f2ab15;
+  transition: 0.3s;
+}
+
+/* Side Menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  margin-top: auto;
+  background-color: var(--ct-verde);
+  opacity: 0.7;
+  padding-top: 5rem;
+  transform: translateX(100%);
+  z-index: 999;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: 2rem;
+}
+
+.side-menu ul li a {
+  color: var(--txt-preto);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Logo Styling */
+.logo {
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  z-index: 1000;
+  padding: 5px;
+}
+
+.logo img {
+  width: 115px;
+  /* Adjust logo size */
+  height: auto;
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+  /* Hamburger Button */
+  .hamburger {
+    position: fixed;
+    top: 1em;
+    right: 1rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 1001;
+    width: 30px;
+    height: 24px;
+  }
+
+  .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--bg-creme);
+    border-radius: 2px;
+    transform-origin: center;
+  }
+
+  .hamburger span {
+    width: 30px;
+    height: 3px;
+    color: #f2ab15;
+    transition: 0.3s;
+  }
+
+  /* Logo styling*/
+  .logo {
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    z-index: 10;
+    padding: 5px;
+  }
+
+  .logo img {
+    width: 100px;
+    /* Adjust logo size */
+    height: auto;
+  }
+  .side-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: auto;
+    background-color: var(--ct-verde);
+    opacity: 0.9;
+    padding-top: 5rem;
+    transform: translateX(100%);
+    z-index: 999;
+  }
+
+  .side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 2rem;
+    justify-content: center;
+  }
+
+  .side-menu ul li a {
+    color: var(--txt-branco);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
+
+/* ----------------------------------------------------------------------- 
+   Os Cogumelos page styles 
+   This section defines the styles for the "Cogumelos" page of the website
+ ----------------------------------------------------------------------- */
+
+/* Wrapper for all the content of the page */
+.cogumelos {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10rem;
+  align-items: center; /* Centraliza a container horizontalmente */
+  justify-content: center; /* Centraliza os itens dentro da container verticalmente */
+  list-style: none;
+  max-width: 100%;
+}
+
+/* Main title of the page */
+.cogumelos .cog-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: var(--font-londrina);
+  font-weight: 400;
+  font-size: 7rem;
+}
+
+/* Container of all 3 sections with the different mushrooms */
+.cogumelos .container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Aumenta o espaçamento entre as seções */
+  align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+/* Individual containers for each mushrooms */
+.cogumelos .container .cogumelo {
+  padding-left: 100px;
+  padding-right: 100px;
+  display: flex;
+  flex-direction: row; /* Texto e imagem lado a lado */
+  align-items: center; /* Alinha a imagem e o texto verticalmente */
+  justify-content: center; /* Garante que o conteúdo do cogumelo seja centralizado */
+}
+
+/* Dimensions of the mushroom images */
+.cogumelos .container img {
+  /* Mudar aqui o tamanho com base na gif feita */
+  height: 35rem;
+  width: auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+/* Text section of every mushroom container */
+.cogumelos .container .cogumelo .text {
+  display: flex;
+  flex-direction: column;
+  width: 70%; /* Limita a largura do texto para que ele ocupe menos espaço */
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Title of the mushroom text */
+.cogumelos .container .cogumelo .text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.1rem;
+  font-family: var(--font-londrina);
+  font-size: px;
+}
+
+/* Description title */
+.cogumelos .container .cogumelo .text h3 {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+/* Sub-title of the mushroom text */
+.cogumelos .container .cogumelo .text h3 i {
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  font-weight: 200;
+}
+
+/* Individual paragraphs */
+.cogumelos .container .cogumelo .text p {
+  font-size: 3rem;
+  margin-top: 1rem;
+  line-height: 1.6;
+  max-height: 12rem; /* Limita a altura do parágrafo para evitar que o texto ocupe muito espaço */
+  overflow: hidden; /* Esconde o texto extra */
+  justify-content: center;
+  align-items: center; /* Centraliza o texto dentro da coluna */
+}
+
+/* Especificidade para inverter a ordem do Cogumelo Juba de Leão */
+.cogumelos .container .cogumelo:nth-child(2) {
+  flex-direction: row-reverse; /* Inverte a ordem apenas para o segundo cogumelo (Juba de Leão) */
+}
+
+/*Usos*/
+
+.usos {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza a container horizontalmente */
+  justify-content: center; /* Centraliza os itens dentro da container verticalmente */
+}
+.usos .us-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: var(--font-londrina);
+  font-weight: 400;
+  font-size: 7rem;
+}
+
+/* Mobile view */
+
+/*Mobile S*/
+@media (max-width: 320px) {
+  .cogumelos {
+    padding-top: 6rem;
+  }
+
+  .cogumelos .cog-title {
+    font-size: 3rem;
+  }
+
+  .cogumelos .container {
+    max-width: 100%;
+  }
+
+  .cogumelos .container .cogumelo {
+    flex-direction: column;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .cogumelos .container img {
+    height: auto;
+    width: 100%;
+    margin: auto 0;
+  }
+
+  .cogumelos .container .cogumelo .text {
+    justify-content: center;
+    padding: 0px 25px;
+  }
+
+  .cogumelos .container .cogumelo .text h2 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .cogumelos .container .cogumelo .text p {
+    font-size: 0.9rem;
+    margin: 0.5rem;
+  }
+  .usos .us-title {
+    font-size: 5rem;
+  }
+
+  /* In mobile view, all the mushrooms are ordered vertically */
+  .cogumelos .container .cogumelo:nth-child(2) {
+    flex-direction: column; /* Ordered vertically */
+  }
+}
+
+/*Mobile M & L*/
+@media (min-width: 375px) and (max-width: 425px) {
+  .cogumelos {
+    padding-top: 6rem;
+  }
+
+  .cogumelos .cog-title {
+    font-size: 4rem;
+  }
+
+  .cogumelos .container {
+    max-width: 100%;
+  }
+  .cogumelos .container .cogumelo {
+    flex-direction: column;
+    margin: 0.5rem 0;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .cogumelos .container img {
+    height: auto;
+    width: 100%;
+    margin: auto 0;
+  }
+
+  .cogumelos .container .cogumelo .text {
+    justify-content: center;
+    padding: 0px 25px;
+  }
+
+  .cogumelos .container .cogumelo .text h2 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .cogumelos .container .cogumelo .text p {
+    font-size: 0.9rem;
+    margin: 0.5rem;
+  }
+
+  /* In mobile view, all the mushrooms are ordered vertically */
+  .cogumelos .container .cogumelo:nth-child(2) {
+    flex-direction: column; /* Ordered vertically */
+  }
+  .usos .us-title {
+    font-size: 4rem;
+  }
+}

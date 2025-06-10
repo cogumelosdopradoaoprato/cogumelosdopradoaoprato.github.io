@@ -1,0 +1,354 @@
+/* Global style variables to use along the code */
+:root {
+  /* Variante para Londrina-- Títulos*/
+  --font-londrina: "Londrina Solid", cursive;
+
+  /* Variante para Inter-- Corpo de Texto */
+  --font-inter: "Inter", sans-serif;
+  /* Satoshi font has to be downloaded and imported. This video will help: https://youtu.be/lDip-1VnaOA?t=94 */
+
+  /* Contrast */
+  --ct-laranja: #fe6731;
+  --ct-amarelo: #ffd816;
+  --ct-azul: #0074ff;
+  --ct-verde: #00b552;
+  /* Backgrounds */
+  --bg-creme: #fff6e7;
+  --bg-branco: #ffffff;
+  /* Text */
+  --txt-branco: #ffffff;
+  --txt-preto: #000000;
+}
+
+/* Basic settings for the whole website */
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-inter);
+  background-color: #f3c681;
+}
+
+/* ----------------------------------------------------------------------- 
+   Hamburger menu styles 
+   This section defines the styles for the hamburger menu, and the navbar
+   present in different pages of the website
+   ----------------------------------------------------------------------- */
+
+/* New navbar */
+/* Hamburger Button */
+.header {
+  max-width: 100%;
+}
+.hamburger {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 1001;
+  width: 30px;
+  height: 24px;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--bg-creme);
+  border-radius: 2px;
+  transform-origin: center;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  color: #f2ab15;
+  transition: 0.3s;
+}
+
+/* Side Menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  margin-top: auto;
+  background-color: var(--ct-verde);
+  opacity: 0.7;
+  padding-top: 5rem;
+  transform: translateX(100%);
+  z-index: 999;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: 2rem;
+}
+
+.side-menu ul li a {
+  color: var(--txt-preto);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Logo Styling */
+.logo {
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  z-index: 1000;
+  padding: 5px;
+}
+
+.logo img {
+  width: 115px;
+  /* Adjust logo size */
+  height: auto;
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+  /* Hamburger Button */
+  .hamburger {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 1001;
+    width: 30px;
+    height: 24px;
+  }
+
+  .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--bg-creme);
+    border-radius: 2px;
+    transform-origin: center;
+  }
+
+  .hamburger span {
+    width: 30px;
+    height: 3px;
+    color: #f2ab15;
+    transition: 0.3s;
+  }
+
+  /* Logo styling*/
+  .logo {
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    z-index: 10;
+    padding: 5px;
+  }
+
+  .logo img {
+    width: 100px;
+    /* Adjust logo size */
+    height: auto;
+  }
+  .side-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: auto;
+    background-color: var(--ct-verde);
+    opacity: 0.9;
+    padding-top: 5rem;
+    transform: translateX(100%);
+    z-index: 999;
+  }
+
+  .side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 2rem;
+    justify-content: center;
+  }
+
+  .side-menu ul li a {
+    color: var(--txt-branco);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
+
+/* ----------------------------------------------------------------------- 
+   Main page styles 
+   This section defines the styles for the "Main" page of the website
+ ----------------------------------------------------------------------- */
+
+/* Main wrapper of all the content of the website */
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Contains the center image with the buttons and the little guys */
+.main .center {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contains the grey background and the 3 buttons */
+.main .center .center-image {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/blob.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Little guys */
+.main .center .cogu-main {
+  position: absolute;
+  transform: translateY(20px);
+  width: 50%;
+  z-index: 2;
+}
+
+/* Styles for the buttons */
+.main .center a {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 3em;
+  z-index: 3;
+  border-radius: 20px;
+  background-color: var(--ct-verde);
+  color: var(--bg-branco);
+  text-decoration: none;
+  font-family: var(--font-londrina);
+  font-weight: 400;
+  font-size: large;
+}
+
+/* Positioning for the button "Produção" */
+.main .center .button1 {
+  right: 10%;
+  top: 0;
+}
+
+/* Positioning for the button "Sobre" */
+.main .center .button2 {
+  left: 5%;
+  top: 50%;
+}
+
+/* Positioning for the button "Os cogumelos" */
+.main .center .button3 {
+  right: 20%;
+  bottom: 0;
+}
+
+/* Other Versions view of Main page */
+/* Mobile S */
+@media (max-width: 320px) {
+  .main .center {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em; /* Espaçamento entre os botões */
+  }
+
+  .main .center .cogu-main {
+    width: 70%;
+    align-items: center; /* Espaço abaixo da imagem */
+  }
+
+  .main .center a {
+    padding: 0.2em 0.5em; /* Botões um pouco maiores */
+    border-radius: 15px;
+    width: 80%; /* Largura fixa para alinhamento */
+    text-align: center;
+    transform: none; /* Remove transform para evitar sobreposição */
+    font-family: var(--font-londrina);
+    font-weight: 400;
+    font-size: small;
+    transform: translateY(160px);
+  }
+
+  /* Remove posicionamento absoluto/fixo dos botões */
+  .main .center .button1,
+  .main .center .button2,
+  .main .center .button3 {
+    position: relative;
+    top: initial;
+    right: initial;
+    left: initial;
+    bottom: initial;
+    margin: 0.2em;
+  }
+}
+
+/* Mobile L & M */
+@media (min-width: 375px) and (max-width: 425px) {
+  .main .center {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em; /* Espaçamento entre os botões */
+  }
+
+  .main .center .cogu-main {
+    width: 70%;
+    margin-bottom: 1em; /* Espaço abaixo da imagem */
+  }
+
+  .main .center a {
+    padding: 0.2em 1em;
+    border-radius: 15px;
+    transform: translateY(200px);
+  }
+
+  .main .center .button1,
+  .main .center .button2,
+  .main .center .button3 {
+    position: relative;
+    top: initial;
+    right: initial;
+    left: initial;
+    bottom: initial;
+    margin: 0.2em;
+  }
+}

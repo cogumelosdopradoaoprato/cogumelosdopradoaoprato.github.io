@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="src/style.css" />
+  <link rel="stylesheet" href="css/cogumelos.css" />
   <title>Cogumelos</title>
   <link rel="shortcut icon" type="image/x-icon" href="public/favicon.ico" />
 
@@ -18,24 +18,28 @@
 </head>
 
 <body>
-  <div class="logo">
-    <a href="index.html" class="button3">
-      <img src="images/logo.png" alt="">
-    </a>
+  <div class="header">
+    <div class="logo">
+      <a href="index.html" class="button3">
+        <img src="images/logo.png" alt="">
+      </a>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span class="bar top"></span>
+      <span class="bar middle"></span>
+      <span class="bar bottom"></span>
+    </div>
+    <nav class="side-menu" id="sideMenu">
+      <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/producao.html">Produção</a></li>
+        <li><a href="/cogumelos.html">Cogumelos</a></li>
+        <li><a href="/sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
   </div>
-  <div class="hamburger" id="hamburger">
-    <span class="bar top"></span>
-    <span class="bar middle"></span>
-    <span class="bar bottom"></span>
-  </div>
-  <nav class="side-menu" id="sideMenu">
-    <ul>
-      <li><a href="/">Início</a></li>
-      <li><a href="/producao.html">Produção</a></li>
-      <li><a href="/cogumelos.html">Cogumelos</a></li>
-      <li><a href="/sobre.html">Sobre</a></li>
-    </ul>
-  </nav>
+
+
   <div class="cogumelos">
     <h1 class="cog-title">COGUMELOS</h1>
     <div class="container">
@@ -44,26 +48,22 @@
         <div class="text">
           <h2>COGUMELO OSTRA</h2>
           <h3><i>Pleurotus ostreatus</i></h3>
-          <p>
           <h3>Características: </h3>
           Chapéu com 7 a 10 cm de diâmetro, com cor cinza-azulada (quando cultivado a temperatura abaixo de 15ºC) ou cor
-          castanha-acinzentada, lâminas brancas e pé curto e branco.
+          castanho-acinzentado, lâminas brancas e pé curto e branco.
           <br>
           <br>
           Frutifica todo o ano de modo rápido e abundante, conserva-se bem.
           <br>
           <h3>Benefícios:</h3>
-          <br>
-          <ul>
-            <li>
-              Apoiar a imunidade
-            </li>
-            <li>
-              Saúde do coração
-            </li>
-            <li>Controle de peso</li>
-            <li>Saúde intestinal</li>
-          </ul>
+          <li>
+            Apoiar a imunidade
+          </li>
+          <li>
+            Saúde do coração
+          </li>
+          <li>Controle de peso</li>
+          <li>Saúde intestinal</li>
           </p>
         </div>
       </div>
@@ -72,7 +72,6 @@
         <div class="text">
           <h2>COGUMELO JUBA DE LEÃO</h2>
           <h3><i>Hericium erinaceus</i></h3>
-          <p>
           <h3>Características: </h3>
           Cogumelos esféricos revestidos por espinhos descendentes não bifurcados, cor branca a levemente rosada, que
           passa a amarelada com o tempo de maturação.
@@ -81,18 +80,16 @@
           Frutifica todo o ano de modo rápido e abundante, embora se recomende a produção de outubro a abril.
           <br>
           <h3>Benefícios:</h3>
-          <br>
-          <ul>
-            <li>
-              Melhora da função cognitiva
-            </li>
-            <li>
-              Melhora a memória
-            </li>
-            <li>
-              Previne doenças cardiovasculares
-            </li>
-          </ul>
+          <li>
+            Melhora da função cognitiva
+          </li>
+          <li>
+            Melhora a memória
+          </li>
+          <li>
+            Previne doenças cardiovasculares
+          </li>
+
           </p>
         </div>
       </div>
@@ -101,7 +98,6 @@
         <div class="text">
           <h2>COGUMELO DO CARDO</h2>
           <h3><i>Pleurotus eryngii</i></h3>
-          <p>
           <h3>Características: </h3>
           Chapéu pequeno, com 5 a 10 cm de diâmetro, cor creme acinzentada, lâminas brancas e pé branco e robusto, com
           10 a 15 cm de comprimento.
@@ -110,23 +106,24 @@
           Frutifica todo o ano com elevada produtividade.
           <br>
           <h3>Benefícios:</h3>
-          <br>
-          <ul>
-            <li>
-              Apoiar a imunidade
-            </li>
-            <li>
-              Saúde do coração
-            </li>
-            <li>Controle de peso</li>
-            <li>Saúde intestinal</li>
-          </ul>
+          <li>
+            Apoiar a imunidade
+          </li>
+          <li>
+            Saúde do coração
+          </li>
+          <li>Controle de peso</li>
+          <li>Saúde intestinal</li>
           </p>
         </div>
       </div>
     </div>
   </div>
-  <div>
+
+  <div class="usos">
+    <h1 class="us-title">USOS</h1>
+    <div class="container">
+      <div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/MotionPathPlugin.min.js"></script>
