@@ -1,22 +1,12 @@
-/* Import fonts */
-@font-face {
-  font-family: "Londrina";
-  src: url(fonts/LondrinaSolid-Regular.ttf);
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url(fonts/Inter-VariableFont_opsz\wght.ttf);
-}
-
 /* Global style variables to use along the code */
 :root {
-  /* Titles */
-  --ft-londrina: "Londrina", sans-serif;
-  --ft-inter: "Inter", sans-serif;
-  /* Sub-titles */
+  /* Variante para Londrina-- Títulos*/
+  --font-londrina: "Londrina Solid", cursive;
+
+  /* Variante para Inter-- Corpo de Texto */
+  --font-inter: "Inter", sans-serif;
   /* Satoshi font has to be downloaded and imported. This video will help: https://youtu.be/lDip-1VnaOA?t=94 */
-  --ft-inter: "Inter", sans-serif;
+
   /* Contrast */
   --ct-laranja: #fe6731;
   --ct-amarelo: #ffd816;
@@ -32,7 +22,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: "Onest", sans-serif;
+  font-family: var(--font-inter);
   background-color: #f3c681;
 }
 
@@ -164,7 +154,7 @@ body {
 .main .center .cogu-main {
   position: absolute;
   transform: translateY(20px);
-  width: 40%;
+  width: 50%;
   z-index: 2;
 }
 
@@ -175,13 +165,15 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0.2em 1em;
+  padding: 1em 3em;
   z-index: 3;
   border-radius: 20px;
-  background-color: #9ae06b;
-  color: black;
+  background-color: var(--ct-verde);
+  color: var(--bg-branco);
   text-decoration: none;
-  font-weight: bold;
+  font-family: var(--font-londrina);
+  font-weight: 400;
+  font-size: large;
 }
 
 /* Positioning for the button "Produção" */
@@ -202,9 +194,50 @@ body {
   bottom: 0;
 }
 
-/* Mobile view of Main page */
+/* Other Versions view of Main page */
+/* Mobile S */
+@media (max-width: 320px) {
+  .main .center {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em; /* Espaçamento entre os botões */
+  }
 
-@media (max-width: 768px) {
+  .main .center .cogu-main {
+    width: 70%;
+    margin-bottom: 1em; /* Espaço abaixo da imagem */
+  }
+
+  .main .center a {
+    padding: 0.2em 0.5em; /* Botões um pouco maiores */
+    border-radius: 15px;
+    width: 80%; /* Largura fixa para alinhamento */
+    text-align: center;
+    transform: none; /* Remove transform para evitar sobreposição */
+    font-family: var(--font-londrina);
+    font-weight: 400;
+    font-size: small;
+    transform: translateY(160px);
+  }
+
+  /* Remove posicionamento absoluto/fixo dos botões */
+  .main .center .button1,
+  .main .center .button2,
+  .main .center .button3 {
+    position: relative;
+    top: initial;
+    right: initial;
+    left: initial;
+    bottom: initial;
+    margin: 0.2em;
+  }
+}
+
+/* Mobile L & M */
+@media (min-width: 375px) and (max-width: 425px) {
   .main .center {
     width: 90%;
     height: 100%;
@@ -218,27 +251,18 @@ body {
   .main .center a {
     padding: 0.2em 1em;
     border-radius: 15px;
-    transform: translateY(180px);
+    transform: translateY(200px);
   }
 
-  .main .center .button1 {
-    position: relative;
-    right: initial;
-    left: initial;
-    margin: 0px 30px;
-  }
-
-  .main .center .button2 {
+  .main .center .button1,
+  .main .center .button2,
+  .main .center .button3 {
     position: relative;
     top: initial;
     right: initial;
     left: initial;
-  }
-
-  .main .center .button3 {
-    position: relative;
-    right: initial;
     bottom: initial;
+    margin: 0.2em;
   }
 }
 
