@@ -1,14 +1,12 @@
 /* Import fonts */
-.londrina {
-  font-family: "Londrina Solid", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+@font-face {
+  font-family: "Londrina";
+  src: url(fonts/LondrinaSolid-Regular.ttf);
 }
 
-.inter {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+@font-face {
+  font-family: "Inter";
+  src: url(fonts/Inter-VariableFont_opsz\wght.ttf);
 }
 
 /* Global style variables to use along the code */
@@ -24,18 +22,9 @@
   --ct-amarelo: #ffd816;
   --ct-azul: #0074ff;
   --ct-verde: #00b552;
-  --ct-rosa: #ff9bc0;
   /* Backgrounds */
   --bg-creme: #fff6e7;
   --bg-branco: #ffffff;
-}
-
-/*Cursor*/
-* {
-  cursor: url("../images/Normal.cur"), default;
-}
-* a {
-  cursor: url("../images/Select.cur"), pointer;
 }
 
 /* Basic settings for the whole website */
@@ -43,9 +32,8 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: var(--ft-inter);
-  font-weight: 100;
-  background-color: var(--bg-creme);
+  font-family: "Onest", sans-serif;
+  background-color: #f3c681;
 }
 
 /* ----------------------------------------------------------------------- 
@@ -187,24 +175,24 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 1em 3em;
+  padding: 0.2em 1em;
   z-index: 3;
   border-radius: 20px;
-  background-color: var(--ct-laranja);
-  color: white;
+  background-color: #9ae06b;
+  color: black;
   text-decoration: none;
   font-weight: bold;
 }
 
 /* Positioning for the button "Produção" */
 .main .center .button1 {
-  right: 15%;
+  right: 10%;
   top: 0;
 }
 
 /* Positioning for the button "Sobre" */
 .main .center .button2 {
-  left: 10%;
+  left: 5%;
   top: 50%;
 }
 
@@ -218,13 +206,13 @@ body {
 
 @media (max-width: 768px) {
   .main .center {
-    width: 100%;
+    width: 90%;
     height: 100%;
   }
 
   .main .center .cogu-main {
-    width: 60%;
-    right: 25%;
+    width: 70%;
+    justify-content: center;
   }
 
   .main .center a {
@@ -236,21 +224,21 @@ body {
   .main .center .button1 {
     position: relative;
     right: initial;
-    top: initial;
+    left: initial;
     margin: 0px 30px;
   }
 
   .main .center .button2 {
     position: relative;
+    top: initial;
     right: initial;
     left: initial;
-    top: initial;
   }
 
   .main .center .button3 {
     position: relative;
     right: initial;
-    top: initial;
+    bottom: initial;
   }
 }
 
