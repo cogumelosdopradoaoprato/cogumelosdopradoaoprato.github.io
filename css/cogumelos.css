@@ -8,15 +8,14 @@
   /* Satoshi font has to be downloaded and imported. This video will help: https://youtu.be/lDip-1VnaOA?t=94 */
 
   /* Contrast */
-  --ct-laranja: #fe6731;
+  --ct-laranja: #ff5e33;
   --ct-amarelo: #ffd816;
-  --ct-azul: #0074ff;
-  --ct-verde: #00b552;
+  --ct-azul: #1a0089;
+  --ct-verde: #b7cf4f;
   /* Backgrounds */
-  --bg-creme: #fff6e7;
-  --bg-branco: #ffffff;
+  --bg-creme: #efe7d3;
   /* Text */
-  --txt-creme: #fff6e7;
+  --txt-creme: #efe7d3;
   --txt-preto: #000000;
 }
 
@@ -64,7 +63,7 @@ body {
 .bar {
   width: 100%;
   height: 3px;
-  background-color: var(--ct-laranja);
+  background-color: var(--ct-azul);
   border-radius: 2px;
   transform-origin: center;
 }
@@ -72,13 +71,26 @@ body {
 .hamburger span {
   width: 30px;
   height: 3px;
-  color: #f2ab15;
+  color: var(--ct-amarelo);
   transition: 0.3s;
 }
 .hamburger,
 .hamburger .bar,
 .hamburger span {
   cursor: url("../images/cursor/SelectBig.cur"), pointer;
+}
+
+a,
+button,
+[onclick],
+[role="button"],
+.hamburger,
+.hamburger *,
+.logo,
+.logo a,
+.main .center a,
+.main .center a * {
+  cursor: url("../images/cursor/SelectBig.cur"), pointer !important;
 }
 
 /* Side Menu */
@@ -155,7 +167,6 @@ body {
   .hamburger span {
     width: 30px;
     height: 3px;
-    color: #f2ab15;
     transition: 0.3s;
   }
 
@@ -180,7 +191,6 @@ body {
     width: 100%;
     height: 100%;
     margin-top: auto;
-    background-color: var(--ct-verde);
     padding-top: 5rem;
     transform: translateX(100%);
     z-index: 999;
