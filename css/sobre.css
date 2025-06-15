@@ -1,0 +1,425 @@
+/* Global style variables to use along the code */
+:root {
+  /* Variante para Londrina-- Títulos*/
+  --font-londrina: "Londrina Solid", cursive;
+
+  /* Variante para Inter-- Corpo de Texto */
+  --font-inter: "Inter", sans-serif;
+  /* Satoshi font has to be downloaded and imported. This video will help: https://youtu.be/lDip-1VnaOA?t=94 */
+
+  /* Contrast */
+  --ct-laranja: #ff5e33;
+  --ct-amarelo: #ffd816;
+  --ct-azul: #1a0089;
+  --ct-verde: #b7cf4f;
+  /* Backgrounds */
+  --bg-creme: #efe7d3;
+  /* Text */
+  --txt-creme: #efe7d3;
+  --txt-preto: #000000;
+}
+
+/*Cursor*/
+* {
+  cursor: url("../images/cursor/NormalBig.cur"), default;
+}
+* a {
+  cursor: url("../images/cursor/SelectBig.cur"), pointer;
+}
+
+/* Basic settings for the whole website */
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-inter);
+  background-color: var(--bg-creme);
+}
+
+/* ----------------------------------------------------------------------- 
+   Hamburger menu styles 
+   This section defines the styles for the hamburger menu, and the navbar
+   present in different pages of the website
+   ----------------------------------------------------------------------- */
+
+/* New navbar */
+/* Hamburger Button */
+.header {
+  max-width: 100%;
+}
+
+.hamburger {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 1001;
+  width: 30px;
+  height: 24px;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--ct-azul);
+  border-radius: 2px;
+  transform-origin: center;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  color: var(--ct-amarelo);
+  transition: 0.3s;
+}
+.hamburger,
+.hamburger .bar,
+.hamburger span {
+  cursor: url("../images/cursor/SelectBig.cur"), pointer;
+}
+
+a,
+button,
+[onclick],
+[role="button"],
+.hamburger,
+.hamburger *,
+.logo,
+.logo a,
+.main .center a,
+.main .center a * {
+  cursor: url("../images/cursor/SelectBig.cur"), pointer !important;
+}
+
+/* Side Menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  margin-top: auto;
+  background-color: var(--ct-verde);
+  opacity: 0.5rem;
+  padding-top: 5rem;
+  transform: translateX(100%);
+  z-index: 999;
+}
+
+.side-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: right;
+  padding-right: 3rem;
+  padding-top: 50%;
+}
+
+.side-menu ul li a {
+  color: var(--txt-creme);
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 400;
+  cursor: url("../images/cursor/SelectBig.cur"), pointer;
+}
+
+/* Logo Styling */
+.logo {
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  z-index: 1000;
+  padding: 5px;
+}
+
+.logo img {
+  width: 115px;
+  /* Adjust logo size */
+  height: auto;
+  cursor: url("../images/cursor/SelectBig.cur"), pointer;
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+  /* Hamburger Button */
+  .hamburger {
+    position: fixed;
+    top: 1em;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 1001;
+    width: 30px;
+    height: 24px;
+  }
+
+  .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--bg-creme);
+    border-radius: 2px;
+    transform-origin: center;
+  }
+
+  .hamburger span {
+    width: 30px;
+    height: 3px;
+    transition: 0.3s;
+  }
+
+  /* Logo styling*/
+  .logo {
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    z-index: 10;
+    padding: 5px;
+  }
+
+  .logo img {
+    width: 100px;
+    /* Adjust logo size */
+    height: auto;
+  }
+  .side-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: auto;
+    padding-top: 5rem;
+    transform: translateX(100%);
+    z-index: 999;
+  }
+}
+
+/* ----------------------------------------------------------------------- 
+   Sobre nós page styles 
+   This section defines the styles for the "Sobre nós" page of the website
+ ----------------------------------------------------------------------- */
+
+/* Main wrapper for the content of the page */
+.sobre {
+  display: flex;
+  flex-direction: column;
+  padding: 10rem 0rem;
+}
+
+/* Main title of the page */
+.sobre .sob-title {
+  font-size: 4rem;
+  text-align: center;
+}
+
+/* Wrapper for the content and images */
+.sobre .container {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 180px;
+}
+
+/* First section the page */
+.sobre .container .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Text of the first section */
+.sobre .container .header .text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 40px;
+}
+
+/* Paragraphs of the first section*/
+.sobre .container .header .text p {
+  font-size: 1.5rem;
+}
+
+/* Text container of individual sections */
+.sobre .container .bodytext {
+  margin: 40px 0px;
+  padding: 40px 0px;
+  font-size: 1.5rem;
+}
+
+/* Wide banner */
+.sobre .container .wide-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Title of sponsors */
+.sobre .container .sponsors h3 {
+  margin-top: 3.5rem;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #9aaf10;
+}
+
+/* Sponsors grid */
+.sobre .container .sponsors .grid-sponsor {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, auto);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sponsors images */
+.sobre .container .grid-sponsor img {
+  width: 7rem;
+  height: auto;
+  padding: 0;
+  margin: 1rem;
+  justify-content: center;
+}
+
+/* Finance grid*/
+.sobre .container .sponsors .grid-finance {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, auto);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Finance images */
+.sobre .container .grid-finance img {
+  width: 15rem;
+  height: auto;
+  padding: 0;
+  justify-content: center;
+}
+
+/* Coordination grid */
+.sobre .container .sponsors .grid-coord {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, auto);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Coordination images */
+.sobre .container .grid-coord img {
+  width: 10rem;
+  height: auto;
+  padding: 0;
+  margin: 1rem;
+  justify-content: center;
+}
+
+/* Post-project grid */
+.sobre .container .sponsors .grid-pos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, auto);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Post-project images */
+.sobre .container .grid-pos img {
+  width: 10rem;
+  height: auto;
+  padding: 0;
+  margin: 1rem;
+  justify-content: center;
+}
+
+/* Mobile view */
+
+@media (max-width: 768px) {
+  .sobre {
+    padding: 5rem 0rem;
+  }
+
+  .sobre .sob-title {
+    font-size: 2rem;
+  }
+
+  .sobre .container {
+    margin: 0px 10px;
+  }
+
+  .sobre .container .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .sobre .container .header .text {
+    margin: 10px;
+  }
+
+  .sobre .container .header .text p {
+    font-size: 1rem;
+  }
+
+  .sobre .container .bodytext {
+    margin: 20px 10px;
+    padding: 0px 0px;
+    font-size: 1.2rem;
+  }
+
+  .sobre .container .bodytext p {
+    font-size: 1rem;
+  }
+
+  .sobre .container .header img {
+    height: 15rem;
+    margin: auto 0;
+  }
+
+  .sobre .container .wide-image img {
+    width: 100%;
+    margin: 1rem 0px;
+  }
+
+  .sobre .container .sponsors h2 {
+    margin: 1rem 0rem;
+    font-size: 2rem;
+  }
+
+  .sobre .container .sponsors .grid-sponsor {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sobre .container .grid-sponsor img {
+    margin: auto;
+  }
+
+  .sobre .container .sponsors .grid-finance {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .sobre .container .grid-finance img {
+    margin: 0 auto;
+  }
+
+  .sobre .container .sponsors .grid-coord {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sobre .container .grid-coord img {
+    margin: 1rem auto;
+  }
+
+  .sobre .container .sponsors .grid-pos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sobre .container .grid-pos img {
+    margin: 1rem auto;
+  }
+}

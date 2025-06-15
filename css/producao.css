@@ -1,0 +1,468 @@
+/* Global style variables to use along the code */
+:root {
+  /* Variante para Londrina-- Títulos*/
+  --font-londrina: "Londrina Solid", cursive;
+
+  /* Variante para Inter-- Corpo de Texto */
+  --font-inter: "Inter", sans-serif;
+  /* Satoshi font has to be downloaded and imported. This video will help: https://youtu.be/lDip-1VnaOA?t=94 */
+
+  /* Contrast */
+  --ct-laranja: #ff5e33;
+  --ct-amarelo: #ffd816;
+  --ct-azul: #1a0089;
+  --ct-verde: #b7cf4f;
+  /* Backgrounds */
+  --bg-creme: #efe7d3;
+  /* Text */
+  --txt-creme: #efe7d3;
+  --txt-preto: #000000;
+}
+
+/*Cursor*/
+* {
+  cursor: url("../images/cursor/NormalBig.cur"), default;
+}
+* a {
+  cursor: url("../images/cursor/SelectBig.cur"), pointer;
+}
+
+/* Basic settings for the whole website */
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-inter);
+  background-color: var(--bg-creme);
+}
+
+/* ----------------------------------------------------------------------- 
+   Hamburger menu styles 
+   This section defines the styles for the hamburger menu, and the navbar
+   present in different pages of the website
+   ----------------------------------------------------------------------- */
+
+/* New navbar */
+/* Hamburger Button */
+.header {
+  max-width: 100%;
+}
+
+.hamburger {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 1001;
+  width: 30px;
+  height: 24px;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--ct-azul);
+  border-radius: 2px;
+  transform-origin: center;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  color: var(--ct-amarelo);
+  transition: 0.3s;
+}
+.hamburger,
+.hamburger .bar,
+.hamburger span {
+  cursor: url("../images/cursor/SelectBig.cur"), pointer;
+}
+
+a,
+button,
+[onclick],
+[role="button"],
+.hamburger,
+.hamburger *,
+.logo,
+.logo a,
+.main .center a,
+.main .center a * {
+  cursor: url("../images/cursor/SelectBig.cur"), pointer !important;
+}
+
+/* Side Menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  margin-top: auto;
+  background-color: var(--ct-verde);
+  opacity: 0.5rem;
+  padding-top: 5rem;
+  transform: translateX(100%);
+  z-index: 999;
+}
+
+.side-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: right;
+  padding-right: 3rem;
+  padding-top: 50%;
+}
+
+.side-menu ul li a {
+  color: var(--txt-creme);
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 400;
+  cursor: url("../images/cursor/SelectBig.cur"), pointer;
+}
+
+/* Logo Styling */
+.logo {
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  z-index: 1000;
+  padding: 5px;
+}
+
+.logo img {
+  width: 115px;
+  /* Adjust logo size */
+  height: auto;
+  cursor: url("../images/cursor/SelectBig.cur"), pointer;
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+  /* Hamburger Button */
+  .hamburger {
+    position: fixed;
+    top: 1em;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 1001;
+    width: 30px;
+    height: 24px;
+  }
+
+  .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--bg-creme);
+    border-radius: 2px;
+    transform-origin: center;
+  }
+
+  .hamburger span {
+    width: 30px;
+    height: 3px;
+    transition: 0.3s;
+  }
+
+  /* Logo styling*/
+  .logo {
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    z-index: 10;
+    padding: 5px;
+  }
+
+  .logo img {
+    width: 100px;
+    /* Adjust logo size */
+    height: auto;
+  }
+  .side-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: auto;
+    padding-top: 5rem;
+    transform: translateX(100%);
+    z-index: 999;
+  }
+}
+
+/* ----------------------------------------------------------------------- 
+   Produção page styles 
+   This section defines the styles for the "Produção" page of the website
+ ----------------------------------------------------------------------- */
+
+/* Wrapper for all the content of the page */
+.producao {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh * 5);
+}
+
+/* Container for all the sections, and the circle */
+.producao .container {
+  height: 500vh;
+  position: relative;
+}
+
+/* Information of every section */
+.producao .container .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  max-width: 70%;
+  align-self: center;
+  padding: 2rem;
+  position: sticky;
+  top: 7rem;
+  margin: auto;
+}
+
+/* Images of every section */
+.producao .container .content img {
+  max-width: 20%;
+}
+
+/* Text of every section */
+.producao .container .content .text {
+  width: 50%;
+}
+
+/* Title of every section */
+.producao .container .content .text h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* Text body of every section */
+.producao .container .content .text p {
+  font-size: 1.1rem;
+}
+
+/* Container for the element os the rotating circle */
+.producao .container .circle-container {
+  position: fixed;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1500px;
+  height: 1500px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* Rotating circle image */
+.producao .container .circle-image {
+  position: absolute;
+  transform-origin: center center;
+  transform: scale(0);
+  max-height: 2000px;
+}
+
+/* Following styles are for every individual section, with their
+   own parallax effect and backgrounds */
+
+/* Section first */
+.producao .container .section-first {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(62, 151, 235);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Section first parallax container*/
+.producao .container .section-first .parallax {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Grass image parallax */
+.producao .container .section-first .parallax .grass-image {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Clouds image parallax*/
+.producao .container .section-first .parallax .clouds-image {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Section second */
+.producao .container .section-second {
+  width: 100%;
+  height: 100vh;
+  background-color: navy;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+}
+
+/* Section second parallax container */
+.producao .container .section-second .parallax {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Section second grass parallax */
+.producao .container .section-second .parallax .grass-image {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Section second clouds parallax */
+.producao .container .section-second .parallax .clouds-image {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Section third */
+.producao .container .section-third {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(0, 128, 6);
+  position: absolute;
+  top: 200vh;
+  left: 0;
+}
+
+/* Section fourth */
+.producao .container .section-fourth {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(219, 241, 15);
+  position: absolute;
+  top: 300vh;
+  left: 0;
+}
+
+/* Section fifth */
+.producao .container .section-fifth {
+  width: 100%;
+  height: 140vh;
+  background-color: rgb(253, 25, 234);
+  position: absolute;
+  top: 400vh;
+  left: 0;
+}
+
+/* The following styles are the initial states from which
+   the elements will be animated. For example, the content
+   of a section will be invisible (opacity: 0) and fade-in
+   when the scroll reaches that point. */
+
+.producao .container .content.first {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.producao .container .content.second {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.producao .container .content.third {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.producao .container .content.fourth {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.producao .container .content.fifth {
+  transform: scale(0);
+  opacity: 0;
+}
+
+/* Small adjustment for heights lower than 1000px */
+@media (max-height: 1000px) {
+  .producao .container .circle-image {
+    height: 250vh;
+  }
+}
+
+/* Mobile view - when width of the screen is lower than 768px */
+@media (max-width: 768px) {
+  .producao .container .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    max-width: 100%;
+    align-self: center;
+    padding: 1rem;
+    position: sticky;
+    top: 5rem;
+    margin: auto;
+  }
+  .producao .container .content img {
+    max-width: 50%;
+    height: 100%;
+  }
+
+  .producao .container .content .text {
+    width: 50%;
+  }
+
+  .producao .container .content .text h2 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .producao .container .content .text p {
+    font-size: 1rem;
+  }
+
+  .producao .container .circle-container {
+    position: fixed;
+    bottom: -0%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  .producao .container .circle-image {
+    position: absolute;
+    transform-origin: center center;
+    transform: scale(0);
+    height: 35rem;
+  }
+
+  /* Section fifth */
+  .producao .container .section-fifth {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(253, 25, 234);
+    position: absolute;
+    top: 400vh;
+    left: 0;
+  }
+}

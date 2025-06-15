@@ -1,0 +1,403 @@
+/* Global style variables to use along the code */
+:root {
+  /* Variante para Londrina-- Títulos*/
+  --font-londrina: "Londrina Solid", cursive;
+
+  /* Variante para Inter-- Corpo de Texto */
+  --font-inter: "Inter", sans-serif;
+  /* Satoshi font has to be downloaded and imported. This video will help: https://youtu.be/lDip-1VnaOA?t=94 */
+
+  /* Contrast */
+  --ct-laranja: #ff5e33;
+  --ct-amarelo: #ffd816;
+  --ct-azul: #1a0089;
+  --ct-verde: #b7cf4f;
+  /* Backgrounds */
+  --bg-creme: #efe7d3;
+  /* Text */
+  --txt-creme: #efe7d3;
+  --txt-preto: #000000;
+}
+
+/*Cursor*/
+* {
+  cursor: url("../images/cursor/NormalBig.cur"), default;
+}
+* a {
+  cursor: url("../images/cursor/SelectBig.cur"), pointer;
+}
+
+/* Basic settings for the whole website */
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-inter);
+  background-color: var(--bg-creme);
+}
+
+/* ----------------------------------------------------------------------- 
+   Hamburger menu styles 
+   This section defines the styles for the hamburger menu, and the navbar
+   present in different pages of the website
+   ----------------------------------------------------------------------- */
+
+/* New navbar */
+/* Hamburger Button */
+.header {
+  max-width: 100%;
+}
+
+.hamburger {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 1001;
+  width: 30px;
+  height: 24px;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--ct-azul);
+  border-radius: 2px;
+  transform-origin: center;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  color: var(--ct-amarelo);
+  transition: 0.3s;
+}
+.hamburger,
+.hamburger .bar,
+.hamburger span {
+  cursor: url("../images/cursor/SelectBig.cur"), pointer;
+}
+
+a,
+button,
+[onclick],
+[role="button"],
+.hamburger,
+.hamburger *,
+.logo,
+.logo a,
+.main .center a,
+.main .center a * {
+  cursor: url("../images/cursor/SelectBig.cur"), pointer !important;
+}
+
+/* Side Menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  margin-top: auto;
+  background-color: var(--ct-verde);
+  opacity: 0.5rem;
+  padding-top: 5rem;
+  transform: translateX(100%);
+  z-index: 999;
+}
+
+.side-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: right;
+  padding-right: 3rem;
+  padding-top: 50%;
+}
+
+.side-menu ul li a {
+  color: var(--txt-creme);
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 400;
+  cursor: url("../images/cursor/SelectBig.cur"), pointer;
+}
+
+/* Logo Styling */
+.logo {
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  z-index: 1000;
+  padding: 5px;
+}
+
+.logo img {
+  width: 115px;
+  /* Adjust logo size */
+  height: auto;
+  cursor: url("../images/cursor/SelectBig.cur"), pointer;
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+  /* Hamburger Button */
+  .hamburger {
+    position: fixed;
+    top: 1em;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 1001;
+    width: 30px;
+    height: 24px;
+  }
+
+  .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--bg-creme);
+    border-radius: 2px;
+    transform-origin: center;
+  }
+
+  .hamburger span {
+    width: 30px;
+    height: 3px;
+    transition: 0.3s;
+  }
+
+  /* Logo styling*/
+  .logo {
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    z-index: 10;
+    padding: 5px;
+  }
+
+  .logo img {
+    width: 100px;
+    /* Adjust logo size */
+    height: auto;
+  }
+  .side-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: auto;
+    padding-top: 5rem;
+    transform: translateX(100%);
+    z-index: 999;
+  }
+}
+
+/* ----------------------------------------------------------------------- 
+   Main page styles 
+   This section defines the styles for the "Main" page of the website
+ ----------------------------------------------------------------------- */
+
+/* Main wrapper of all the content of the website */
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Contains the center image with the buttons and the little guys */
+.main .center {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contains the grey background and the 3 buttons */
+.main .center .center-image {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/blob.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Little guys */
+.main .center .cogu-main {
+  position: absolute;
+  transform: translateY(20px);
+  width: 45%;
+  z-index: 2;
+}
+
+/* Styles for the buttons */
+.main .center a {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 3em;
+  z-index: 3;
+  border-radius: 20px;
+  background-color: var(--ct-verde);
+  color: var(--bg-branco);
+  text-decoration: none;
+  font-family: var(--font-londrina);
+  font-weight: 400;
+  font-size: large;
+  cursor: url("../images/cursor/SelectBig.cur"), pointer !important;
+}
+
+.main .center .p {
+  cursor: url("../images/cursor/SelectBig.cur"), pointer !important;
+}
+
+/* Positioning for the button "Produção" */
+.main .center .button1 {
+  right: 15%;
+  top: 0;
+}
+
+/* Positioning for the button "Sobre" */
+.main .center .button2 {
+  left: 10%;
+  top: 60%;
+}
+
+/* Positioning for the button "Os cogumelos" */
+.main .center .button3 {
+  right: 20%;
+  bottom: 0;
+}
+
+/* Other Versions view of Main page */
+/* Mobile*/
+@media (max-width: 425px) {
+  .main .center {
+    flex-direction: row;
+    gap: 1em;
+  }
+
+  .main .center .center-image {
+    flex-direction: row;
+    gap: 1em;
+  }
+
+  .main .center .cogu-main {
+    width: 70%;
+    margin-bottom: 0;
+  }
+
+  .main .center .button-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.8em;
+    width: 100%;
+  }
+
+  .main .center a {
+    padding: 0.6em 1.6em;
+    transform: translateY(150px);
+  }
+  .main .center .button1,
+  .main .center .button2,
+  .main .center .button3 {
+    position: relative;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+  }
+}
+/* Mobile S */
+@media (max-width: 320px) {
+  .main .center .buttons-container {
+    gap: 0.8rem;
+  }
+
+  .main .center a {
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  /* Positioning for the button "Produção" */
+  .main .center .button1 {
+    right: 5%;
+    top: 20%;
+  }
+
+  /* Positioning for the button "Sobre" */
+  .main .center .button2 {
+    left: -3%;
+    top: 60%;
+  }
+
+  /* Positioning for the button "Os cogumelos" */
+  .main .center .button3 {
+    right: 3%;
+    bottom: 20%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  /* Positioning for the button "Produção" */
+  .main .center .button1 {
+    right: 5%;
+    top: 20%;
+  }
+
+  /* Positioning for the button "Sobre" */
+  .main .center .button2 {
+    left: -3%;
+    top: 60%;
+  }
+
+  /* Positioning for the button "Os cogumelos" */
+  .main .center .button3 {
+    right: 3%;
+    bottom: 20%;
+  }
+}
+
+/* Laptop */
+@media (max-width: 1024px) {
+  /* Positioning for the button "Produção" */
+  .main .center .button1 {
+    right: 5%;
+    top: 15%;
+  }
+
+  /* Positioning for the button "Sobre" */
+  .main .center .button2 {
+    left: -2%;
+    top: 60%;
+  }
+
+  /* Positioning for the button "Os cogumelos" */
+  .main .center .button3 {
+    right: 10%;
+    bottom: 15%;
+  }
+}
