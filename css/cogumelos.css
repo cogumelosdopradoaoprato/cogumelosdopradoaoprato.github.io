@@ -233,10 +233,10 @@ body {
 /* Dimensions of the mushroom images */
 .cogumelos .container img {
   /* Mudar aqui o tamanho com base na gif feita */
-  height: 50rem;
+  height: 25rem;
   width: auto;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 /* Text section of every mushroom container */

@@ -81,6 +81,19 @@ body {
   cursor: url("../images/cursor/SelectBig.cur"), pointer;
 }
 
+a,
+button,
+[onclick],
+[role="button"],
+.hamburger,
+.hamburger *,
+.logo,
+.logo a,
+.main .center a,
+.main .center a * {
+  cursor: url("../images/cursor/SelectBig.cur"), pointer !important;
+}
+
 /* Side Menu */
 .side-menu {
   position: fixed;
@@ -191,19 +204,6 @@ body {
    Main page styles 
    This section defines the styles for the "Main" page of the website
  ----------------------------------------------------------------------- */
-/* Garante que todos os elementos clicáveis usem o cursor personalizado */
-a,
-button,
-[onclick],
-[role="button"],
-.hamburger,
-.hamburger *,
-.logo,
-.logo a,
-.main .center a,
-.main .center a * {
-  cursor: url("../images/cursor/SelectBig.cur"), pointer !important;
-}
 
 /* Main wrapper of all the content of the website */
 .main {
@@ -280,8 +280,8 @@ button,
 
 /* Positioning for the button "Sobre" */
 .main .center .button2 {
-  left: 5%;
-  top: 50%;
+  left: 0;
+  top: 60%;
 }
 
 /* Positioning for the button "Os cogumelos" */
@@ -363,5 +363,68 @@ button,
     left: initial;
     bottom: initial;
     margin: 0.2em;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  /* Positioning for the button "Produção" */
+  .main .center .button1 {
+    right: 5%;
+    top: 20%;
+  }
+
+  /* Positioning for the button "Sobre" */
+  .main .center .button2 {
+    left: -3%;
+    top: 60%;
+  }
+
+  /* Positioning for the button "Os cogumelos" */
+  .main .center .button3 {
+    right: 3%;
+    bottom: 20%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  /* Positioning for the button "Produção" */
+  .main .center .button1 {
+    right: 5%;
+    top: 20%;
+  }
+
+  /* Positioning for the button "Sobre" */
+  .main .center .button2 {
+    left: -3%;
+    top: 60%;
+  }
+
+  /* Positioning for the button "Os cogumelos" */
+  .main .center .button3 {
+    right: 3%;
+    bottom: 20%;
+  }
+}
+
+/* Laptop */
+@media (max-width: 1024px) {
+  /* Positioning for the button "Produção" */
+  .main .center .button1 {
+    right: 5%;
+    top: 15%;
+  }
+
+  /* Positioning for the button "Sobre" */
+  .main .center .button2 {
+    left: -2%;
+    top: 60%;
+  }
+
+  /* Positioning for the button "Os cogumelos" */
+  .main .center .button3 {
+    right: 10%;
+    bottom: 15%;
   }
 }
