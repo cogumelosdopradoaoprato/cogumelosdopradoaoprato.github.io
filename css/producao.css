@@ -1,10 +1,13 @@
 /* Global style variables to use along the code */
 :root {
   /* Variante para Londrina-- Títulos*/
-  --font-londrina: "Londrina Solid", cursive;
+  --font-titulo: "Londrina Solid", sans-serif;
+
+  /* Variante para Londrina-- Subtítulos*/
+  --font-sub: "Space Mono", monospace;
 
   /* Variante para Inter-- Corpo de Texto */
-  --font-inter: "Inter", sans-serif;
+  --font-text: "Bricolage Grotesque", sans-serif;
   /* Satoshi font has to be downloaded and imported. This video will help: https://youtu.be/lDip-1VnaOA?t=94 */
 
   /* Contrast */
@@ -32,7 +35,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: var(--font-inter);
+  font-family: var(--font-text);
   background-color: var(--bg-creme);
 }
 
