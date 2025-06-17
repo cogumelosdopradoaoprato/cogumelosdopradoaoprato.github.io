@@ -221,21 +221,26 @@ body {
     .main .center a {
       padding: 0.2em 1em;
       border-radius: 15px;
+      transform: translateY(180px);
     }
   
     .main .center .button1 {
-      right: 5%;
-      top: 30%;
+      position: relative;
+      right: initial;
+      top: initial;
+      margin: 0px 30px;
     }
   
     .main .center .button2 {
-      left: 5%;
-      top: 60%;
+      position: relative;
+      left: initial;
+      top: initial;
     }
-  
+    
     .main .center .button3 {
-      right: 5%;
-      bottom: 30%;
+      position: relative;
+      right: initial;
+      bottom: initial;
     }
 }
 
