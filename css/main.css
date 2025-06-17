@@ -251,20 +251,11 @@ button,
 
 /* Styles for the buttons */
 .main .center a {
+  display: block;
   position: absolute;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 1em 1.2em;
   z-index: 3;
-  border-radius: 30px;
-  background-color: var(--ct-verde);
-  color: var(--bg-creme);
-  text-decoration: none;
-  font-family: var(--font-sub);
-  font-weight: 700;
-  font-size: 1.2rem;
+  width: 8rem;
+  height: 6rem;
   cursor: url("../images/cursor/SelectBig.cur"), pointer;
 }
 
@@ -276,18 +267,27 @@ button,
 .main .center .button1 {
   right: 15%;
   top: 0;
+  background-image: url('/images/buttons/bupro.png');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /* Positioning for the button "Sobre" */
 .main .center .button2 {
   left: 5%;
   top: 60%;
+  background-image: url('/images/buttons/buso.png');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /* Positioning for the button "Os cogumelos" */
 .main .center .button3 {
   right: 20%;
   bottom: 0;
+  background-image: url('/images/buttons/buco.png');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /* Other Versions view of Main page */
