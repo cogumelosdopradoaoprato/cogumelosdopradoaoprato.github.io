@@ -11,7 +11,7 @@
   /* Satoshi font has to be downloaded and imported. This video will help: https://youtu.be/lDip-1VnaOA?t=94 */
 
   /* Contrast */
-  --ct-laranja: #ff5e33;
+  --ct-laranja: #ce8a39;
   --ct-amarelo: #ffd816;
   --ct-azul: #1a0089;
   --ct-verde: #b7cf4f;
@@ -216,6 +216,14 @@ button,
   max-width: 100%;
   font-weight: 400;
   font-size: 1.5rem;
+}
+.cogumelos .hero-image {
+  background-image: url("Banner.png");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 /* Main title of the page */
