@@ -256,7 +256,7 @@ button,
 /* Container for the element os the rotating circle */
 .producao .container .circle-container {
   position: fixed;
-  bottom: -200px;
+  bottom: -280px;
   left: 50%;
   transform: translateX(-50%);
   width: 1500px;

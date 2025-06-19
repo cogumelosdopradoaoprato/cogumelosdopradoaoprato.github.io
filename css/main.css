@@ -270,6 +270,13 @@ button,
   background-image: url(/images/buttons/bupro.png);
   background-size: contain;
   background-repeat: no-repeat;
+  transition: 0.2s;
+}
+
+/* Hover animation for the button "Produção" */
+.main .center .button1:hover {
+  scale: 1.1;
+  rotate: -5deg;
 }
 
 /* Positioning for the button "Sobre" */
@@ -279,6 +286,13 @@ button,
   background-image: url(/images/buttons/buso.png);
   background-size: contain;
   background-repeat: no-repeat;
+  transition: 0.2s;
+}
+
+/* Hover animation for the button "Sobre" */
+.main .center .button2:hover {
+  scale: 1.1;
+  rotate: 5deg;
 }
 
 /* Positioning for the button "Os cogumelos" */
@@ -288,6 +302,13 @@ button,
   background-image: url(/images/buttons/buco.png);
   background-size: contain;
   background-repeat: no-repeat;
+  transition: 0.2s;
+}
+
+/* Hover animation for the button "Os cogumelos" */
+.main .center .button3:hover {
+  scale: 1.1;
+  rotate: -5deg;
 }
 
 /* Other Versions view of Main page */
