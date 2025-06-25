@@ -83,6 +83,10 @@ body {
   cursor: url("../images/cursor/SelectBig.cur"), pointer;
 }
 
+.hamimg {
+  max-width: 32px;
+  margin-left: 0.7rem;
+}
 a,
 button,
 [onclick],
@@ -222,7 +226,7 @@ button,
 .producao .container .content {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
   gap: 50px;
   max-width: 70%;
   align-self: center;
@@ -244,13 +248,17 @@ button,
 
 /* Title of every section */
 .producao .container .content .text h2 {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+  color: var(--ct-verde);
   margin: 0;
+  transform: rotate(-5deg);
+  font-family: var(--font-titulo);
 }
 
 /* Text body of every section */
 .producao .container .content .text p {
   font-size: 1.1rem;
+  margin-top: 2.5rem;
 }
 
 /* Container for the element os the rotating circle */

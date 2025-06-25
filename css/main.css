@@ -83,6 +83,11 @@ body {
   cursor: url("../images/cursor/SelectBig.cur"), pointer;
 }
 
+.hamimg {
+  max-width: 32px;
+  margin-left: 0.7rem;
+}
+
 a,
 button,
 [onclick],
