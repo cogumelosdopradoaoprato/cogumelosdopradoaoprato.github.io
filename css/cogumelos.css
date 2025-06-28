@@ -11,7 +11,7 @@
   /* Satoshi font has to be downloaded and imported. This video will help: https://youtu.be/lDip-1VnaOA?t=94 */
 
   /* Contrast */
-  --ct-laranja: #ff5e33;
+  --ct-laranja: #ce8a39;
   --ct-amarelo: #ffd816;
   --ct-azul: #1a0089;
   --ct-verde: #b7cf4f;
@@ -81,6 +81,24 @@ body {
 .hamburger .bar,
 .hamburger span {
   cursor: url("../images/cursor/SelectBig.cur"), pointer;
+}
+.hamimg{
+ max-width: 32px;
+ margin-left: 0.7rem; 
+}
+
+
+.side-menu ul li:hover > .hamimg {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(20deg); }
+  75% { transform: rotate(-20deg); }
+  100% { transform: rotate(0deg); }
 }
 
 a,
@@ -216,6 +234,14 @@ button,
   max-width: 100%;
   font-weight: 400;
   font-size: 1.5rem;
+}
+.cogumelos .hero-image {
+  background-image: url("Banner.png");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 /* Main title of the page */

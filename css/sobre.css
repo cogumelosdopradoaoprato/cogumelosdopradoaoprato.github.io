@@ -80,6 +80,25 @@ body {
   cursor: url("../images/cursor/SelectBig.cur"), pointer;
 }
 
+.hamimg {
+  max-width: 32px;
+  margin-left: 0.7rem;
+}
+
+
+.side-menu ul li:hover > .hamimg {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(20deg); }
+  75% { transform: rotate(-20deg); }
+  100% { transform: rotate(0deg); }
+}
+
 a,
 button,
 [onclick],

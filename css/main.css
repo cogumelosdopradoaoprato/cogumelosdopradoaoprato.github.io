@@ -83,6 +83,25 @@ body {
   cursor: url("../images/cursor/SelectBig.cur"), pointer;
 }
 
+.hamimg {
+  max-width: 32px;
+  margin-left: 0.7rem;
+}
+
+
+.side-menu ul li:hover > .hamimg {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(20deg); }
+  75% { transform: rotate(-20deg); }
+  100% { transform: rotate(0deg); }
+}
+
 a,
 button,
 [onclick],
@@ -245,7 +264,7 @@ button,
 .main .center .cogu-main {
   position: absolute;
   transform: translateY(20px);
-  width: 45%;
+  width: 40%;
   z-index: 2;
 }
 
@@ -254,8 +273,11 @@ button,
   display: block;
   position: absolute;
   z-index: 3;
+  width: 12rem;
+  height: 8rem;
   width: 8rem;
   height: 6rem;
+
   cursor: url("../images/cursor/SelectBig.cur"), pointer;
 }
 
@@ -265,6 +287,18 @@ button,
 
 /* Positioning for the button "Produção" */
 .main .center .button1 {
+  right: 20%;
+  top: 5%;
+  background-image: url(/images/buttons/bupro.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 0.2s;
+}
+
+/* Hover animation for the button "Produção" */
+.main .center .button1:hover {
+  scale: 1.1;
+  rotate: -5deg;
   right: 15%;
   top: 0;
   background-image: url('/images/buttons/bupro.png');
@@ -274,6 +308,18 @@ button,
 
 /* Positioning for the button "Sobre" */
 .main .center .button2 {
+  left: 18%;
+  top: 65%;
+  background-image: url(/images/buttons/buso.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 0.2s;
+}
+
+/* Hover animation for the button "Sobre" */
+.main .center .button2:hover {
+  scale: 1.1;
+  rotate: 5deg;
   left: 5%;
   top: 60%;
   background-image: url('/images/buttons/buso.png');
@@ -285,6 +331,16 @@ button,
 .main .center .button3 {
   right: 20%;
   bottom: 0;
+  background-image: url(/images/buttons/buco.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 0.2s;
+}
+
+/* Hover animation for the button "Os cogumelos" */
+.main .center .button3:hover {
+  scale: 1.1;
+  rotate: -5deg;
   background-image: url('/images/buttons/buco.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -388,5 +444,3 @@ button,
     transform: translateY(150px);
   }
 }
-
-
