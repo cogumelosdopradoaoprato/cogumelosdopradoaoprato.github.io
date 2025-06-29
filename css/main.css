@@ -299,8 +299,6 @@ button,
 .main .center .button1:hover {
   scale: 1.1;
   rotate: -5deg;
-  right: 15%;
-  top: 0;
   background-image: url('/images/buttons/bupro.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -320,8 +318,6 @@ button,
 .main .center .button2:hover {
   scale: 1.1;
   rotate: 5deg;
-  left: 5%;
-  top: 60%;
   background-image: url('/images/buttons/buso.png');
   background-size: contain;
   background-repeat: no-repeat;

@@ -319,19 +319,13 @@ button,
   position: relative;
 }
 
-/* Grass image parallax */
-.producao .container .section-first .parallax .grass-image {
+/* Section second parallax */
+.producao .container .section-first .parallax img {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
-/* Clouds image parallax*/
-.producao .container .section-first .parallax .clouds-image {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
 
 /* Section second */
 .producao .container .section-second {
@@ -348,17 +342,12 @@ button,
   width: 100%;
   height: 100%;
   position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
-/* Section second grass parallax */
-.producao .container .section-second .parallax .grass-image {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-/* Section second clouds parallax */
-.producao .container .section-second .parallax .clouds-image {
+/* Section second parallax */
+.producao .container .section-second .parallax img {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -368,20 +357,52 @@ button,
 .producao .container .section-third {
   width: 100%;
   height: 100vh;
-  background-color: #f9f2e2;
+  background-color: #e3e2c8;
   position: absolute;
   top: 200vh;
   left: 0;
+}
+
+/* Section third parallax container */
+.producao .container .section-third .parallax {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* Section third parallax */
+.producao .container .section-third .parallax img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 /* Section fourth */
 .producao .container .section-fourth {
   width: 100%;
   height: 100vh;
-  background-color: #f9f2e2;
+  background-color: #e3e2c8;
   position: absolute;
   top: 300vh;
   left: 0;
+}
+
+/* Section fourth parallax container */
+.producao .container .section-fourth .parallax {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* Section fourth parallax */
+.producao .container .section-fourth .parallax img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 /* Section fifth */
@@ -392,6 +413,21 @@ button,
   position: absolute;
   top: 400vh;
   left: 0;
+}
+
+/* Section fifth parallax container */
+.producao .container .section-fifth .parallax {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-y: hidden;
+}
+
+/* Section fifth parallax */
+.producao .container .section-fifth .parallax img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 /* The following styles are the initial states from which

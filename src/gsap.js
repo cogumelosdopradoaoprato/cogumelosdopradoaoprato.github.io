@@ -316,15 +316,59 @@ if (isMobile()) {
     }
   );
 
-  /* When in viewport, move the grass from bottom to top */
+  /* When in viewport, move the clouds from bottom to top */
   gsap.fromTo(
-    ".section-first .parallax .grass-image",
+    ".section-first .parallax .clouds-image",
+    {
+      y: '100%',
+    },
+    {
+      y: '20%',
+      duration: 3.5,
+      delay: 3,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".section-first",
+        start: "top 20%",
+        end: "bottom 60%",
+        scrub: false,
+        toggleActions: "play reverse play reverse", // scales in and out on scroll
+        //markers: true
+      }
+    }
+  );
+
+  /* When in viewport, move the front grass from bottom to top */
+  gsap.fromTo(
+    ".section-first .parallax .grass-image-front",
     {
       y: '100%',
     },
     {
       y: '0%',
       duration: 2,
+      delay: 1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".section-first",
+        start: "top 20%",
+        end: "bottom 60%",
+        scrub: false,
+        toggleActions: "play reverse play reverse", // scales in and out on scroll
+        //markers: true
+      }
+    }
+  );
+
+  /* When in viewport, move the back grass from bottom to top */
+  gsap.fromTo(
+    ".section-first .parallax .grass-image-back",
+    {
+      y: '100%',
+    },
+    {
+      y: '0%',
+      duration: 2.5,
       delay: 2,
       ease: "power2.out",
       scrollTrigger: {
@@ -338,16 +382,16 @@ if (isMobile()) {
     }
   );
 
-  /* When in viewport, move the clouds from bottom to top */
+  /* When in viewport, move the grass foliage from bottom to top */
   gsap.fromTo(
-    ".section-first .parallax .clouds-image",
+    ".section-first .parallax .grass-image-foliage",
     {
       y: '100%',
     },
     {
-      y: '20%',
+      y: '0%',
       duration: 3,
-      delay: 3,
+      delay: 4,
       ease: "power2.out",
       scrollTrigger: {
         trigger: ".section-first",
@@ -359,6 +403,29 @@ if (isMobile()) {
       }
     }
   );
+
+  /* When in viewport, move the grass extra from bottom to top */
+  gsap.fromTo(
+    ".section-first .parallax .grass-image-extra",
+    {
+      y: '100%',
+    },
+    {
+      y: '0%',
+      duration: 3,
+      delay: 4,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".section-first",
+        start: "top 20%",
+        end: "bottom 60%",
+        scrub: false,
+        toggleActions: "play reverse play reverse", // scales in and out on scroll
+        //markers: true
+      }
+    }
+  );
+
 
   /* Second content block:
      When reached, fade-in and scale-up the content */
@@ -376,27 +443,6 @@ if (isMobile()) {
       scrollTrigger: {
         trigger: ".section-second",
         start: "top 40%",
-        end: "bottom 60%",
-        scrub: false,
-        toggleActions: "play reverse play reverse", // scales in and out on scroll
-        //markers: true
-      }
-    }
-  );
-
-  /* When in viewport, move the grass from bottom to top */
-  gsap.fromTo(
-    ".section-second .parallax .grass-image",
-    {
-      y: '100%',
-    },
-    {
-      y: '0%',
-      duration: 2,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".section-second",
-        start: "top 20%",
         end: "bottom 60%",
         scrub: false,
         toggleActions: "play reverse play reverse", // scales in and out on scroll
@@ -426,6 +472,91 @@ if (isMobile()) {
     }
   );
 
+  /* When in viewport, move the front grass from bottom to top */
+  gsap.fromTo(
+    ".section-second .parallax .grass-image-front",
+    {
+      y: '100%',
+    },
+    {
+      y: '0%',
+      duration: 2,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".section-second",
+        start: "top 20%",
+        end: "bottom 60%",
+        scrub: false,
+        toggleActions: "play reverse play reverse", // scales in and out on scroll
+        //markers: true
+      }
+    }
+  );
+
+  /* When in viewport, move the back grass from bottom to top */
+  gsap.fromTo(
+    ".section-second .parallax .grass-image-back",
+    {
+      y: '100%',
+    },
+    {
+      y: '0%',
+      duration: 4,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".section-second",
+        start: "top 20%",
+        end: "bottom 60%",
+        scrub: false,
+        toggleActions: "play reverse play reverse", // scales in and out on scroll
+        //markers: true
+      }
+    }
+  );
+
+  /* When in viewport, move the grass foliage from bottom to top */
+  gsap.fromTo(
+    ".section-second .parallax .grass-image-foliage",
+    {
+      y: '100%',
+    },
+    {
+      y: '0%',
+      duration: 4,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".section-second",
+        start: "top 20%",
+        end: "bottom 60%",
+        scrub: false,
+        toggleActions: "play reverse play reverse", // scales in and out on scroll
+        //markers: true
+      }
+    }
+  );
+
+  /* When in viewport, move the grass extra from bottom to top */
+  gsap.fromTo(
+    ".section-second .parallax .grass-image-extra",
+    {
+      y: '100%',
+    },
+    {
+      y: '0%',
+      duration: 4,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".section-second",
+        start: "top 20%",
+        end: "bottom 60%",
+        scrub: false,
+        toggleActions: "play reverse play reverse", // scales in and out on scroll
+        //markers: true
+      }
+    }
+  );
+
+
   /* Third content block:
      When reached, fade-in and scale-up the content */
   gsap.fromTo(
@@ -442,6 +573,69 @@ if (isMobile()) {
       scrollTrigger: {
         trigger: ".section-third",
         start: "top 40%",
+        end: "bottom 60%",
+        scrub: false,
+        toggleActions: "play reverse play reverse", // scales in and out on scroll
+        //markers: true
+      }
+    }
+  );
+
+  /* When in viewport, move the floor from bottom to top */
+  gsap.fromTo(
+    ".section-third .parallax .floor-image",
+    {
+      y: '100%',
+    },
+    {
+      y: '0%',
+      duration: 2,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".section-third",
+        start: "top 20%",
+        end: "bottom 60%",
+        scrub: false,
+        toggleActions: "play reverse play reverse", // scales in and out on scroll
+        //markers: true
+      }
+    }
+  );
+
+  /* When in viewport, move the furniture 1 from bottom to top */
+  gsap.fromTo(
+    ".section-third .parallax .floor-image-furniture-1",
+    {
+      x: '-100%',
+    },
+    {
+      x: '0%',
+      duration: 4,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".section-third",
+        start: "top 20%",
+        end: "bottom 60%",
+        scrub: false,
+        toggleActions: "play reverse play reverse", // scales in and out on scroll
+        //markers: true
+      }
+    }
+  );
+
+  /* When in viewport, move the furniture 2 from bottom to top */
+  gsap.fromTo(
+    ".section-third .parallax .floor-image-furniture-2",
+    {
+      x: '100%',
+    },
+    {
+      x: '0%',
+      duration: 4,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".section-third",
+        start: "top 20%",
         end: "bottom 60%",
         scrub: false,
         toggleActions: "play reverse play reverse", // scales in and out on scroll
@@ -474,6 +668,69 @@ if (isMobile()) {
     }
   );
 
+/* When in viewport, move the floor from bottom to top */
+gsap.fromTo(
+  ".section-fourth .parallax .floor-image",
+  {
+    y: '100%',
+  },
+  {
+    y: '0%',
+    duration: 2,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".section-fourth",
+      start: "top 20%",
+      end: "bottom 60%",
+      scrub: false,
+      toggleActions: "play reverse play reverse", // scales in and out on scroll
+      //markers: true
+    }
+  }
+);
+
+/* When in viewport, move the furniture 1 from bottom to top */
+gsap.fromTo(
+  ".section-fourth .parallax .floor-image-furniture-1",
+  {
+    x: '-100%',
+  },
+  {
+    x: '0%',
+    duration: 4,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".section-fourth",
+      start: "top 20%",
+      end: "bottom 60%",
+      scrub: false,
+      toggleActions: "play reverse play reverse", // scales in and out on scroll
+      //markers: true
+    }
+  }
+);
+
+/* When in viewport, move the furniture 2 from bottom to top */
+gsap.fromTo(
+  ".section-fourth .parallax .floor-image-furniture-2",
+  {
+    x: '100%',
+  },
+  {
+    x: '0%',
+    duration: 4,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".section-fourth",
+      start: "top 20%",
+      end: "bottom 60%",
+      scrub: false,
+      toggleActions: "play reverse play reverse", // scales in and out on scroll
+      //markers: true
+    }
+  }
+);
+
   /* Fifth content block:
      When reached, fade-in and scale-up the content */
   gsap.fromTo(
@@ -498,6 +755,111 @@ if (isMobile()) {
     }
   );
 }
+
+  /* When in viewport, move the clouds from bottom to top */
+  gsap.fromTo(
+    ".section-fifth .parallax .clouds-image",
+    {
+      y: '100%',
+    },
+    {
+      y: '20%',
+      duration: 3,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".section-fifth",
+        start: "top 20%",
+        end: "bottom 60%",
+        scrub: false,
+        toggleActions: "play reverse play reverse", // scales in and out on scroll
+        //markers: true
+      }
+    }
+  );
+
+  /* When in viewport, move the front grass from bottom to top */
+  gsap.fromTo(
+    ".section-fifth .parallax .grass-image-front",
+    {
+      y: '100%',
+    },
+    {
+      y: '0%',
+      duration: 2,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".section-fifth",
+        start: "top 20%",
+        end: "bottom 60%",
+        scrub: false,
+        toggleActions: "play reverse play reverse", // scales in and out on scroll
+        //markers: true
+      }
+    }
+  );
+
+  /* When in viewport, move the back grass from bottom to top */
+  gsap.fromTo(
+    ".section-fifth .parallax .grass-image-back",
+    {
+      y: '100%',
+    },
+    {
+      y: '0%',
+      duration: 4,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".section-fifth",
+        start: "top 20%",
+        end: "bottom 60%",
+        scrub: false,
+        toggleActions: "play reverse play reverse", // scales in and out on scroll
+        //markers: true
+      }
+    }
+  );
+
+  /* When in viewport, move the grass foliage from bottom to top */
+  gsap.fromTo(
+    ".section-fifth .parallax .grass-image-foliage",
+    {
+      y: '100%',
+    },
+    {
+      y: '0%',
+      duration: 4,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".section-fifth",
+        start: "top 20%",
+        end: "bottom 60%",
+        scrub: false,
+        toggleActions: "play reverse play reverse", // scales in and out on scroll
+        //markers: true
+      }
+    }
+  );
+
+  /* When in viewport, move the grass extra from bottom to top */
+  gsap.fromTo(
+    ".section-fifth .parallax .grass-image-extra",
+    {
+      y: '100%',
+    },
+    {
+      y: '0%',
+      duration: 4,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".section-fifth",
+        start: "top 20%",
+        end: "bottom 60%",
+        scrub: false,
+        toggleActions: "play reverse play reverse", // scales in and out on scroll
+        //markers: true
+      }
+    }
+  );
 
 // Listen for page resize to load the respective animation for Desktop or Mobile
 window.addEventListener("resize", () => {
