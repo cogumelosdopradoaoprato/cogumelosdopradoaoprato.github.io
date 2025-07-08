@@ -1,13 +1,10 @@
 /* Global style variables to use along the code */
 :root {
-  /* Variante para Londrina-- Títulos*/
-  --font-titulo: "Londrina Solid", sans-serif;
+  /* Variante para -- Títulos*/
+  --font-titulo: "Unbounded", sans-serif;
 
-  /* Variante para Londrina-- Subtítulos*/
-  --font-sub: "Space Mono", monospace;
-
-  /* Variante para Inter-- Corpo de Texto */
-  --font-text: "Bricolage Grotesque", sans-serif;
+  /* Variante para Corpo de Texto */
+  --font-text: "DM Sans", sans-serif;
   /* Satoshi font has to be downloaded and imported. This video will help: https://youtu.be/lDip-1VnaOA?t=94 */
 
   /* Contrast */
@@ -82,11 +79,10 @@ body {
 .hamburger span {
   cursor: url("../images/cursor/SelectBig.cur"), pointer;
 }
-.hamimg{
- max-width: 32px;
- margin-left: 0.7rem; 
+.hamimg {
+  max-width: 32px;
+  margin-left: 0.7rem;
 }
-
 
 .side-menu ul li:hover > .hamimg {
   animation: shake 0.5s;
@@ -95,10 +91,18 @@ body {
 }
 
 @keyframes shake {
-  0% { transform: rotate(0deg); }
-  50% { transform: rotate(20deg); }
-  75% { transform: rotate(-20deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 a,
@@ -247,10 +251,10 @@ button,
 /* Main title of the page */
 .cogumelos .cog-title {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-family: var(--font-titulo);
   color: var(--ct-azul);
-  font-weight: 400;
+  font-weight: 900;
   font-size: 7rem;
 }
 
@@ -292,7 +296,7 @@ button,
 /* Title of the mushroom text */
 .cogumelos .container .cogumelo .text h2 {
   font-size: 4rem;
-  font-family: var(--font-sub);
+  font-family: var(--font-titulo);
   color: var(--ct-laranja);
 }
 

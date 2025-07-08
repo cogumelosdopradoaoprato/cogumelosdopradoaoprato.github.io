@@ -1,13 +1,10 @@
 /* Global style variables to use along the code */
 :root {
-  /* Variante para Londrina-- Títulos*/
-  --font-titulo: "Londrina Solid", sans-serif;
+  /* Variante para -- Títulos*/
+  --font-titulo: "Unbounded", sans-serif;
 
-  /* Variante para Londrina-- Subtítulos*/
-  --font-sub: "Space Mono", monospace;
-
-  /* Variante para Inter-- Corpo de Texto */
-  --font-text: "Bricolage Grotesque", sans-serif;
+  /* Variante para Corpo de Texto */
+  --font-text: "DM Sans", sans-serif;
   /* Satoshi font has to be downloaded and imported. This video will help: https://youtu.be/lDip-1VnaOA?t=94 */
 
   /* Contrast */
@@ -241,9 +238,9 @@ button,
 .producao .container .content {
   display: flex;
   flex-direction: row;
-  justify-content: left;
-  gap: 50px;
-  max-width: 70%;
+  justify-content: center;
+  gap: 50%;
+  max-width: 50%;
   align-self: center;
   padding: 2rem;
   position: sticky;
@@ -259,14 +256,16 @@ button,
 /* Text of every section */
 .producao .container .content .text {
   width: 50%;
+  background-color: #e1e6e9de;
+  padding: 1em 2em;
+  border-radius: 20px;
 }
 
 /* Title of every section */
 .producao .container .content .text h2 {
   font-size: 2.5rem;
-  color: var(--ct-verde);
+  color: var(--bg-);
   margin: 0;
-  transform: rotate(-5deg);
   font-family: var(--font-titulo);
 }
 

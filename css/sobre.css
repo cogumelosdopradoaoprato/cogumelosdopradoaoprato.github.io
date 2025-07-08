@@ -1,10 +1,10 @@
 /* Global style variables to use along the code */
 :root {
-  /* Variante para Londrina-- Títulos*/
-  --font-londrina: "Londrina Solid", cursive;
+  /* Variante para -- Títulos*/
+  --font-titulo: "Unbounded", sans-serif;
 
-  /* Variante para Inter-- Corpo de Texto */
-  --font-inter: "Inter", sans-serif;
+  /* Variante para Corpo de Texto */
+  --font-text: "DM Sans", sans-serif;
   /* Satoshi font has to be downloaded and imported. This video will help: https://youtu.be/lDip-1VnaOA?t=94 */
 
   /* Contrast */
@@ -85,7 +85,6 @@ body {
   margin-left: 0.7rem;
 }
 
-
 .side-menu ul li:hover > .hamimg {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
@@ -93,10 +92,18 @@ body {
 }
 
 @keyframes shake {
-  0% { transform: rotate(0deg); }
-  50% { transform: rotate(20deg); }
-  75% { transform: rotate(-20deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 a,
