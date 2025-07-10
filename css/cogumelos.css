@@ -5,18 +5,15 @@
 
   /* Variante para Corpo de Texto */
   --font-text: "DM Sans", sans-serif;
-  /* Satoshi font has to be downloaded and imported. This video will help: https://youtu.be/lDip-1VnaOA?t=94 */
 
   /* Contrast */
-  --ct-laranja: #ce8a39;
-  --ct-amarelo: #ffd816;
-  --ct-azul: #1a0089;
-  --ct-verde: #b7cf4f;
+  --ct-laranja: #dc5601;
+  --ct-verde: #74762b;
   /* Backgrounds */
-  --bg-creme: #efe7d3;
+  --bg-color: #ced6be;
   /* Text */
-  --txt-creme: #efe7d3;
-  --txt-preto: #000000;
+  --txt-creme: #f7e9ca;
+  --txt-preto: #442408;
 }
 
 /*Cursor*/
@@ -28,12 +25,12 @@
 }
 
 /* Basic settings for the whole website */
-
 body {
   padding: 0;
   margin: 0;
   font-family: var(--font-text);
-  background-color: var(--bg-creme);
+  background-color: var(--bg-color);
+  overflow-x: hidden; /* Previne rolagem horizontal */
 }
 
 /* ----------------------------------------------------------------------- 
@@ -43,11 +40,12 @@ body {
    ----------------------------------------------------------------------- */
 
 /* New navbar */
-/* Hamburger Button */
 .header {
-  max-width: 100%;
+  width: 100%;
+  position: relative;
 }
 
+/* Hamburger Button */
 .hamburger {
   position: fixed;
   top: 1rem;
@@ -58,27 +56,33 @@ body {
   z-index: 1001;
   width: 30px;
   height: 24px;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
 .bar {
   width: 100%;
   height: 3px;
-  background-color: var(--ct-azul);
+  background-color: var(--ct-rosa);
   border-radius: 2px;
   transform-origin: center;
+  transition: all 0.3s ease;
 }
 
 .hamburger span {
   width: 30px;
   height: 3px;
-  color: var(--ct-amarelo);
+  color: var(--ct-verdeama);
   transition: 0.3s;
 }
+
 .hamburger,
 .hamburger .bar,
 .hamburger span {
   cursor: url("../images/cursor/SelectBig.cur"), pointer;
 }
+
 .hamimg {
   max-width: 32px;
   margin-left: 0.7rem;
@@ -125,12 +129,16 @@ button,
   right: 0;
   width: 300px;
   height: 100vh;
-  margin-top: auto;
   background-color: var(--ct-verde);
-  opacity: 0.5rem;
   padding-top: 5rem;
   transform: translateX(100%);
+  transition: transform 0.3s ease;
   z-index: 999;
+  overflow-y: auto;
+}
+
+.side-menu.active {
+  transform: translateX(0);
 }
 
 .side-menu ul {
@@ -141,6 +149,7 @@ button,
   text-align: right;
   padding-right: 3rem;
   padding-top: 50%;
+  margin: 0;
 }
 
 .side-menu ul li a {
@@ -148,78 +157,30 @@ button,
   text-decoration: none;
   font-size: 2rem;
   font-weight: 400;
-  cursor: url("../images/cursor/SelectBig.cur"), pointer;
+  transition: color 0.3s ease;
+}
+
+.side-menu ul li a:hover {
+  color: var(--ct-verdeama);
 }
 
 /* Logo Styling */
 .logo {
   position: fixed;
-  top: 0rem;
-  left: 0rem;
+  top: 0.5rem;
+  left: 0.5rem;
   z-index: 1000;
   padding: 5px;
 }
 
 .logo img {
   width: 115px;
-  /* Adjust logo size */
   height: auto;
-  cursor: url("../images/cursor/SelectBig.cur"), pointer;
+  transition: transform 0.3s ease;
 }
 
-@media (min-width: 320px) and (max-width: 425px) {
-  /* Hamburger Button */
-  .hamburger {
-    position: fixed;
-    top: 1em;
-    right: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    z-index: 1001;
-    width: 30px;
-    height: 24px;
-  }
-
-  .bar {
-    width: 100%;
-    height: 3px;
-    background-color: var(--bg-creme);
-    border-radius: 2px;
-    transform-origin: center;
-  }
-
-  .hamburger span {
-    width: 30px;
-    height: 3px;
-    transition: 0.3s;
-  }
-
-  /* Logo styling*/
-  .logo {
-    position: fixed;
-    top: 0rem;
-    left: 0rem;
-    z-index: 10;
-    padding: 5px;
-  }
-
-  .logo img {
-    width: 100px;
-    /* Adjust logo size */
-    height: auto;
-  }
-  .side-menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    margin-top: auto;
-    padding-top: 5rem;
-    transform: translateX(100%);
-    z-index: 999;
-  }
+.logo img:hover {
+  transform: scale(1.05);
 }
 
 /* ----------------------------------------------------------------------- 
@@ -231,17 +192,20 @@ button,
 .cogumelos {
   display: flex;
   flex-direction: column;
-  padding-top: 10rem;
-  align-items: center; /* Centraliza a container horizontalmente */
-  justify-content: center; /* Centraliza os itens dentro da container verticalmente */
+  padding-top: 5rem;
+  align-items: center;
+  justify-content: center;
   list-style: none;
-  max-width: 100%;
+  width: 100%;
   font-weight: 400;
   font-size: 1.5rem;
+  box-sizing: border-box;
 }
+
 .cogumelos .hero-image {
   background-image: url("Banner.png");
-  height: 50%;
+  height: 50vh;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -251,252 +215,208 @@ button,
 /* Main title of the page */
 .cogumelos .cog-title {
   text-align: center;
-  margin-bottom: 1rem;
   font-family: var(--font-titulo);
-  color: var(--ct-azul);
+  color: var(--ct-vermelho);
   font-weight: 900;
-  font-size: 7rem;
+  font-size: clamp(3rem, 8vw, 7rem);
 }
 
 /* Container of all 3 sections with the different mushrooms */
 .cogumelos .container {
   display: flex;
   flex-direction: column;
-  gap: 1rem; /* Aumenta o espaçamento entre as seções */
-  align-items: center; /* Centraliza os itens horizontalmente */
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  box-sizing: border-box;
 }
 
 /* Individual containers for each mushrooms */
 .cogumelos .container .cogumelo {
-  padding-left: 5rem;
-  padding-right: 5rem;
   display: flex;
-  flex-direction: row; /* Texto e imagem lado a lado */
-  align-items: center; /* Alinha a imagem e o texto verticalmente */
-  justify-content: center; /* Garante que o conteúdo do cogumelo seja centralizado */
+  flex-direction: row;
+  align-items: center; 
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  gap: 2rem;
 }
 
 /* Dimensions of the mushroom images */
 .cogumelos .container img {
-  /* Mudar aqui o tamanho com base na gif feita */
-  height: 40rem;
-  width: auto;
-  margin: 8rem;
+  height: auto;
+  max-height: 40rem;
+  width: auto; 
+  max-width: 45%;
+  object-fit: contain;
+  align-self: center;
 }
 
 /* Text section of every mushroom container */
 .cogumelos .container .cogumelo .text {
   display: flex;
   flex-direction: column;
-  width: 60%; /* Limita a largura do texto para que ele ocupe menos espaço */
-  padding-left: 5rem;
-  padding-right: 5rem;
+  width: 45%;
+  max-width: 600px;
+  padding: 0 1rem;
 }
 
 /* Title of the mushroom text */
 .cogumelos .container .cogumelo .text h2 {
-  font-size: 4rem;
+  font-size: clamp(1.5rem, 5vw, 4rem);
   font-family: var(--font-titulo);
-  color: var(--ct-laranja);
+  color: var(--ct-vermelho);
+  font-weight: 600;
 }
 
 /* Description title */
 .cogumelos .container .cogumelo .text h3 {
-  font-size: 2rem;
+  font-size: clamp(1rem, 3vw, 2rem);
   text-align: justify;
-  margin-bottom: 1rem;
 }
 
 /* Sub-title of the mushroom text */
 .cogumelos .container .cogumelo .text h3 i {
-  font-size: 2.5rem;
-  font-weight: 500;
-  color: var(--ct-verde);
+  font-size: clamp(1.7rem, 3.5vw, 2.5rem);
+  font-weight: 200;
+  color: var(--ct-laranja);
 }
 
 /* Individual paragraphs */
 .cogumelos .container .cogumelo .text p {
-  font-size: 5rem;
+  font-size: clamp(0.5rem, 2vw, 1rem);
   line-height: 1.6;
   font-weight: 100;
-  max-height: 12rem; /* Limita a altura do parágrafo para evitar que o texto ocupe muito espaço */
-  overflow: hidden; /* Esconde o texto extra */
-  justify-content: center;
-  align-items: center; /* Centraliza o texto dentro da coluna */
+  text-align: justify;
 }
 
 /* Especificidade para inverter a ordem do Cogumelo Juba de Leão */
 .cogumelos .container .cogumelo:nth-child(2) {
-  flex-direction: row-reverse; /* Inverte a ordem apenas para o segundo cogumelo (Juba de Leão) */
+  flex-direction: row-reverse;
 }
 
-/*Usos*/
+/*Usos
 .usos {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza a container horizontalmente */
-  justify-content: center; /* Centraliza os itens dentro da container verticalmente */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
 }
+
 .usos .us-title {
   text-align: center;
   margin-bottom: 2rem;
   font-family: var(--font-titulo);
   font-weight: 400;
-  font-size: 7rem;
-}
+  font-size: clamp(3rem, 8vw, 7rem);
+  color: var(--ct-azul);
+}*/
 
-/* Mobile view */
-/*Mobile S*/
-@media (max-width: 320px) {
-  .cogumelos {
-    padding-top: 6rem;
-    text-align: justify;
-  }
+/* ==================== MEDIA QUERIES ==================== */
 
-  .cogumelos .cog-title {
-    font-size: 3rem;
-  }
-
-  .cogumelos .container {
-    max-width: 100%;
-  }
-
-  .cogumelos .container .cogumelo {
-    flex-direction: column;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  .cogumelos .container img {
-    height: auto;
-    width: 100%;
-    margin: auto 0;
-  }
-
-  .cogumelos .container .cogumelo .text {
-    justify-content: center;
-    padding: 0px 25px;
-  }
-
-  .cogumelos .container .cogumelo .text h2 {
-    font-size: 1.5rem;
-    margin: 0;
-  }
-
-  .cogumelos .container .cogumelo .text p {
-    font-size: 0.9rem;
-    margin: 0.5rem;
-  }
-  .usos .us-title {
-    font-size: 5rem;
-  }
-
-  /* In mobile view, all the mushrooms are ordered vertically */
-  .cogumelos .container .cogumelo:nth-child(2) {
-    flex-direction: column; /* Ordered vertically */
-  }
-}
-
-/*Mobile M & L*/
-@media (min-width: 375px) and (max-width: 425px) {
-  .cogumelos {
-    padding-top: 6rem;
-    text-align: center;
-  }
-
-  .cogumelos .cog-title {
-    font-size: 4rem;
-  }
-
-  .cogumelos .container {
-    max-width: 100%;
-  }
-  .cogumelos .container .cogumelo {
-    flex-direction: column;
-    margin: 0.5rem 0;
-    text-align: center;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  .cogumelos .container img {
-    height: auto;
-    width: 100%;
-    margin: auto 0;
-  }
-
-  .cogumelos .container .cogumelo .text {
-    justify-content: center;
-    padding: 0px 25px;
-  }
-
-  .cogumelos .container .cogumelo .text h2 {
-    font-size: 1.5rem;
-    margin: 0;
-  }
-
-  .cogumelos .container .cogumelo .text p {
-    font-size: 0.9rem;
-    margin: 0.5rem;
-  }
-
-  /* In mobile view, all the mushrooms are ordered vertically */
-  .cogumelos .container .cogumelo:nth-child(2) {
-    flex-direction: column; /* Ordered vertically */
-  }
-  .usos .us-title {
-    font-size: 4rem;
-  }
-}
-
-/*Tablet View*/
-
+/* Mobile view - General (up to 768px) */
 @media (max-width: 768px) {
+  /* Hamburger menu adjustments */
+  .hamburger {
+    top: 0.8rem;
+    right: 0.8rem;
+  }
+
+  .logo {
+    top: 0.3rem;
+    left: 0.3rem;
+  }
+
+  .logo img {
+    width: 90px;
+  }
+
+  .side-menu {
+    width: 100%;
+    padding-top: 4rem;
+  }
+
+  .side-menu ul {
+    padding-top: 30%;
+    padding-right: 1.5rem;
+  }
+
+  .side-menu ul li a {
+    font-size: 2.5rem;
+  }
+
+  /* Cogumelos content adjustments */
   .cogumelos {
     padding-top: 6rem;
   }
 
-  .cogumelos .cog-title {
-    font-size: 4rem;
-  }
-
-  .cogumelos .container {
-    max-width: 100%;
-  }
   .cogumelos .container .cogumelo {
     flex-direction: column;
-    margin: 0.5rem 0;
-    text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
   }
 
   .cogumelos .container img {
-    height: auto;
-    width: 70%;
-    margin: auto 0;
+    max-width: 80%;
   }
 
   .cogumelos .container .cogumelo .text {
-    justify-content: center;
-    padding: 0px 25px;
+    width: 90%;
+    text-align: center;
   }
 
-  .cogumelos .container .cogumelo .text h2 {
-    font-size: 1.5rem;
-    margin: 0;
-  }
-
+  .cogumelos .container .cogumelo .text h3,
   .cogumelos .container .cogumelo .text p {
-    font-size: 0.9rem;
-    margin: 0.5rem;
+    text-align: center;
   }
 
   /* In mobile view, all the mushrooms are ordered vertically */
   .cogumelos .container .cogumelo:nth-child(2) {
-    flex-direction: column; /* Ordered vertically */
+    flex-direction: column;
   }
-  .usos .us-title {
-    font-size: 4rem;
+}
+
+/* Tablet view (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .cogumelos .container .cogumelo {
+    flex-direction: column;
+  }
+
+  .cogumelos .container img {
+    max-width: 70%;
+    margin: 2rem 0;
+  }
+
+  .cogumelos .container .cogumelo .text {
+    max-width: 80%;
+  }
+
+  .cogumelos .container .cogumelo:nth-child(2) {
+    flex-direction: column;
+  }
+}
+
+/* Small desktop/laptop (1025px to 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .cogumelos .container .cogumelo img {
+    max-width: 50%;
+    align-items: center;
+  }
+}
+
+/* Large desktop (1441px and up) */
+@media (min-width: 1441px) {
+  .cogumelos .container {
+    max-width: 1600px;
+  }
+
+  .cogumelos .container img {
+    max-width: 600px;
+  }
+
+  .cogumelos .container .cogumelo .text {
+    max-width: 700px;
   }
 }
