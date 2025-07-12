@@ -234,8 +234,8 @@ button,
 
 /* Contains the center image with the buttons and the little guys */
 .main .center {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -251,14 +251,6 @@ button,
   justify-content: center;
   align-items: center;
   position: relative;
-}
-
-/* Little guys */
-.main .center .cogu-main {
-  position: absolute;
-  transform: translateY(20px);
-  width: 40%;
-  z-index: 2;
 }
 
 .main .center .clouds {
@@ -299,29 +291,34 @@ button,
 
 /* Styles for the buttons */
 .main .center a {
-  display: block;
-  position: absolute;
-  z-index: 3;
-  width: 12rem;
-  height: 8rem;
+  z-index: 10;
   width: 8rem;
   height: 6rem;
-
   cursor: url("../images/cursor/SelectBig.cur"), pointer;
+  transform: translateY(-70px) scale(1.3);
 }
 
-.main .center .p {
-  cursor: url("../images/cursor/SelectBig.cur"), pointer;
+.main .center .center-image .right {
+  z-index: 10;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
 
+.main .center .center-image .right img {
+  width: 100%;
+  z-index: 20;
+}
 /* Positioning for the button "Produção" */
 .main .center .button1 {
-  right: 20%;
-  top: 5%;
   background-image: url(/images/buttons/bupro.png);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center center;
   transition: 0.2s;
+  z-index: 30;
 }
 
 /* Hover animation for the button "Produção" */
@@ -333,14 +330,28 @@ button,
   background-repeat: no-repeat;
 }
 
+.main .center .center-image .left {
+  z-index: 10;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.main .center .center-image .left img {
+  width: 100%;
+  z-index: 20;
+}
+
 /* Positioning for the button "Sobre" */
 .main .center .button2 {
-  left: 18%;
-  top: 65%;
   background-image: url(/images/buttons/buso.png);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center center;
   transition: 0.2s;
+  z-index: 30;
 }
 
 /* Hover animation for the button "Sobre" */
@@ -352,14 +363,27 @@ button,
   background-repeat: no-repeat;
 }
 
+.main .center .center-image .middle {
+  z-index: 10;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.main .center .center-image .middle img {
+  width: 100%;
+  z-index: 20;
+}
 /* Positioning for the button "Os cogumelos" */
 .main .center .button3 {
-  right: 20%;
-  bottom: 0;
   background-image: url(/images/buttons/buco.png);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center center;
   transition: 0.2s;
+  z-index: 30;
 }
 
 /* Hover animation for the button "Os cogumelos" */
@@ -427,7 +451,7 @@ button,
 
   .main .center .center-image {
     flex-direction: row;
-    gap: 1em;
+    margin: 0;
   }
 
   .main .center .clouds {
@@ -440,7 +464,7 @@ button,
     background-image: url("../images/parallax/BG 125/clouds.png");
     background-size: 200%;
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center 20%;
 }
 
 .main .center .grass-back {
@@ -450,7 +474,7 @@ button,
   top: 0;
   left: 0;
   overflow: hidden;
-  background-image: url("../images/parallax/BG 125/back.png");
+  background-image: url("../images/grass_mobile/relvaback\ 400px.png");
   background-size: 200%;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -462,16 +486,17 @@ button,
   height: 100vh;
   top: 0;
   left: 0;
-  background-image: url("../images/parallax/BG 125/front.png");
+  background-image: url("../images/grass_mobile/relvafrente\ 400px.png");
   background-size: 200%;
   background-repeat: no-repeat;
   background-position: center bottom;
 }
 
-  .main .center .cogu-main {
-    width: 70%;
-    margin-bottom: 0;
-  }
+.main .center .center-image .left,
+.main .center .center-image .middle,
+.main .center .center-image .right {
+  transform: translateY(-15%);
+}
 
   .main .center .button-row {
     display: block;
@@ -481,30 +506,6 @@ button,
   }
 
   .main .center a {
-    padding: 0.7rem 1rem;
-    font-size: 1rem;
-    transform: translateY(180px);
-  }
-  .main .center .button1,
-  .main .center .button2,
-  .main .center .button3 {
-    position: relative;
-    top: auto !important;
-    right: auto !important;
-    left: auto !important;
-    bottom: auto !important;
-  }
-}
-
-/* Mobile S */
-@media (max-width: 320px) {
-  .main .center .center-image {
-    gap: 0.8rem;
-  }
-
-  .main .center a {
-    padding: 0.7rem 1rem;
-    font-size: 0.9rem;
-    transform: translateY(150px);
+    transform: scale(90%);
   }
 }
