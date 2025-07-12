@@ -246,10 +246,6 @@ button,
 .main .center .center-image {
   width: 100%;
   height: 100%;
-  background-image: url("../images/blob.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -263,6 +259,42 @@ button,
   transform: translateY(20px);
   width: 40%;
   z-index: 2;
+}
+
+.main .center .clouds {
+  position: absolute;
+  width: 100vw;
+  height:100vh;
+  top: 0;
+  left: 0;
+  overflow:hidden;
+  background-image: url("../images/parallax/BG 125/clouds.png");
+  background-size:cover;
+  background-position:center;
+}
+
+.main .center .grass-back {
+  position: absolute;
+  width: 100vw;
+  height:100vh;
+  top: 0;
+  left: 0;
+  overflow:hidden;
+  background-image: url("../images/parallax/BG 125/back.png");
+  background-size:cover;
+  background-position:center;
+}
+
+.main .center .grass-front {
+  position: absolute;
+  width: 100vw;
+  height:100vh;
+  top: 0;
+  left: 0;
+  overflow:hidden;
+  background-image: url("../images/parallax/BG 125/front.png");
+  background-size:cover;
+  background-position:center;
 }
 
 /* Styles for the buttons */
@@ -390,12 +422,51 @@ button,
   .main .center {
     flex-direction: row;
     gap: 1em;
+    overflow: hidden;
   }
 
   .main .center .center-image {
     flex-direction: row;
     gap: 1em;
   }
+
+  .main .center .clouds {
+    position: absolute;
+    width: 100vw;
+    height:100vh;
+    top: 0;
+    left: 0;
+    overflow:hidden;
+    background-image: url("../images/parallax/BG 125/clouds.png");
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.main .center .grass-back {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background-image: url("../images/parallax/BG 125/back.png");
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.main .center .grass-front {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-image: url("../images/parallax/BG 125/front.png");
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
 
   .main .center .cogu-main {
     width: 70%;
