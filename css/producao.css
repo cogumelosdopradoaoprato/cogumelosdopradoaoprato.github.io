@@ -516,14 +516,4 @@ button,
     transform: scale(0);
     height: 35rem;
   }
-
-  /* Section fifth */
-  .producao .container .section-fifth {
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(253, 25, 234);
-    position: absolute;
-    top: 400vh;
-    left: 0;
-  }
 }

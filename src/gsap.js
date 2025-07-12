@@ -272,12 +272,12 @@ if (isMobile()) {
       rotation: "0", 
     },
     {
-      rotation: "360", 
+      rotation: "288", 
       ease: "none",
       scrollTrigger: {
         trigger: ".producao .container",
         start: "top top",
-        end: "130% bottom",
+        end: "100% bottom",
         scrub: 0.2,
         smooth: 1,
         //markers: true,
