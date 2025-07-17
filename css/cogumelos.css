@@ -1,19 +1,21 @@
 /* Global style variables to use along the code */
 :root {
   /* Variante para -- Títulos*/
-  --font-titulo: "Unbounded", sans-serif;
+  --font-titulo: "Bricolage Grotesque", sans-serif;
 
   /* Variante para Corpo de Texto */
-  --font-text: "DM Sans", sans-serif;
+  --font-text: "Bricolage Grotesque", sans-serif;
+  /* Satoshi font has to be downloaded and imported. This video will help: https://youtu.be/lDip-1VnaOA?t=94 */
 
   /* Contrast */
-  --ct-laranja: #dc5601;
-  --ct-verde: #74762b;
+  --ct-laranja: #f97b22;
+  --ct-verde: #1F4529;
+  --ct-verde2: #47663B;
   /* Backgrounds */
-  --bg-color: #ced6be;
+  --bg-color: #FFFFDD;
   /* Text */
-  --txt-creme: #f7e9ca;
-  --txt-preto: #442408;
+  --txt-creme: #FFFFDD;
+  --txt-preto: #000000;
 }
 
 /*Cursor*/
@@ -64,7 +66,7 @@ body {
 .bar {
   width: 100%;
   height: 3px;
-  background-color: var(--ct-rosa);
+  background-color: var(--ct-verde2);
   border-radius: 2px;
   transform-origin: center;
   transition: all 0.3s ease;
@@ -73,7 +75,7 @@ body {
 .hamburger span {
   width: 30px;
   height: 3px;
-  color: var(--ct-verdeama);
+  color: var(--ct-verde);
   transition: 0.3s;
 }
 
@@ -192,7 +194,7 @@ button,
 .cogumelos {
   display: flex;
   flex-direction: column;
-  padding-top: 5rem;
+  padding-top: 6rem;
   align-items: center;
   justify-content: center;
   list-style: none;
@@ -202,21 +204,12 @@ button,
   box-sizing: border-box;
 }
 
-.cogumelos .hero-image {
-  background-image: url("Banner.png");
-  height: 50vh;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
 
 /* Main title of the page */
 .cogumelos .cog-title {
   text-align: center;
   font-family: var(--font-titulo);
-  color: var(--ct-vermelho);
+  color: var(--ct-verde);
   font-weight: 900;
   font-size: clamp(3rem, 8vw, 7rem);
 }
@@ -227,7 +220,7 @@ button,
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1500px;
   box-sizing: border-box;
 }
 
@@ -238,9 +231,9 @@ button,
   align-items: center; 
   justify-content: center;
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   box-sizing: border-box;
-  gap: 2rem;
+  gap: 5rem;
 }
 
 /* Dimensions of the mushroom images */
@@ -257,29 +250,31 @@ button,
 .cogumelos .container .cogumelo .text {
   display: flex;
   flex-direction: column;
-  width: 45%;
+  width: 100%;
   max-width: 600px;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 /* Title of the mushroom text */
 .cogumelos .container .cogumelo .text h2 {
   font-size: clamp(1.5rem, 5vw, 4rem);
   font-family: var(--font-titulo);
-  color: var(--ct-vermelho);
-  font-weight: 600;
+  color: var(--ct-verde2);
+  font-weight: 900;
 }
 
 /* Description title */
 .cogumelos .container .cogumelo .text h3 {
   font-size: clamp(1rem, 3vw, 2rem);
   text-align: justify;
+  font-weight: 900;
+  color: var(--ct-verde2);
 }
 
 /* Sub-title of the mushroom text */
 .cogumelos .container .cogumelo .text h3 i {
   font-size: clamp(1.7rem, 3.5vw, 2.5rem);
-  font-weight: 200;
+  font-weight: 500;
   color: var(--ct-laranja);
 }
 

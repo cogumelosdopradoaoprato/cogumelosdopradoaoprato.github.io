@@ -1,21 +1,20 @@
 /* Global style variables to use along the code */
 :root {
   /* Variante para -- Títulos*/
-  --font-titulo: "Unbounded", sans-serif;
+  --font-titulo: "Bricolage Grotesque", sans-serif;
 
   /* Variante para Corpo de Texto */
-  --font-text: "DM Sans", sans-serif;
+  --font-text: "Bricolage Grotesque", sans-serif;
   /* Satoshi font has to be downloaded and imported. This video will help: https://youtu.be/lDip-1VnaOA?t=94 */
 
   /* Contrast */
-  --ct-laranja: #ff5e33;
-  --ct-amarelo: #ffd816;
-  --ct-azul: #1a0089;
-  --ct-verde: #b7cf4f;
+  --ct-laranja: #f97b22;
+  --ct-verde: #1F4529;
+  --ct-verde2: #47663B;
   /* Backgrounds */
-  --bg-creme: #efe7d3;
+  --bg-color: #FFFFDD;
   /* Text */
-  --txt-creme: #efe7d3;
+  --txt-creme: #FFFFDD;
   --txt-preto: #000000;
 }
 
@@ -28,12 +27,12 @@
 }
 
 /* Basic settings for the whole website */
-
 body {
   padding: 0;
   margin: 0;
-  font-family: var(--font-inter);
-  background-color: var(--bg-creme);
+  font-family: var(--font-text);
+  background-color: var(--bg-color);
+  overflow-x: hidden; /* Previne rolagem horizontal */
 }
 
 /* ----------------------------------------------------------------------- 
@@ -43,11 +42,12 @@ body {
    ----------------------------------------------------------------------- */
 
 /* New navbar */
-/* Hamburger Button */
 .header {
-  max-width: 100%;
+  width: 100%;
+  position: relative;
 }
 
+/* Hamburger Button */
 .hamburger {
   position: fixed;
   top: 1rem;
@@ -58,22 +58,27 @@ body {
   z-index: 1001;
   width: 30px;
   height: 24px;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
 .bar {
   width: 100%;
   height: 3px;
-  background-color: var(--ct-azul);
+  background-color: var(--ct-verde2);
   border-radius: 2px;
   transform-origin: center;
+  transition: all 0.3s ease;
 }
 
 .hamburger span {
   width: 30px;
   height: 3px;
-  color: var(--ct-amarelo);
+  color: var(--ct-verde);
   transition: 0.3s;
 }
+
 .hamburger,
 .hamburger .bar,
 .hamburger span {
@@ -126,12 +131,16 @@ button,
   right: 0;
   width: 300px;
   height: 100vh;
-  margin-top: auto;
   background-color: var(--ct-verde);
-  opacity: 0.5rem;
   padding-top: 5rem;
   transform: translateX(100%);
+  transition: transform 0.3s ease;
   z-index: 999;
+  overflow-y: auto;
+}
+
+.side-menu.active {
+  transform: translateX(0);
 }
 
 .side-menu ul {
@@ -142,6 +151,7 @@ button,
   text-align: right;
   padding-right: 3rem;
   padding-top: 50%;
+  margin: 0;
 }
 
 .side-menu ul li a {
@@ -149,78 +159,30 @@ button,
   text-decoration: none;
   font-size: 2rem;
   font-weight: 400;
-  cursor: url("../images/cursor/SelectBig.cur"), pointer;
+  transition: color 0.3s ease;
+}
+
+.side-menu ul li a:hover {
+  color: var(--ct-verdeama);
 }
 
 /* Logo Styling */
 .logo {
   position: fixed;
-  top: 0rem;
-  left: 0rem;
+  top: 0.5rem;
+  left: 0.5rem;
   z-index: 1000;
   padding: 5px;
 }
 
 .logo img {
   width: 115px;
-  /* Adjust logo size */
   height: auto;
-  cursor: url("../images/cursor/SelectBig.cur"), pointer;
+  transition: transform 0.3s ease;
 }
 
-@media (min-width: 320px) and (max-width: 425px) {
-  /* Hamburger Button */
-  .hamburger {
-    position: fixed;
-    top: 1em;
-    right: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    z-index: 1001;
-    width: 30px;
-    height: 24px;
-  }
-
-  .bar {
-    width: 100%;
-    height: 3px;
-    background-color: var(--bg-creme);
-    border-radius: 2px;
-    transform-origin: center;
-  }
-
-  .hamburger span {
-    width: 30px;
-    height: 3px;
-    transition: 0.3s;
-  }
-
-  /* Logo styling*/
-  .logo {
-    position: fixed;
-    top: 0rem;
-    left: 0rem;
-    z-index: 10;
-    padding: 5px;
-  }
-
-  .logo img {
-    width: 100px;
-    /* Adjust logo size */
-    height: auto;
-  }
-  .side-menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    margin-top: auto;
-    padding-top: 5rem;
-    transform: translateX(100%);
-    z-index: 999;
-  }
+.logo img:hover {
+  transform: scale(1.05);
 }
 
 /* ----------------------------------------------------------------------- 
