@@ -11,9 +11,9 @@
   --ct-verde: #1f4529;
   --ct-verde2: #47663b;
   /* Backgrounds */
-  --bg-color: #fdfcf7;
+  --bg-color: #fefae7;
   /* Text */
-  --txt-creme: #fdfcf7;
+  --txt-creme: #fefae7;
   --txt-preto: #000000;
 }
 
@@ -162,7 +162,7 @@ button,
 }
 
 .side-menu ul li a:hover {
-  color: var(--ct-verdeama);
+  color: var(--ct-verde2);
 }
 
 /* Logo Styling */
