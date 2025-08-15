@@ -429,6 +429,33 @@ button,
   opacity: 0;
 }
 
+/*
+ Scroll down gif image indicator
+ This image will be shown in the first section, to indicate
+  that the user can scroll down to see more content
+*/
+
+.producao .container .section-first .scroll-down {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 10;
+  margin: 10px
+}
+
+.producao .container .section-first .scroll-down p {
+  color: white;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.producao .container .section-first .scroll-down img {
+  width: 100px;
+  height: auto;
+  animation: bounce 2s infinite;
+}
+
+
 /* Small adjustment for heights lower than 1000px */
 @media (max-height: 1000px) {
   .producao .container .circle-image {
@@ -485,5 +512,9 @@ button,
     transform-origin: center center;
     transform: scale(0);
     height: 35rem;
+  }
+
+  .producao .container .section-first .scroll-down {
+    display: none;
   }
 }
