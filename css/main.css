@@ -180,6 +180,11 @@ body {
   background-repeat: no-repeat;
 }
 
+/* Hover animation for the image of "Produção" */
+.main .center .right img:hover {
+  cursor: url("../images/cursor/SelectBig.cur"), pointer;
+}
+
 .main .center .center-image .left {
   z-index: 10;
   height: 100%;
@@ -213,6 +218,11 @@ body {
   background-repeat: no-repeat;
 }
 
+/* Hover animation for the image of "Sobre" */
+.main .center .left img:hover {
+  cursor: url("../images/cursor/SelectBig.cur"), pointer;
+}
+
 .main .center .center-image .middle {
   z-index: 10;
   height: 100%;
@@ -243,6 +253,11 @@ body {
   background-image: url('/images/buttons/buco.png');
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+/* Hover animation for the image of "Os cogumelos" */
+.main .center .middle img:hover {
+  cursor: url("../images/cursor/SelectBig.cur"), pointer;
 }
 
 /* Other Versions view of Main page */
