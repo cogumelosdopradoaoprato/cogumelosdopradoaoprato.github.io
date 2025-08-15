@@ -298,6 +298,9 @@ button,
 
 /* Mobile view - General (up to 768px) */
 @media (max-width: 768px) {
+  .logo img {
+    width: 100px;
+  }
   /* Hamburger menu adjustments */
   .hamburger {
     top: 0.8rem;

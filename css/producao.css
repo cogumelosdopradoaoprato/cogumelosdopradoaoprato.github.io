@@ -465,6 +465,11 @@ button,
 
 /* Mobile view - when width of the screen is lower than 768px */
 @media (max-width: 768px) {
+
+  .logo img {
+    width: 100px;
+  }
+
   .producao .container .content {
     display: flex;
     flex-direction: row;
@@ -474,7 +479,7 @@ button,
     align-self: center;
     padding: 1rem;
     position: sticky;
-    top: 5rem;
+    top: 6rem;
     margin: auto;
   }
   .producao .container .content img {
@@ -483,7 +488,8 @@ button,
   }
 
   .producao .container .content .text {
-    width: 50%;
+    width: 80%;
+    padding: 20px;
   }
 
   .producao .container .content .text h2 {
@@ -493,6 +499,7 @@ button,
 
   .producao .container .content .text p {
     font-size: 1rem;
+    margin: 10px 0px;
   }
 
   .producao .container .circle-container {
