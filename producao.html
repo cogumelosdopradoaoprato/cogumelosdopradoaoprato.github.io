@@ -15,6 +15,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
     rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -183,5 +184,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/MotionPathPlugin.min.js"></script>
 <script src="src/gsap.js"></script>
 <script src="src/navbar.js"></script>
+<script>
+    function updateImage() {
+        if ($(window).width() <= 768) {
+          // Mobile view
+            $(".section-first .grass-image-back").attr("src", "images/grass_mobile/relvaback 400px.png");
+            $(".section-first .grass-image-front").attr("src", "images/grass_mobile/relvafrente 400px.png");
+        } else {
+            $(".section-first .grass-image-back").attr("src", "images/parallax/BG 125/back.png");
+            $(".section-first .grass-image-front").attr("src", "images/parallax/BG 125/front.png");
+        }
+    }
 
+    updateImage(); // On load
+    $(window).resize(updateImage); // On resize
+</script>
 </html>

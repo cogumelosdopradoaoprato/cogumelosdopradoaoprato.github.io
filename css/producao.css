@@ -288,7 +288,7 @@ button,
   position: relative;
 }
 
-/* Section second parallax */
+/* Section first parallax */
 .producao .container .section-first .parallax img {
   position: absolute;
   bottom: 0;

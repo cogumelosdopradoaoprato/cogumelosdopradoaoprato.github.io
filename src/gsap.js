@@ -15,7 +15,7 @@ if (isMobile()) {
       ease: "power3.out",
       onComplete: () => {
         gsap.to(".circle-image", { duration: 1, scale: 1 })
-        gsap.to(".circle-container", { duration: 1, bottom: "-50%" })
+        gsap.to(".circle-container", { duration: 1, bottom: "-65%" })
       }
   });
 
@@ -26,12 +26,12 @@ if (isMobile()) {
       rotation: "0", // Start at 0% rotation
     },
     {
-      rotation: "360", // Rotate a full circle
+      rotation: "288", // Rotate a full circle
       ease: "none",
       scrollTrigger: {
         trigger: ".producao .container",
         start: "top top",
-        end: "120% bottom",
+        end: "100% bottom",
         scrub: true,
         smooth: 1,
         //markers: true,
@@ -70,15 +70,60 @@ if (isMobile()) {
     }
   );
 
-  /* When in viewport, move the grass from bottom to top */
+  /* When in viewport, move the clouds from bottom to top */
   gsap.fromTo(
-    ".section-first .parallax .grass-image",
+    ".section-first .parallax .clouds-image",
+    {
+      y: '100%',
+    },
+    {
+      y: '-40%',
+      duration: 3,
+      delay: 3,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".section-first",
+        start: "top 20%",
+        end: "bottom 60%",
+        scrub: false,
+        toggleActions: "play reverse play reverse", // scales in and out on scroll
+        //markers: true
+      }
+    }
+  );
+
+  /* When in viewport, move the front grass from bottom to top */
+  gsap.fromTo(
+    ".section-first .parallax .grass-image-front",
     {
       y: '100%',
     },
     {
       y: '0%',
       duration: 2,
+      delay: 1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".section-first",
+        start: "top 20%",
+        end: "bottom 60%",
+        scrub: false,
+        toggleActions: "play reverse play reverse", // scales in and out on scroll
+        //markers: true
+      }
+    }
+  );
+  
+
+  /* When in viewport, move the back grass from bottom to top */
+  gsap.fromTo(
+    ".section-first .parallax .grass-image-back",
+    {
+      y: '100%',
+    },
+    {
+      y: '0%',
+      duration: 2.5,
       delay: 2,
       ease: "power2.out",
       scrollTrigger: {
@@ -92,16 +137,38 @@ if (isMobile()) {
     }
   );
 
-  /* When in viewport, move the clouds from bottom to top */
+    /* When in viewport, move the grass foliage from bottom to top */
   gsap.fromTo(
-    ".section-first .parallax .clouds-image",
+    ".section-first .parallax .grass-image-foliage",
     {
       y: '100%',
     },
     {
-      y: '20%',
+      y: '-25%',
       duration: 3,
-      delay: 3,
+      delay: 4,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".section-first",
+        start: "top 20%",
+        end: "bottom 60%",
+        scrub: false,
+        toggleActions: "play reverse play reverse", // scales in and out on scroll
+        //markers: true
+      }
+    }
+  );
+
+  /* When in viewport, move the grass extra from bottom to top */
+  gsap.fromTo(
+    ".section-first .parallax .grass-image-extra",
+    {
+      y: '100%',
+    },
+    {
+      y: '-25%',
+      duration: 3,
+      delay: 4,
       ease: "power2.out",
       scrollTrigger: {
         trigger: ".section-first",
@@ -138,26 +205,6 @@ if (isMobile()) {
     }
   );
 
-  /* When in viewport, move the grass from bottom to top */
-  gsap.fromTo(
-    ".section-second .parallax .grass-image",
-    {
-      y: '100%',
-    },
-    {
-      y: '0%',
-      duration: 2,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".section-second",
-        start: "top 20%",
-        end: "bottom 60%",
-        scrub: false,
-        toggleActions: "play reverse play reverse", // scales in and out on scroll
-        //markers: true
-      }
-    }
-  );
 
   /* When in viewport, move the clouds from bottom to top */
   gsap.fromTo(
@@ -359,6 +406,7 @@ if (isMobile()) {
       }
     }
   );
+  
 
   /* When in viewport, move the back grass from bottom to top */
   gsap.fromTo(
@@ -381,6 +429,7 @@ if (isMobile()) {
       }
     }
   );
+  
 
   /* When in viewport, move the grass foliage from bottom to top */
   gsap.fromTo(
