@@ -80,7 +80,8 @@ body {
 
 .hamburger,
 .hamburger .bar,
-.hamburger span {
+.hamburger span,
+.side-menu img{
   cursor: url("../images/cursor/SelectBig.cur"), pointer;
 }
 
@@ -89,7 +90,7 @@ body {
   margin-left: 0.7rem;
 }
 
-.side-menu ul li:hover > .hamimg {
+.side-menu ul li:hover .hamimg {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
