@@ -10,6 +10,7 @@
   --ct-laranja: #f97b22;
   --ct-verde: #1f4529;
   --ct-verde2: #47663b;
+  --ct-verdetrans: #1f4529d8;
   /* Backgrounds */
   --bg-color: #fefae7;
   /* Text */
@@ -185,7 +186,6 @@ button,
   transform: scale(1.05);
 }
 
-
 /* ----------------------------------------------------------------------- 
    Produção page styles 
    This section defines the styles for the "Produção" page of the website
@@ -196,6 +196,7 @@ button,
   display: flex;
   flex-direction: column;
   height: calc(100vh * 5);
+  font-family: var(--font-text);
 }
 
 /* Container for all the sections, and the circle */
@@ -226,7 +227,7 @@ button,
 /* Text of every section */
 .producao .container .content .text {
   width: 50%;
-  background-color: #e1e6e9de;
+  background-color: var(--ct-verdetrans);
   padding: 1em 2em;
   border-radius: 20px;
 }
@@ -234,15 +235,16 @@ button,
 /* Title of every section */
 .producao .container .content .text h2 {
   font-size: 2.5rem;
-  color: var(--bg-);
-  margin: 0;
+  color: var(--bg-color);
+  margin-top: 0.5em;
   font-family: var(--font-titulo);
 }
 
 /* Text body of every section */
 .producao .container .content .text p {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   margin-top: 2.5rem;
+  color: var(--txt-creme);
 }
 
 /* Container for the element os the rotating circle */
@@ -294,7 +296,6 @@ button,
   bottom: 0;
   width: 100%;
 }
-
 
 /* Section second */
 .producao .container .section-second {
@@ -440,7 +441,7 @@ button,
   bottom: 0px;
   right: 0px;
   z-index: 10;
-  margin: 10px
+  margin: 10px;
 }
 
 .producao .container .section-first .scroll-down p {
@@ -455,7 +456,6 @@ button,
   animation: bounce 2s infinite;
 }
 
-
 /* Small adjustment for heights lower than 1000px */
 @media (max-height: 1000px) {
   .producao .container .circle-image {
@@ -465,9 +465,36 @@ button,
 
 /* Mobile view - when width of the screen is lower than 768px */
 @media (max-width: 768px) {
-
   .logo img {
     width: 100px;
+  }
+  /* Hamburger menu adjustments */
+  .hamburger {
+    top: 0.8rem;
+    right: 0.8rem;
+  }
+
+  .logo {
+    top: 0.3rem;
+    left: 0.3rem;
+  }
+
+  .logo img {
+    width: 90px;
+  }
+
+  .side-menu {
+    width: 100%;
+    padding-top: 4rem;
+  }
+
+  .side-menu ul {
+    padding-top: 30%;
+    padding-right: 1.5rem;
+  }
+
+  .side-menu ul li a {
+    font-size: 2.5rem;
   }
 
   .producao .container .content {
@@ -504,7 +531,7 @@ button,
 
   .producao .container .circle-container {
     position: fixed;
-    bottom: -0%;
+    bottom: 0%;
     left: 50%;
     transform: translateX(-50%);
     height: 100%;
@@ -518,7 +545,8 @@ button,
     position: absolute;
     transform-origin: center center;
     transform: scale(0);
-    height: 35rem;
+    height: 45rem;
+    max-width: 80%;
   }
 
   .producao .container .section-first .scroll-down {
