@@ -242,7 +242,7 @@ button,
 
 /* Text body of every section */
 .producao .container .content .text p {
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   margin-top: 2.5rem;
   color: var(--txt-creme);
 }
@@ -253,8 +253,8 @@ button,
   bottom: -280px;
   left: 50%;
   transform: translateX(-50%);
-  width: 1500px;
-  height: 1500px;
+  width: 2000px;
+  height: 2000px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -267,7 +267,7 @@ button,
   position: absolute;
   transform-origin: center center;
   transform: scale(0);
-  max-height: 2000px;
+  max-height: 1300px;
 }
 
 /* Following styles are for every individual section, with their
@@ -378,7 +378,7 @@ button,
 /* Section fifth */
 .producao .container .section-fifth {
   width: 100%;
-  height: 140vh;
+  height: 100vh;
   background-color: #a9d3e8;
   position: absolute;
   top: 400vh;
