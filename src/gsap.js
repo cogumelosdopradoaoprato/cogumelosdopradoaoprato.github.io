@@ -4,7 +4,6 @@ gsap.registerPlugin(ScrollTrigger); // Plugin for scroll animations
 let isMobile = window.innerWidth <= 768;
 
 function initAnimations() {
-
   // Depending on the viewport size, load one animation or another
   if (isMobile) {
     // When page is loaded, show circle in the middle and then move it to the bottom
@@ -75,7 +74,7 @@ function initAnimations() {
         y: "100%",
       },
       {
-        y: "-5%",
+        y: "-40%",
         duration: 3,
         delay: 3,
         ease: "power2.out",
@@ -141,7 +140,7 @@ function initAnimations() {
         y: "100%",
       },
       {
-        y: "0%",
+        y: "-25%",
         duration: 3,
         delay: 4,
         ease: "power2.out",
@@ -163,7 +162,7 @@ function initAnimations() {
         y: "100%",
       },
       {
-        y: "0%",
+        y: "-25%",
         duration: 3,
         delay: 4,
         ease: "power2.out",
@@ -209,97 +208,8 @@ function initAnimations() {
         y: "100%",
       },
       {
-        y: "-5%",
+        y: "20%",
         duration: 3,
-        delay: 3,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".section-second",
-          start: "top 20%",
-          end: "bottom 60%",
-          scrub: false,
-          toggleActions: "play reverse play reverse", // scales in and out on scroll
-          //markers: true
-        },
-      }
-    );
-
-    /* When in viewport, move the front grass from bottom to top */
-    gsap.fromTo(
-      ".section-second .parallax .grass-image-front",
-      {
-        y: "100%",
-      },
-      {
-        y: "0%",
-        duration: 2,
-        delay: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".section-second",
-          start: "top 20%",
-          end: "bottom 60%",
-          scrub: false,
-          toggleActions: "play reverse play reverse", // scales in and out on scroll
-          //markers: true
-        },
-      }
-    );
-
-    /* When in viewport, move the back grass from bottom to top */
-    gsap.fromTo(
-      ".section-second .parallax .grass-image-back",
-      {
-        y: "100%",
-      },
-      {
-        y: "0%",
-        duration: 2.5,
-        delay: 2,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".section-second",
-          start: "top 20%",
-          end: "bottom 60%",
-          scrub: false,
-          toggleActions: "play reverse play reverse", // scales in and out on scroll
-          //markers: true
-        },
-      }
-    );
-
-    /* When in viewport, move the grass foliage from bottom to top */
-    gsap.fromTo(
-      ".section-second .parallax .grass-image-foliage",
-      {
-        y: "100%",
-      },
-      {
-        y: "0%",
-        duration: 3,
-        delay: 4,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".section-second",
-          start: "top 20%",
-          end: "bottom 60%",
-          scrub: false,
-          toggleActions: "play reverse play reverse", // scales in and out on scroll
-          //markers: true
-        },
-      }
-    );
-
-    /* When in viewport, move the grass extra from bottom to top */
-    gsap.fromTo(
-      ".section-second .parallax .grass-image-extra",
-      {
-        y: "100%",
-      },
-      {
-        y: "0%",
-        duration: 3,
-        delay: 4,
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".section-second",
@@ -316,10 +226,7 @@ function initAnimations() {
       When reached, fade-in and scale-up the content */
     gsap.fromTo(
       ".content.third",
-      {
-        scale: 0,
-        opacity: 0,
-      },
+      { scale: 0, opacity: 0 },
       {
         scale: 1,
         opacity: 1,
@@ -330,8 +237,58 @@ function initAnimations() {
           start: "top 40%",
           end: "bottom 60%",
           scrub: false,
-          toggleActions: "play reverse play reverse", // scales in and out on scroll
-          //markers: true
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".section-third .parallax .floor-image",
+      { y: "100%" },
+      {
+        y: "0%",
+        duration: 2,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".section-third",
+          start: "top 20%",
+          end: "bottom 60%",
+          scrub: false,
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".section-third .parallax .floor-image-furniture-1",
+      { x: "-100%" },
+      {
+        x: "0%",
+        duration: 3,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".section-third",
+          start: "top 20%",
+          end: "bottom 60%",
+          scrub: false,
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".section-third .parallax .floor-image-furniture-2",
+      { x: "100%" },
+      {
+        x: "0%",
+        duration: 3,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".section-third",
+          start: "top 20%",
+          end: "bottom 60%",
+          scrub: false,
+          toggleActions: "play reverse play reverse",
         },
       }
     );
@@ -340,10 +297,7 @@ function initAnimations() {
       When reached, fade-in and scale-up the content */
     gsap.fromTo(
       ".content.fourth",
-      {
-        scale: 0,
-        opacity: 0,
-      },
+      { scale: 0, opacity: 0 },
       {
         scale: 1,
         opacity: 1,
@@ -354,8 +308,58 @@ function initAnimations() {
           start: "top 40%",
           end: "bottom 60%",
           scrub: false,
-          toggleActions: "play reverse play reverse", // scales in and out on scroll
-          //markers: true
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".section-fourth .parallax .floor-image",
+      { y: "100%" },
+      {
+        y: "0%",
+        duration: 2,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".section-fourth",
+          start: "top 20%",
+          end: "bottom 60%",
+          scrub: false,
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".section-fourth .parallax .floor-image-furniture-1",
+      { x: "-100%" },
+      {
+        x: "0%",
+        duration: 3,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".section-fourth",
+          start: "top 20%",
+          end: "bottom 60%",
+          scrub: false,
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".section-fourth .parallax .floor-image-furniture-2",
+      { x: "100%" },
+      {
+        x: "0%",
+        duration: 3,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".section-fourth",
+          start: "top 20%",
+          end: "bottom 60%",
+          scrub: false,
+          toggleActions: "play reverse play reverse",
         },
       }
     );
@@ -588,6 +592,90 @@ function initAnimations() {
       {
         y: "20%",
         duration: 3,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".section-second",
+          start: "top 20%",
+          end: "bottom 60%",
+          scrub: false,
+          toggleActions: "play reverse play reverse", // scales in and out on scroll
+          //markers: true
+        },
+      }
+    );
+
+    /* When in viewport, move the front grass from bottom to top */
+    gsap.fromTo(
+      ".section-second .parallax .grass-image-front",
+      {
+        y: "100%",
+      },
+      {
+        y: "0%",
+        duration: 2,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".section-second",
+          start: "top 20%",
+          end: "bottom 60%",
+          scrub: false,
+          toggleActions: "play reverse play reverse", // scales in and out on scroll
+          //markers: true
+        },
+      }
+    );
+
+    /* When in viewport, move the back grass from bottom to top */
+    gsap.fromTo(
+      ".section-second .parallax .grass-image-back",
+      {
+        y: "100%",
+      },
+      {
+        y: "0%",
+        duration: 4,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".section-second",
+          start: "top 20%",
+          end: "bottom 60%",
+          scrub: false,
+          toggleActions: "play reverse play reverse", // scales in and out on scroll
+          //markers: true
+        },
+      }
+    );
+
+    /* When in viewport, move the grass foliage from bottom to top */
+    gsap.fromTo(
+      ".section-second .parallax .grass-image-foliage",
+      {
+        y: "100%",
+      },
+      {
+        y: "0%",
+        duration: 4,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".section-second",
+          start: "top 20%",
+          end: "bottom 60%",
+          scrub: false,
+          toggleActions: "play reverse play reverse", // scales in and out on scroll
+          //markers: true
+        },
+      }
+    );
+
+    /* When in viewport, move the grass extra from bottom to top */
+    gsap.fromTo(
+      ".section-second .parallax .grass-image-extra",
+      {
+        y: "100%",
+      },
+      {
+        y: "0%",
+        duration: 4,
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".section-second",
@@ -905,16 +993,16 @@ function initAnimations() {
   );
 
   // Smooth section scroll navigation
-  (function() {
+  (function () {
     const sectionSelectors = [
       ".section-first",
       ".section-second",
       ".section-third",
       ".section-fourth",
-      ".section-fifth"
+      ".section-fifth",
     ];
     const sections = sectionSelectors
-      .map(sel => document.querySelector(sel))
+      .map((sel) => document.querySelector(sel))
       .filter(Boolean);
 
     let isScrolling = false;
@@ -934,13 +1022,20 @@ function initAnimations() {
       if (idx < 0 || idx >= sections.length) return;
       isScrolling = true;
       sections[idx].scrollIntoView({ behavior: "smooth" });
-      setTimeout(() => { isScrolling = false; }, 800); // prevent rapid scrolls
+      setTimeout(() => {
+        isScrolling = false;
+      }, 800); // prevent rapid scrolls
     }
 
     function scrollToBottom() {
       isScrolling = true;
-      window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" });
-      setTimeout(() => { isScrolling = false; }, 800);
+      window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: "smooth",
+      });
+      setTimeout(() => {
+        isScrolling = false;
+      }, 800);
     }
 
     function handleScroll(e, direction) {
@@ -969,13 +1064,17 @@ function initAnimations() {
       // Se está na primeira secção e faz scroll para cima, deixa scroll normal
     }
 
-    window.addEventListener("wheel", function(e) {
-      if (e.ctrlKey) return; // allow zoom
-      if (Math.abs(e.deltaY) < 10) return;
-      handleScroll(e, e.deltaY > 0 ? 1 : -1);
-    }, { passive: false });
+    window.addEventListener(
+      "wheel",
+      function (e) {
+        if (e.ctrlKey) return; // allow zoom
+        if (Math.abs(e.deltaY) < 10) return;
+        handleScroll(e, e.deltaY > 0 ? 1 : -1);
+      },
+      { passive: false }
+    );
 
-    window.addEventListener("keydown", function(e) {
+    window.addEventListener("keydown", function (e) {
       if (isScrolling) return;
       if (["ArrowDown", "PageDown"].includes(e.key)) {
         handleScroll(e, 1);
@@ -983,9 +1082,7 @@ function initAnimations() {
         handleScroll(e, -1);
       }
     });
-
   })();
-
 }
 // Run once at page load
 initAnimations();
@@ -999,5 +1096,3 @@ window.addEventListener("resize", () => {
     initAnimations(); // re-run setup instead of reloading
   }
 });
-
-
