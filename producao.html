@@ -65,16 +65,16 @@
       </div>
       <div class="section-third">
         <div class="parallax">
-          <img class="floor-image" src="images/parallax/BG 34/FLOOR.png" alt="" srcset="" />
-          <img class="floor-image-furniture-1" src="images/parallax/3/EXTRA 31.png" alt="" srcset="" />
-          <img class="floor-image-furniture-2" src="images/parallax/3/EXTRA 32.png" alt="" srcset="" />
+          <img class="floor-image" src="images/parallax/BG3/bg3.png" alt="" srcset="" />
+          <img class="floor-image-furniture-1" src="images/parallax/3/extra31.png" alt="" srcset="" />
+          <img class="floor-image-furniture-2" src="images/parallax/3/extra32.png"alt="" srcset="" />
         </div>
       </div>
       <div class="section-fourth">
         <div class="parallax">
-          <img class="floor-image" src="images/parallax/BG 34/FLOOR.png" alt="" srcset="" />
-          <img class="floor-image-furniture-1" src="images/parallax/4/EXTRA 41.png" alt="" srcset="" />
-          <img class="floor-image-furniture-2" src="images/parallax/4/EXTRA 42.png" alt="" srcset="" />
+          <img class="floor-image" src="images/parallax/BG4/bg4.png" alt="" srcset="" />
+          <img class="floor-image-furniture-1" src="images/parallax/4/extra41.png" alt="" srcset="" />
+          <img class="floor-image-furniture-2" src="images/parallax/4/extra42.png" alt="" srcset="" />
         </div>
       </div>
       <div class="section-fifth">
@@ -83,7 +83,7 @@
           <img class="grass-image-back" src="images/parallax/BG 125/back.png" alt="" srcset="" />
           <img class="grass-image-front" src="images/parallax/BG 125/front.png" alt="" srcset="" />
           <img class="grass-image-foliage" src="images/parallax/BG 125/trees.png" alt="" srcset="" />
-          <img class="grass-image-extra" src="images/parallax/5/EXTRA 5.png" alt="" srcset="" />
+          <img class="grass-image-extra" src="images/parallax/5/extra5.png" alt="" srcset="" />
         </div>
       </div>
       <div class="content first">
@@ -152,20 +152,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/MotionPathPlugin.min.js"></script>
 <script src="src/gsap.js"></script>
 <script src="src/navbar.js"></script>
-<script>
-  function updateImage() {
-    if ($(window).width() <= 768) {
-      // Mobile view
-      $(".section-first .grass-image-back").attr("src", "images/grass_mobile/relvaback 400px.png");
-      $(".section-first .grass-image-front").attr("src", "images/grass_mobile/relvafrente 400px.png");
-    } else {
-      $(".section-first .grass-image-back").attr("src", "images/parallax/BG 125/back.png");
-      $(".section-first .grass-image-front").attr("src", "images/parallax/BG 125/front.png");
-    }
-  }
-
-  updateImage(); // On load
-  $(window).resize(updateImage); // On resize
-</script>
+<script src="src/mobilepro.js"></script>
 
 </html>
