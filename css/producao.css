@@ -374,6 +374,11 @@ button,
   bottom: 0;
   width: 100%;
 }
+.section-third .parallax img,
+.section-fourth .parallax img {
+  position: absolute;
+  bottom: 0;
+}
 
 /* Section fifth */
 .producao .container .section-fifth {
@@ -552,4 +557,34 @@ button,
   .producao .container .section-first .scroll-down {
     display: none;
   }
+
+  .section-third .floor-image {
+    width: 100%;   /* ocupa largura toda */
+    height: auto;
+    left: 0;
+  }
+  .section-third .floor-image-furniture-1 {
+    width: 35%;    /* ajusta até ficar proporcional */
+    left: 0%;
+  }
+  .section-third .floor-image-furniture-2 {
+    width: 35%;
+    right: 0%;
+  }
+
+  /* Seção 4 */
+  .section-fourth .floor-image {
+    width: 100%;
+    height: auto;
+    left: 0;
+  }
+  .section-fourth .floor-image-furniture-1 {
+    width: 35%;
+    left: 0%;
+  }
+  .section-fourth .floor-image-furniture-2 {
+    width: 35%;
+    right: 0%;
+  }
 }
+
