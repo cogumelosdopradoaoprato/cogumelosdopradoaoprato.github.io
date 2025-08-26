@@ -110,7 +110,7 @@ body {
   top: 0;
   left: 0;
   overflow: hidden;
-  background-image: url("../images/parallax/BG 125/clouds.png");
+  background-image: url("../images/parallax/BG125/clouds.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -123,7 +123,7 @@ body {
   top: 0;
   left: 0;
   overflow: hidden;
-  background-image: url("../images/parallax/BG 125/back.png");
+  background-image: url("../images/parallax/BG125/back.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -136,7 +136,7 @@ body {
   top: 0;
   left: 0;
   overflow: hidden;
-  background-image: url("../images/parallax/BG 125/front.png");
+  background-image: url("../images/parallax/BG125/front.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -329,7 +329,7 @@ body {
     top: 0;
     left: 0;
     overflow: hidden;
-    background-image: url("../images/parallax/BG 125/clouds.png");
+    background-image: url("../images/parallax/BG125/clouds.png");
     /* Mantém imagem proporcional */
     background-size: cover;
     background-position: center;
@@ -343,7 +343,7 @@ body {
     top: 0;
     left: 0;
     overflow: hidden;
-    background-image: url("../images/grass_mobile/relvaback\ 400px.png");
+    background-image: url("../images/images/mobile_img/relvaback.png");
     /* Mantém imagem proporcional */
     background-size: cover;
     background-position: center;
@@ -356,7 +356,7 @@ body {
     height: 100vh;
     top: 0;
     left: 0;
-    background-image: url("../images/grass_mobile/relvafrente\ 400px.png");
+    background-image: url("../images/mobile_img/relvafront.png");
     /* Mantém imagem proporcional */
     background-size: cover;
     background-position: center;
@@ -410,17 +410,17 @@ body {
 
 /* Layers backgrounds */
 .main .center .clouds {
-  background-image: url("../images/parallax/BG 125/clouds.png");
+  background-image: url("../images/parallax/BG125/clouds.png");
   z-index: -3;
 }
 
 .main .center .grass-back {
-  background-image: url("../images/parallax/BG 125/back.png");
+  background-image: url("../images/parallax/BG125/back.png");
   z-index: -2;
 }
 
 .main .center .grass-front {
-  background-image: url("../images/parallax/BG 125/front.png");
+  background-image: url("../images/parallax/BG125/front.png");
   z-index: -1;
 }
 
@@ -507,10 +507,10 @@ body {
 
   /* Backgrounds mobile-specific (if você quiser imagens diferentes) */
   .main .center .grass-back {
-    background-image: url("../images/grass_mobile/relvaback 400px.png");
+    background-image: url("../images/images/mobile_img/relvaback.png");
   }
   .main .center .grass-front {
-    background-image: url("../images/grass_mobile/relvafrente 400px.png");
+    background-image: url("../images/mobile_img/relvafront.png");
   }
 }
 

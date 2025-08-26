@@ -210,7 +210,7 @@ button,
   color: var(--ct-verde);
   font-weight: 800;
   padding-bottom: 0.5em;
-  font-size: clamp(6rem, 8vw, 10rem); /* Desktop */
+  font-size: clamp(9rem, 8vw, 10rem); /* Desktop */
   margin: 0px;
 }
 
