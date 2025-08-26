@@ -25,6 +25,7 @@ function initAnimations() {
     setupMobileAnimations();
   } else {
     setupDesktopAnimations();
+    initSmoothScrolling();
   }
 }
 
@@ -893,7 +894,6 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log(`Initializing animations for: ${deviceType}`);
   initAnimations();
   setupFifthSectionParallax();
-  initSmoothScrolling();
 });
 
 window.addEventListener('load', () => {

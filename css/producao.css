@@ -560,31 +560,35 @@ button,
 
   .section-third .floor-image {
     width: 100%;   /* ocupa largura toda */
-    height: auto;
+    height: 100%;
     left: 0;
   }
   .section-third .floor-image-furniture-1 {
     width: 35%;    /* ajusta até ficar proporcional */
     left: 0%;
+    margin-bottom: 20%;
   }
   .section-third .floor-image-furniture-2 {
     width: 35%;
     right: 0%;
+    margin-bottom: 20%;
   }
 
   /* Seção 4 */
   .section-fourth .floor-image {
     width: 100%;
-    height: auto;
+    height: 100%;
     left: 0;
   }
   .section-fourth .floor-image-furniture-1 {
     width: 35%;
     left: 0%;
+    margin-bottom: 20%;
   }
   .section-fourth .floor-image-furniture-2 {
     width: 35%;
     right: 0%;
+    margin-bottom: 20%;
   }
 }
 
