@@ -88,7 +88,6 @@ function updateImage() {
       "src",
       "images/mobile_img/extra5.png"
     );
-
   } else {
     // 1ª secção
     $(".section-first .clouds-image").attr(

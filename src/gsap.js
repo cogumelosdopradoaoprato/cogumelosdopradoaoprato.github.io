@@ -889,6 +889,8 @@ function setupFifthSectionParallax() {
   });
 }
 
+
+
 // Initialize everything
 document.addEventListener('DOMContentLoaded', () => {
   console.log(`Initializing animations for: ${deviceType}`);
