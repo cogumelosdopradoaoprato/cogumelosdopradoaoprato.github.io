@@ -254,8 +254,8 @@ button,
   max-width: 200px;
   padding: 0 2rem;
 }
-.cogumelos .container .cogumelo .text li{
-    text-align: justify;
+.cogumelos .container .cogumelo .text li {
+  text-align: justify;
 }
 
 /* Title of the mushroom text */
@@ -362,16 +362,21 @@ button,
     max-width: 90%;
   }
 
-  .cogumelos .container .cogumelo .text h3{
+  .cogumelos .container .cogumelo .text li {
+    text-align: left;
+  }
+  .cogumelos .container .cogumelo .text h3 {
     text-align: center;
-        font-size: clamp(1.5rem, 4vw, 10rem);
+    font-size: clamp(1.5rem, 4vw, 10rem);
+    padding-bottom: 1rem;
+        padding-top: 1rem;
   }
 
   /* Individual paragraphs */
-.cogumelos .container .cogumelo .text p {
-  text-align: start;
-  margin: 0px 15px;
-}
+  .cogumelos .container .cogumelo .text p {
+    text-align: center;
+    margin: 0px 15px;
+  }
 
   /* In mobile view, all the mushrooms are ordered vertically */
   .cogumelos .container .cogumelo:nth-child(2) {
