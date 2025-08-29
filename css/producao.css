@@ -462,10 +462,26 @@ button,
 }
 
 /* Small adjustment for heights lower than 1000px */
-@media (max-height: 1000px) {
+@media (max-width: 1024px) {
   .producao .container .circle-image {
-    height: 250vh;
+    height: 100vh;
   }
+  
+  .producao .container .content .text {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .producao .container .content .text h2 {
+    font-size: 3rem;
+    margin: 0;
+  }
+
+  .producao .container .content .text p {
+    font-size: 1.5rem;
+    margin: 10px 0px;
+  }
+
 }
 
 /* Mobile view - when width of the screen is lower than 768px */
@@ -525,12 +541,12 @@ button,
   }
 
   .producao .container .content .text h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 0;
   }
 
   .producao .container .content .text p {
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin: 10px 0px;
   }
 
@@ -550,7 +566,7 @@ button,
     position: absolute;
     transform-origin: center center;
     transform: scale(0);
-    height: 45rem;
+    height: 55rem;
     max-width: 80%;
   }
 
