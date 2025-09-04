@@ -39,7 +39,6 @@ body {
    This section defines the styles for the hamburger menu, and the navbar
    present in different pages of the website
    ----------------------------------------------------------------------- */
-
 /* New navbar */
 .header {
   width: 100%;
@@ -185,6 +184,7 @@ button,
   transform: scale(1.05);
 }
 
+
 /* ----------------------------------------------------------------------- 
    Os Cogumelos page styles 
    This section defines the styles for the "Cogumelos" page of the website
@@ -300,6 +300,32 @@ button,
 /* ==================== MEDIA QUERIES ==================== */
 
 /* Mobile view - General (up to 768px) */
+@media (max-width: 480px) {
+  .cogumelos .container {
+    width: 100%;
+  }
+  .cogumelos .cogumelo{
+    width: 80%;
+  }
+  .cogumelos .container .cogumelo {
+    flex-direction: column;
+  }
+
+  .cogumelos .container img {
+    max-width: 60%;
+    margin: 2rem 0;
+  }
+
+  .cogumelos .container .cogumelo .text {
+    max-width: 50%;
+    padding: 0;
+  }
+
+  .cogumelos .container .cogumelo:nth-child(2) {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 768px) {
   .logo img {
     width: 100px;
@@ -353,7 +379,7 @@ button,
   }
 
   .cogumelos .container img {
-    max-width: 80%;
+    max-width: 60%;
   }
 
   .cogumelos .container .cogumelo .text {
@@ -363,13 +389,13 @@ button,
   }
 
   .cogumelos .container .cogumelo .text li {
-    text-align: left;
+    text-align: center;
   }
   .cogumelos .container .cogumelo .text h3 {
     text-align: center;
     font-size: clamp(1.5rem, 4vw, 10rem);
     padding-bottom: 1rem;
-        padding-top: 1rem;
+    padding-top: 1rem;
   }
 
   /* Individual paragraphs */
@@ -385,7 +411,7 @@ button,
 }
 
 /* Tablet view (769px to 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .cogumelos .container .cogumelo {
     flex-direction: column;
   }
@@ -406,9 +432,21 @@ button,
 
 /* Small desktop/laptop (1025px to 1440px) */
 @media (min-width: 1025px) and (max-width: 1440px) {
-  .cogumelos .container .cogumelo img {
-    max-width: 50%;
-    align-items: center;
+  .cogumelos .container .cogumelo {
+    flex-direction: column;
+  }
+
+  .cogumelos .container img {
+    max-width: 70%;
+    margin: 2rem 0;
+  }
+
+  .cogumelos .container .cogumelo .text {
+    max-width: 80%;
+  }
+
+  .cogumelos .container .cogumelo:nth-child(2) {
+    flex-direction: column;
   }
 }
 
