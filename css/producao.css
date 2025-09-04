@@ -461,6 +461,10 @@ button,
   animation: bounce 2s infinite;
 }
 
+.scroll-down-toggle {
+  cursor: url("../images/cursor/SelectBig.cur"), pointer;
+}
+
 /* Small adjustment for heights lower than 1000px */
 @media (max-width: 1024px) {
   .producao .container .circle-image {

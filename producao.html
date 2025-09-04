@@ -49,9 +49,9 @@
           <img class="grass-image-foliage" src="images/parallax/BG125/trees.png" alt="" srcset="" />
           <img class="grass-image-extra" src="images/parallax/1/extra1.png" alt="" srcset="" />
         </div>
-        <div class="scroll-down">
-          <p>Scroll down</p>
-          <img src="images/parallax/scroll-down-mouse.gif" alt="" srcset="">
+        <div id="scroll-indicator" class="scroll-down">
+          <p id="scroll-down-text">Scroll down</p>
+          <img id="scroll-down-image" src="images/parallax/scroll-down-mouse.gif" alt="" srcset="">
         </div>
       </div>
       <div class="section-second">
@@ -153,5 +153,39 @@
 <script src="src/gsap.js"></script>
 <script src="src/navbar.js"></script>
 <script src="src/mobilepro.js"></script>
+<script>
+  const scrollDownText = document.getElementById('scroll-down-text');
+  const scrollDownImage = document.getElementById('scroll-down-image');
+  const scrollIndicator = document.getElementById('scroll-indicator');
 
+  let atBottom = false;
+
+  window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY + window.innerHeight;
+    const bottom = document.documentElement.scrollHeight;
+
+    if (scrollPosition >= bottom - 10) {
+      scrollDownText.textContent = 'Scroll up';
+      scrollDownImage.style.transform = 'rotate(180deg)';
+      scrollIndicator.classList.add("scroll-down-toggle"); // add custom cursor
+      scrollDownText.classList.add("scroll-down-toggle"); // add custom cursor
+      scrollDownImage.classList.add("scroll-down-toggle"); // add custom cursor
+      atBottom = true;
+    } else {
+      scrollDownText.textContent = 'Scroll down';
+      scrollDownImage.style.transform = 'rotate(0deg)';
+      scrollIndicator.classList.remove("scroll-down-toggle"); // add custom cursor
+      scrollDownText.classList.remove("scroll-down-toggle"); // add custom cursor
+      scrollDownImage.classList.remove("scroll-down-toggle"); // add custom cursor
+      atBottom = false;
+    }
+  });
+
+  scrollIndicator.addEventListener('click', () => {
+    if (atBottom) {
+      // Scroll smoothly to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+</script>
 </html>
